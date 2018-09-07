@@ -1,0 +1,35 @@
+ul#navigation {
+    position: fixed;
+    margin: 0 0 0 20%;
+    padding: 0px;
+    top: 0px;    
+    list-style: none;
+    z-index:999999;
+    width:720px;
+    font-family: "FUTURABOOK";
+    font-size: 12px;  
+}
+ul#navigation li {
+    width: 175px;
+    display:inline;
+    float:left;    
+}
+ul#navigation li a {
+    background-color: rgba(221, 75, 57,0.9);
+    display: block;
+    float: left;
+    height: 25px;
+    margin-top: -2px;
+    padding-top: 85px;
+    text-align: center;
+    text-decoration: none;
+    width: 160px;     
+}
+ul#navigation li a:hover{
+     background-color:rgb(221, 75, 57);
+}
+ul#navigation li a span{
+    letter-spacing:0.5px;
+    font-size:13px;
+    color:#FFF;     
+} 

@@ -1,0 +1,87 @@
+.expandir h1 { 
+  border-bottom: 1px solid #333;
+  font-size: 32px;
+  color: #fff;
+  padding-bottom: 12px;
+  text-shadow: #fff;  
+}
+  
+.expandir h2 {
+  margin: 10px 0;
+  color: #000; 
+  font-size: 18px;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.expandir h3 {
+  margin: 0;
+  background-color: #369808;    
+  padding: 0px
+}
+ 
+.expandir h3 a {
+  background: url("../../images/expandirdivs/sprite.png") 15px 13px no-repeat;
+  display: block;
+  padding: 10px;
+  padding-left: 32px;
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal; 
+  border-bottom: 1px solid #00337E;
+}
+.expandir h3:hover { background: #EAEBFF; color: #000 }   
+.expandir h3.open  { background: #D3D6FF; color: #000 }   
+.expandir h3.open a { background-position: 13px -25px; color: #000 } 
+.expandir h3 + div { padding: 10px; } 
+
+ 
+/* Pre hide sections with JavaScript on
+--- */
+.expandir h3+div {
+  display: none;
+}
+
+/* CSS3 Animation example
+--- */
+.expandir h3 + div {
+  height: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background: #f2f2f2;    
+  display: block!important;
+  -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition:all 0.3s ease;
+	transition: all 0.3s ease; 
+}
+ 
+.expandir h3.open + div {
+  height: auto; 
+  background: url("../../images/bg1.png");    
+}
+
+/* Event example
+--- */
+pre#event-log {
+  background: #fafacc;
+  padding: 10px;
+  display: block;
+}  
+ 
+.expandir a:link { 
+    color: #fff;  
+}
+
+.expandir a:visited{
+ color: #000;     
+}
+
+.expandir a:active{
+ color: #000;  
+}
+.expandir a:hover{
+ color: #000;   
+} 

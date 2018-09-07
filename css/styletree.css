@@ -1,0 +1,175 @@
+body{
+    font-family: verdana,arial,helvetica,sans-serif;
+    background: #ECF0F5;
+}
+#nivel1{
+    height: 20px;
+    background-image: url("../images/iconos/nivel1.png");
+    background-repeat:no-repeat;
+    background-position: top center;
+    padding-top: 30px;
+
+}
+
+#nivel2{
+    height: 20px;
+    background-image: url("../images/iconos/nivel2.png"); 
+    background-repeat:no-repeat;
+    background-position: top center;    
+    padding-top:30px;
+
+} 
+#nivel3{
+    height: 20px;
+    background-image: url("../images/iconos/nivel3.png"); 
+    background-repeat:no-repeat;
+    background-position: top center;
+    padding-top: 30px;
+}
+#nivel4{
+    height: 20px;
+    background-image: url("../images/iconos/nivel4.png");
+    background-repeat:no-repeat;
+    background-position: top center;
+    padding-top: 30px;
+
+}
+#nivel5{
+    height: 20px;
+    background-image: url("../images/iconos/nivel5.png");
+    background-repeat:no-repeat;
+    background-position: top center;
+    padding-top: 30px;
+
+}
+#nivel6{
+    height: 20px;
+    background-image: url("../images/iconos/nivel6.png");
+    background-repeat:no-repeat;
+    background-position: top center;
+    padding-top: 30px;
+
+}
+#nivel7{
+    height: 20px;
+    background-image: url("../images/iconos/nivel7.png");
+    background-repeat:no-repeat;
+    background-position: top center;
+    padding-top: 30px;
+
+}
+#nivel8{
+    height: 20px;
+    background-image: url("../images/iconos/nivel8.png");
+    background-repeat:no-repeat;
+    background-position: top center;
+    padding-top: 30px;
+
+}
+#nivel9{
+    height: 20px;
+    background-image: url("../images/iconos/nivel9.png");
+    background-repeat:no-repeat;
+    background-position: top center;
+    padding-top: 30px;
+
+} 
+#nivel10{
+    height: 20px;
+    background-image: url("../images/iconos/nivel10.png");
+    background-repeat:no-repeat;
+    background-position: top center;
+    padding-top: 30px;
+
+}
+#raiz{
+    height: 20px;
+    background-image: url("../images/iconos/empresario.png");
+    background-repeat:no-repeat;
+    background-position: top center;
+    padding-top: 45px;
+
+}
+
+
+#msgform {
+    background: none repeat scroll 0 0 #70992D;
+    border: 2px solid #70992D;
+    border-radius: 6px 6px 6px 6px;
+    padding: 0px;
+    top: -1px;    
+    z-index: 9;
+}
+.mainCompose { display: inline; }
+
+
+#tofield { margin-bottom: 1px; }
+
+.mainCompose { position: absolute; left: 33px; top: 20px; }
+
+
+#msgform label { display: inline; color: #827f6a; font-size: 14px; font-weight: bold; font-family: "Trebuchet MS", Arial, sans-serif; margin-bottom: 4px; }
+
+.calloutUp {
+    border-bottom: 12px solid #70992D;
+    border-left: 12px dotted transparent;
+    border-right: 12px dotted transparent;
+    height: 0;
+    left: 0;
+    margin-left: 30px;
+    top: 0;
+    width: 0;
+    z-index: 10;
+}
+
+.calloutUp2 {
+    border-bottom: 12px solid #70992D;
+    border-left: 12px dotted transparent;
+    border-right: 12px solid transparent;
+    left: -12px;
+    position: relative;
+    top: 8px;
+    z-index: 11;
+}
+
+tr.headall {
+    background: none repeat scroll 0 0 #70992D;
+}
+
+th.headinit {
+    color: #FFFFFF;
+    font-family: verdana,arial,helvetica,sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 4px;
+    text-align: center;
+}
+
+td.headinit {
+    font-weight: bold;
+    padding: 0 4px 0 0;
+    text-align: right;
+    width: 30%;
+}
+td.headother {
+    border-left: 1px solid #70992D;
+    padding: 8px;
+    text-align: left;
+}
+
+tr.class2 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+tr.class1 {
+    background: none repeat scroll 0 0 #D1E7AE;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.google-visualization-orgchart-linenode{
+ border-color: #357CA5 !important;
+}

@@ -1,0 +1,121 @@
+#flotante{
+    position:fixed;
+    top:0;
+    left: 0%;
+    right: 0%;
+    height:32px;
+    width:100%;
+    text-align:center;
+    z-index:999;
+    display:none;
+    background-color: #1abb9c;
+    padding-top: 8px 
+}
+
+#cajaselect{
+    float: left;
+    color:#ffffff;
+    text-align:left;
+    font-family: "FUTURABOOK";
+    margin-left: 5%;
+     
+}
+
+#flotante select, #flotante input{
+ border: medium none;
+    font-family: "futurabook";
+    height: 25px;
+    padding-left: 5px;
+}
+.carrito{
+    margin-top: 40px;
+    background: #ECF0F5;
+}
+
+.pagenav {
+    background: none repeat scroll 0 0 #fff;
+    border-width: 1px;
+    border-color: green;
+    border-style: solid;
+    float: left;
+    height: 20px;
+    margin: 5px;
+    padding: 5px 5px 2px;
+    text-align: center;
+    width: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.pagenav a{    
+    text-decoration: none;
+    color: #369808;
+}
+
+.pagenavselected {
+    background: none repeat scroll 0 0 #009900;
+    border-width: 1px;
+    border-color: green;
+    border-style: solid;
+    float: left;
+    height: 20px;
+    margin: 5px;
+    padding: 5px 5px 2px;
+    text-align: center;
+    width: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;       
+}
+
+.pagenav2 {
+    background: none repeat scroll 0 0 #fff;
+    border-width: 1px;
+    border-color: green;
+    border-style: solid;
+    float: left;
+    height: 20px;
+    margin: 5px;
+    padding: 5px 5px 2px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+.pagenav2 a{    
+    text-decoration: none;
+    color: #369808;
+}
+
+.contenido {
+    font-family:"FUTURABOOK";
+    font-size: 11px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.productoitem{
+    margin: 8px;
+    padding: 5px;
+}
+
+.buscarButton{
+  background-color: #3c8dbc;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 1px 1px 1px 10px;
+    padding: 4px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 97%;
+    font-family: "futurabook"
+}
+
+.buscarButton:hover{
+    background-color: #F3AB63;
+    border:1px solid #C2E1EF;
+}

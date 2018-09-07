@@ -1,0 +1,127 @@
+root {  
+    display: block;
+}
+body{
+background: none repeat scroll 0 0 rgb(30, 40, 44);
+    height: auto !important;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-top: 1px;
+    padding-top: 3px;
+    vertical-align: middle;
+    width: 230px;
+    overflow-x:hidden;
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+body img{
+ border: none   
+} 
+
+.sidebar-menu > li.header {
+    background: none repeat scroll 0 0 rgb(26, 34, 38);
+    color: rgb(75, 100, 111);
+}
+.sidebar-menu {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-menu > li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.sidebar-menu > li > a {
+    color: #b8c7ce;
+    display: block;
+    padding: 12px 5px 12px 15px;
+    text-decoration: none;
+    font-family: "FUTURABOOK";
+    font-size: 14px;
+}
+.sidebar-menu > li > a > .fa, .sidebar-menu > li > a > .glyphicon, .sidebar-menu > li > a > .ion {
+    width: 20px;
+}
+.sidebar-menu > li .label, .sidebar-menu > li .badge {
+    margin-right: 5px;
+    margin-top: 3px;
+}
+.sidebar-menu li.header {
+    font-size: 12px;
+    padding: 10px 25px 10px 15px;
+}
+.sidebar-menu li > a > .fa-angle-left {
+    height: auto;
+    margin-right: 10px;
+    margin-top: 3px;
+    padding: 0;
+    width: auto;
+}
+.sidebar-menu li.active > a > .fa-angle-left {
+    transform: rotate(-90deg);
+}
+.sidebar-menu li.active > .treeview-menu {
+    display: block;
+}
+.sidebar-menu .treeview-menu {
+    display: none;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+.sidebar-menu .treeview-menu .treeview-menu {
+    padding-left: 20px;
+}
+.sidebar-menu .treeview-menu > li {
+    margin: 0;
+}
+.sidebar-menu .treeview-menu > li > a {
+    display: block;
+    font-size: 14px;
+    padding: 5px 5px 5px 15px;
+}
+.sidebar-menu .treeview-menu > li > a > .fa, .sidebar-menu .treeview-menu > li > a > .glyphicon, .sidebar-menu .treeview-menu > li > a > .ion {
+    width: 20px;
+}
+.sidebar-menu .treeview-menu > li > a > .fa-angle-left, .sidebar-menu .treeview-menu > li > a > .fa-angle-down {
+    width: auto;
+}
+a {
+    background-color: rgba(0, 0, 0, 0);
+}
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: inherit;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-rendering: auto;
+    transform: translate(0px, 0px);
+}
+.sidebar a {
+    color: #b8c7ce;
+}
+.sidebar-menu > li > a {
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    margin-right: 1px;
+}
+.sidebar-menu > li > a:hover, .sidebar-menu > li.active > a {
+    background: none repeat scroll 0 0 #1e282c;
+    border-left-color: #3c8dbc;
+    color: #ffffff;
+}
+.sidebar-menu > li > .treeview-menu {
+    background: none repeat scroll 0 0 #2c3b41;
+    margin: 0 1px;
+}
+.sidebar a {
+    color: #b8c7ce;
+}

@@ -1,0 +1,53 @@
+.buscarButton{
+      background-color: #3c8dbc;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 1px;
+    padding: 4px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 97%;
+    margin-left: 10px;
+}
+
+.buscarButton:hover{
+    color: #fff;
+    background-color: #286090;
+    border:1px solid #204d74;
+    cursor: pointer;
+    padding:4px;
+}
+
+.describ{
+    background-color: #999999;
+    text-align: right;
+    color: #FFF;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+}
+.describb{
+    background-color: #71B11D;
+    text-align: center;
+    color: #FFF;
+}
+.infodescrib {
+    background-color: #ecf0f5;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+
+.infodescribb {
+    text-align: right;
+    background-color: #E4E4E4;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-top: 12px;
+    color: #0600b7;
+}
+

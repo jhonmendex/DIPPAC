@@ -1,0 +1,61 @@
+﻿
+
+ Error en la consulta: select * from bodegas where bodegaid= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: select * from bodegas where bodegaid=
+                                             ^
+
+ Error en la consulta: select p.idproducto, p.referencia, p.nombreproducto, p.idcategoria, b.stock, b.costo, b.idbodegaproductos, p.unidadmedida
+                from productos p, bodegasproductos b
+                where b.idproducto=p.idproducto
+                and p.estado='activo'
+                and b.idbodega=
+                order by p.idcategoria, p.nombreproducto asc 
+ERROR:  error de sintaxis en o cerca de «order»
+LINE 6:                 order by p.idcategoria, p.nombreproducto asc
+                        ^
+
+ Error en la consulta: select * from bodegas where bodegaid= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: select * from bodegas where bodegaid=
+                                             ^
+
+ Error en la consulta: select p.idproducto, p.referencia, p.nombreproducto, p.idcategoria, b.stock, b.costo, b.idbodegaproductos, p.unidadmedida
+                from productos p, bodegasproductos b
+                where b.idproducto=p.idproducto
+                and p.estado='activo'
+                and b.idbodega=
+                order by p.idcategoria, p.nombreproducto asc 
+ERROR:  error de sintaxis en o cerca de «order»
+LINE 6:                 order by p.idcategoria, p.nombreproducto asc
+                        ^
+
+ Error en la consulta: select * from bodegas where bodegaid= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: select * from bodegas where bodegaid=
+                                             ^
+
+ Error en la consulta: select p.idproducto, p.referencia, p.nombreproducto, p.idcategoria, b.stock, b.costo, b.idbodegaproductos, p.unidadmedida
+                from productos p, bodegasproductos b
+                where b.idproducto=p.idproducto
+                and p.estado='activo'
+                and b.idbodega=
+                order by p.idcategoria, p.nombreproducto asc 
+ERROR:  error de sintaxis en o cerca de «order»
+LINE 6:                 order by p.idcategoria, p.nombreproducto asc
+                        ^
+
+ Error en la consulta: select * from bodegas where bodegaid= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: select * from bodegas where bodegaid=
+                                             ^
+
+ Error en la consulta: select p.idproducto, p.referencia, p.nombreproducto, p.idcategoria, b.stock, b.costo, b.idbodegaproductos, p.unidadmedida
+                from productos p, bodegasproductos b
+                where b.idproducto=p.idproducto
+                and p.estado='activo'
+                and b.idbodega=
+                order by p.idcategoria, p.nombreproducto asc 
+ERROR:  error de sintaxis en o cerca de «order»
+LINE 6:                 order by p.idcategoria, p.nombreproducto asc
+                        ^

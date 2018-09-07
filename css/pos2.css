@@ -1,0 +1,235 @@
+root { 
+    display: block;
+} 
+
+#main {
+    height: 100%;
+    margin: auto;
+    width: 100%;    
+}
+#content {  
+    border: 1px solid #B8B8B6;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 7px #666666;
+    height: auto !important;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    min-height: 500px;
+    padding: 10px;
+    vertical-align: middle;
+    width: auto;
+}
+
+.panelizquierdo
+{
+  border: 1px #369808 solid;
+  border-radius: 5px;
+  width: 75%;  
+  background-color: #fff;
+  vertical-align: top;
+  height: 100%; 
+}    
+.panelderecho{
+  margin: 5px; 
+  border: 1px #369808 solid;
+  border-radius: 5px;
+  width: 25%;
+  background-color: #fff;
+  vertical-align: top;
+  height: 100%
+}
+
+table {  
+    width: 100%;
+    border-spacing:1; 
+    font-family: verdana 
+}
+
+table thead{
+    color: #993300;
+    font-size: 20px;
+}
+ 
+.precio {  
+    border: 1px solid #369808;
+    border-radius: 5px 5px 5px 5px;  
+    font-size: 50px;
+    text-align: left;
+    width: 40%;  
+    padding-left: 10px;
+    background-color: #FFF
+}
+
+.precio2 {  
+    border: 1px solid #369808;
+    border-radius: 5px 5px 5px 5px;  
+    font-size: 20px;
+    text-align: left;
+    width: 40%;  
+    padding-left: 10px;
+    background-color: #FFF
+}
+.precio3 {  
+    border: 1px solid #369808;
+    border-radius: 5px 5px 5px 5px;  
+    font-size: 20px;
+    text-align: left;
+    width: 40%;  
+    padding-left: 10px;
+    background-color: #FFF 
+}
+.totales{   
+    font-size: 50px;
+    text-align: right; 
+    width: 60%;
+    padding-right: 10px;
+}
+
+.totales img{
+ float: left
+}
+
+.totales p{
+ margin: 0px;
+ padding-top: 25px 
+}
+
+.subtotal{
+    font-size: 20px;
+    text-align: right; 
+    width: 60%;
+    padding-right: 10px;   
+}
+.productos{     
+    font-size: 20px;
+    text-align: right; 
+    width: 60%;
+    padding-right: 10px;     
+}
+
+#busquedap {
+    height: 30px;
+    padding: 11px 11px 10px;
+    background-color: #f2f2f2
+} 
+
+#busquedap input{
+    background : url("../images/pos/busquedap.png") no-repeat scroll 100% 8px transparent;
+    background-color: #fff;
+    border-radius: 5px;       
+    height: 30px;
+    width: 99%;
+    font-size: 30px
+}
+
+#busquedap2 {
+    height: 30px;
+    padding: 11px 11px 10px;    
+} 
+
+#busquedap2 input{    
+    background-color: #fff;
+    border-radius: 5px;       
+    height: 30px;
+    width: 99%;
+    font-size: 30px
+}
+.panelderecho input{
+    background: url("../images/pos/busquedap.png") no-repeat scroll 100% 8px #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 30px;
+    height: 30px;
+    width: 99%; 
+}
+.buscarButton {
+    background-color: #F0F0F0;
+    border: 1px solid #B8B8B6;
+    border-radius: 5px 5px 5px 5px;
+    color: #444444;
+    cursor: pointer;
+    font-size: 15px; 
+    font-weight: bold;
+    margin: 1px;
+    padding: 4px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 100%;
+    height: 57px 
+} 
+.buscarButton:hover {
+    background-color: #F3AB63;
+    border: 1px solid #C2E1EF;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 4px; 
+}
+
+.buscarButton2 {
+    background-color: #F0F0F0;
+    border: 1px solid #B8B8B6;
+    border-radius: 5px 5px 5px 5px;
+    color: #444444;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    height: 60px;
+    margin: 1px;
+    padding: 4px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 100%;
+}
+.buscarButton2:hover {  
+    background-color: #F3AB63;
+    border: 1px solid #C2E1EF;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 4px; 
+}
+
+.buscarButton2 img{
+float: left   
+}
+.buscarButton img{
+float: left    
+}
+.buscarButton2 p{
+     font-size: 15px 
+}
+.registrodeventas{ 
+    font-size: 20px;
+    padding-right: 10px;
+    text-align: right;
+    width: 60%;}
+
+.buscarButton5{
+    background-color: #F0F0F0;
+    margin: 1px;
+    font-size: 10px;
+    border: 1px solid #B8B8B6;
+    border-radius: 5px 5px 5px 5px;
+    color: #444;
+    font-weight: bold;
+    cursor: pointer;
+    height: 22px;
+    padding: 2px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 80px;
+}
+
+.buscarButton5:hover{
+    color : #fff;
+    background-color: #F3AB63;
+    border:1px solid #C2E1EF;
+    cursor: pointer;
+    padding:2px;
+}
+
+.ticket
+{
+display:none;
+width:230px;
+margin: 0px 0px 0px 0px;
+padding: 0px 0px 0px 0px;
+}

@@ -1,0 +1,255 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M885.589 228.053c-8.149-9.344-19.883-14.72-32.256-14.72h-589.611l-8.32-49.664c-3.413-20.565-21.205-35.669-42.069-35.669h-96c-23.595 0-42.667 19.072-42.667 42.667s19.072 42.667 42.667 42.667h59.861l79.36 476.331c0.341 1.92 1.323 3.499 1.92 5.291 0.683 2.261 1.237 4.395 2.304 6.443 1.365 2.816 3.2 5.205 5.12 7.637 1.323 1.664 2.517 3.328 4.053 4.779 2.475 2.304 5.333 3.925 8.235 5.547 1.621 0.896 3.029 2.091 4.779 2.773 4.949 2.005 10.155 3.2 15.659 3.2 0.043 0 469.376 0 469.376 0 23.595 0 42.667-19.072 42.667-42.667s-19.072-42.667-42.667-42.667h-433.195l-7.083-42.667h482.944c21.248 0 39.253-15.616 42.24-36.608l42.667-298.667c1.749-12.288-1.92-24.704-9.984-34.005zM804.139 298.667l-12.16 85.333h-151.979v-85.333h164.139zM597.333 298.667v85.333h-128v-85.333h128zM597.333 426.667v85.333h-128v-85.333h128zM426.667 298.667v85.333h-128c-2.261 0-4.309 0.64-6.315 1.28l-14.421-86.613h148.736zM299.264 426.667h127.403v85.333h-113.195l-14.208-85.333zM640 512v-85.333h145.835l-12.16 85.333h-133.675z",
+					"M426.667 832c0 35.346-28.654 64-64 64s-64-28.654-64-64c0-35.346 28.654-64 64-64 35.346 0 64 28.654 64 64z",
+					"M810.667 832c0 35.346-28.654 64-64 64s-64-28.654-64-64c0-35.346 28.654-64 64-64 35.346 0 64 28.654 64 64z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"shopping-cart"
+				],
+				"grid": 24
+			},
+			"attrs": [],
+			"properties": {
+				"id": 305,
+				"order": 10,
+				"prevSize": 24,
+				"name": "shopping-cart",
+				"code": 59649
+			},
+			"setIdx": 0,
+			"setId": 2,
+			"iconIdx": 304
+		},
+		{
+			"icon": {
+				"paths": [
+					"M512 1024c282.77 0 512-229.23 512-512s-229.23-512-512-512-512 229.23-512 512 229.23 512 512 512zM512 96c229.75 0 416 186.25 416 416s-186.25 416-416 416-416-186.25-416-416 186.25-416 416-416z",
+					"M669.256 317.256l-90.512-90.512-285.254 285.256 285.256 285.254 90.508-90.508-194.744-194.746z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"circle-left",
+					"left",
+					"circle-previous",
+					"arrow"
+				],
+				"defaultCode": 58883,
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"id": 5,
+				"order": 9,
+				"prevSize": 32,
+				"code": 59972,
+				"ligatures": "circle-left, left5",
+				"name": "sesion"
+			},
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 0
+		},
+		{
+			"icon": {
+				"paths": [
+					"M1024 590.444l-512-397.426-512 397.428v-162.038l512-397.426 512 397.428zM896 576v384h-256v-256h-256v256h-256v-384l384-288z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"home",
+					"house"
+				],
+				"defaultCode": 57345,
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"id": 51,
+				"order": 2,
+				"prevSize": 32,
+				"code": 59648,
+				"ligatures": "home, house",
+				"name": "inicio"
+			},
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 1
+		},
+		{
+			"icon": {
+				"paths": [
+					"M480 64c-265.096 0-480 214.904-480 480 0 265.098 214.904 480 480 480 265.098 0 480-214.902 480-480 0-265.096-214.902-480-480-480zM480 928c-212.078 0-384-171.922-384-384s171.922-384 384-384c212.078 0 384 171.922 384 384s-171.922 384-384 384zM512 512v-128h128v-64h-128v-64h-64v64h-128v256h128v128h-128v64h128v64h64v-64h128.002l-0.002-256h-128zM448 512h-64v-128h64v128zM576.002 704h-64.002v-128h64.002v128z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"coin-dollar",
+					"money",
+					"cash",
+					"currency-dollar"
+				],
+				"defaultCode": 57555,
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"order": 3,
+				"id": 1772,
+				"prevSize": 32,
+				"code": 59707,
+				"ligatures": "coin-dollar, money",
+				"name": "comisiones"
+			},
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 2
+		},
+		{
+			"icon": {
+				"paths": [
+					"M576 706.612v-52.78c70.498-39.728 128-138.772 128-237.832 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h896c0-128.968-166.898-235.64-384-253.388z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"user",
+					"profile",
+					"avatar",
+					"person",
+					"member"
+				],
+				"defaultCode": 57733,
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"order": 8,
+				"id": 1628,
+				"prevSize": 32,
+				"code": 59761,
+				"ligatures": "user, profile2",
+				"name": "perfil"
+			},
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 3
+		},
+		{
+			"icon": {
+				"width": 1024,
+				"paths": [
+					"M384 736c0-151.234 95.874-280.486 230.032-330.2 16.28-36.538 25.968-77.164 25.968-117.8 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h397.306c-8.664-30.53-13.306-62.732-13.306-96z",
+					"M736 448c-159.058 0-288 128.942-288 288s128.942 288 288 288c159.056 0 288-128.942 288-288s-128.942-288-288-288zM896 768h-128v128h-64v-128h-128v-64h128v-128h64v128h128v64z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"user-plus",
+					"user",
+					"user-add",
+					"profile",
+					"avatar",
+					"person",
+					"member"
+				],
+				"defaultCode": 57735,
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"id": 478,
+				"order": 6,
+				"prevSize": 32,
+				"code": 59763,
+				"ligatures": "user-plus, user2",
+				"name": "inscripciones"
+			},
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 4
+		},
+		{
+			"icon": {
+				"paths": [
+					"M320 768v-768h-128v768h-160l224 224 224-224h-160z",
+					"M448 576h576v128h-576v-128z",
+					"M448 384h448v128h-448v-128z",
+					"M448 192h320v128h-320v-128z",
+					"M448 0h192v128h-192v-128z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"sort-amount-asc",
+					"arrange"
+				],
+				"defaultCode": 61003,
+				"grid": 16
+			},
+			"attrs": [],
+			"properties": {
+				"order": 4,
+				"id": 1732,
+				"prevSize": 32,
+				"code": 59980,
+				"ligatures": "sort-amount-asc, arrange5",
+				"name": "visor-de-volumen"
+			},
+			"setIdx": 1,
+			"setId": 1,
+			"iconIdx": 5
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"showQuickUse2": false,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon",
+				"majorVersion": 1,
+				"minorVersion": 0
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"autoHost": true,
+			"ie7": true,
+			"includeMetadata": true,
+			"embed": false,
+			"showSelector": false,
+			"selector": "i",
+			"showMetrics": false,
+			"showMetadata": false,
+			"noie8": false
+		},
+		"imagePref": {
+			"prefix": "icon-",
+			"png": true,
+			"useClassSelector": true,
+			"color": 4473924,
+			"bgColor": 16777215,
+			"classSelector": ".icon"
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"quickUsageToken": {}
+	}
+}

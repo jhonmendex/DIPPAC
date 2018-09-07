@@ -1,0 +1,26 @@
+body{    
+    margin: 0px 0px 0px 0px;        
+}
+
+.logininputb{
+    background-color: #F0F0F0;
+    margin-bottom: 8px;    
+    border: 1px solid #B8B8B6;
+    border-radius: 5px 5px 5px 5px;
+    color: #444;
+    font-weight: bold;
+    cursor: pointer;
+    height: 25px;
+    padding: 2px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 120px;
+}
+
+.logininputb:hover{
+    color : #fff;
+    background-color: #F3AB63;
+    border:1px solid #C2E1EF;
+    cursor: pointer;
+    padding:2px;
+}

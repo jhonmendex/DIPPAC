@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+
+.barraf{
+   background-color: rgba(242, 222, 222, 0.9);
+    display: none;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 34px;
+    font-size: 11px;
+    left: 30%;
+    padding-top: 3px;
+    position: fixed;
+    right: 30%;
+    text-align: center;
+    top: 0;
+    width: 40%;
+    z-index: 9999;
+}
+
+/* ------------------Font---------------------- */
+@font-face {
+    font-family: FUTURABOLD;
+    src:url("font/futurabold.eot?") format("eot"),
+        url("font/futurabold.woff") format("woff"),
+        url("font/futurabold.ttf")  format("truetype"),
+        url("font/futurabold.svg#futurabold") format("svg"); 
+} 
+@font-face {
+    font-family: FUTURABOOK;
+    src:url("font/futurabook.eot?") format("eot"),
+        url("font/futurabook.woff") format("woff"),
+        url("font/futurabook.ttf")  format("truetype"),
+        url("font/futurabook.svg#futurabook") format("svg"); 
+} 
+@font-face {
+    font-family: FUTURAMEDIUM;
+    src:url("font/futuramedium.eot?") format("eot"),
+        url("font/futuramedium.woff") format("woff"),
+        url("font/futuramedium.ttf")  format("truetype"),
+        url("font/futuramedium.svg#futuramedium") format("svg"); 
+} 
+@font-face {
+    font-family: FUTURAHEAVY;
+    src:url("font/futuraheavy.eot?") format("eot"),
+        url("font/futuraheavy.woff") format("woff"),
+        url("font/futuraheavy.ttf")  format("truetype"), 
+        url("font/futuraheavy.svg#futuraheavy") format("svg"); 
+} 
+/*Add your font at here*/
