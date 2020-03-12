@@ -56,6 +56,7 @@ class ValidationController extends ControllerPublic {
         if ($min <= 0) {
             $min = 1;
         }
+
         // if ($this->model->$types[$tipo]($valor, $min)) {
         //     $respuesta['result'] = "true";
         //     echo json_encode($respuesta);

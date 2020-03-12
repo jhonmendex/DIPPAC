@@ -76,8 +76,8 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 			</div>
 			<div class="create-account">
 				<p>
-					Aún no estas en DPAAC ?&nbsp; 
-					<a id="register-btn" class="various3" href="index.php?controlador=Novinculado">Registrate</a>
+					<!-- Aún no estas en DPAAC ?&nbsp; 
+					<a id="register-btn" class="various3" href="index.php?controlador=Novinculado">Registrate</a> -->
 				</p>
 			</div> 
 		</form>

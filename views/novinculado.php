@@ -36,15 +36,15 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
                             array('maxlength' => '15')); ?> 
                     </div>
                     <div class="form-group">
-                        <!-- <label for=""><?php $doc->texto('BORN_DATE') ?>(*):</label> -->
+                      +<label for=""><?php $doc->texto('BORN_DATE') ?>(*):</label> 
                         <?php
-                            // $view->input("born_date", 
-                            // "calendar", 
-                            // $doc->t('BORN_DATE'),
-                            // array('required' => true),
-                            // array('readonly' => 'readonly',
-                            //     'midate' => (int) date("Y") - 100,
-                            //     'madate' => (int) date("Y") - 18));
+                            $view->input("born_date", 
+                            "calendar", 
+                            $doc->t('BORN_DATE'),
+                            array('required' => true),
+                            array('readonly' => 'readonly',
+                                'midate' => (int) date("Y") - 100,
+                                'madate' => (int) date("Y") - 18));
                     ?>
                     </div>
                     <div class="form-group">
@@ -55,7 +55,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
                             array('maxlength' => '25'));
                     ?>
                     </div>
-                    <!--  --> <!-- <div class="form-group">
+                    <div class="form-group">
                      <label for=""><?php //$doc->texto('STADE') ?>: </label>
                      <?php //echo $deps; ?>
                     </div>
@@ -72,25 +72,25 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
                       <div id="barrio"><?php //echo $barrvin; ?></div>
                     </div>
                      <div class="form-group">
-                     <label><?php //$doc->texto('ADDRESS') ?>: </label>-->   
+                     <label><?php //$doc->texto('ADDRESS') ?>: </label>   
                       <?php
-                    // $view->input("direccion", 
-                    //         "text", 
-                    //         "Direccion", 
-                    //         array('required' => true, 'text' => 'address'), 
-                    //         array('maxlength' => '50', 'minsize' => '10'));
+                    $view->input("direccion", 
+                            "text", 
+                            "Direccion", 
+                            array('required' => true, 'text' => 'address'), 
+                            array('maxlength' => '50', 'minsize' => '10'));
                     ?>  
-                     <!-- </div> -->
-                    <!--  <div class="form-group">
+                    </div> 
+                    <div class="form-group">
                         <label><?php //$doc->texto('PHONE') ?>: </label> 
                         <?php
-                    // $view->input("telefono",
-                    //         "numeric", 
-                    //         "Telefóno", 
-                    //         array('required' => true, 'text' => 'numeric', 'minsize' => '7'),
-                    //         array('maxlength' => '10'));
+                    $view->input("telefono",
+                            "numeric", 
+                            "Telefóno", 
+                            array('required' => true, 'text' => 'numeric', 'minsize' => '7'),
+                            array('maxlength' => '10'));
                     ?>
-                     </div> -->
+                     </div> 
         
          
              <div class="form-group">
