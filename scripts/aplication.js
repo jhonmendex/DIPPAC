@@ -1,4 +1,4 @@
-function message(mensaje, imagen) {    
+function message(mensaje, imagen) {
     $("#titlemesagge").html("<strong>" + mensaje + "<strong/>");
     $("#iconmesagge").html(" <img src='" + imagen + "'/>");
     $("#barraf").slideDown(1000).delay(3000).fadeIn(400);
@@ -50,8 +50,7 @@ function presence(value, label) {
         url: "index.php?controlador=Validation&accion=validar_presencia",
         data: values,
         async: false,
-        success: function(response)
-        {
+        success: function(response) {
             respuesta = response.result;
             mensaje = response.mensaje;
             if (respuesta == 'true') {
@@ -80,14 +79,13 @@ function patt(value, type, label, minsize) {
         url: "index.php?controlador=Validation&accion=validar_pattern",
         data: values,
         async: false,
-        success: function(response)
-        {
+        success: function(response) {
             respuesta = response.result;
             mensaje = response.mensaje;
-            if (respuesta == 'true') {
+            if (respuesta === 'true') {
                 retorno = 'ok';
             } else {
-                retorno = mensaje;
+                retorno = 'mensaje';
             }
         },
         error: function(error) {
@@ -111,8 +109,7 @@ function unique(value, key, label, name, exception) {
         url: "index.php?controlador=Validation&accion=validar_unica",
         data: values,
         async: false,
-        success: function(response)
-        {
+        success: function(response) {
             respuesta = response.result;
             mensaje = response.mensaje;
             if (respuesta == 'true') {
@@ -129,7 +126,7 @@ function unique(value, key, label, name, exception) {
 }
 
 function validates(idform, messss) {
-    if(!messss){messss = "si";}
+    if (!messss) { messss = "si"; }
     $('#' + idform + ' .error_input').remove();
     var $inputs = $('#' + idform + ' :input');
     var submitAct = true;
@@ -153,20 +150,19 @@ function validates(idform, messss) {
                                 } else {
                                     submitAct = false;
                                     $(this).after('<div class="error_input" style="font-size: 12px; color: Red; font-weight: bold;">' + res3 + '</div>');
-                                    $(this).css("background-color","#F0CBBA");
+                                    $(this).css("background-color", "#F0CBBA");
                                 }
                             }
                         } else {
                             submitAct = false;
                             $(this).after('<div class="error_input" style="font-size: 12px; color: Red; font-weight: bold;">' + res2 + '</div>');
-                            $(this).css("background-color","#F0CBBA");
+                            $(this).css("background-color", "#F0CBBA");
                         }
-                    } else {
-                    }
+                    } else {}
                 } else {
                     submitAct = false;
                     $(this).after('<div class="error_input" style="margin-top:8px !important;font-size: 12px; color: Red; font-weight: bold;">' + res + '</div>');
-                    $(this).css("background-color","#F0CBBA");
+                    $(this).css("background-color", "#F0CBBA");
                 }
             } else {
                 if ($(this).val() != '') {
@@ -185,13 +181,13 @@ function validates(idform, messss) {
                                 } else {
                                     submitAct = false;
                                     $(this).after('<div class="error_input" style="font-size: 12px; color: Red; font-weight: bold;">' + res3 + '</div>');
-                                    $(this).css("background-color","#F0CBBA");
+                                    $(this).css("background-color", "#F0CBBA");
                                 }
                             }
                         } else {
                             submitAct = false;
                             $(this).after('<div class="error_input" style="font-size: 12px; color: Red; font-weight: bold;">' + res2 + '</div>');
-                            $(this).css("background-color","#F0CBBA");
+                            $(this).css("background-color", "#F0CBBA");
                         }
                     } else {
                         if ($(this).attr('norepeat')) {
@@ -201,7 +197,7 @@ function validates(idform, messss) {
                             } else {
                                 submitAct = false;
                                 $(this).after('<div class="error_input" style="font-size: 12px; color: Red; font-weight: bold;">' + res3 + '</div>');
-                                $(this).css("background-color","#F0CBBA");
+                                $(this).css("background-color", "#F0CBBA");
                             }
                         }
                     }
@@ -212,25 +208,26 @@ function validates(idform, messss) {
     if (submitAct) {
         return true;
     } else {
-        if(messss=="si"){
+        if (messss == "si") {
             message('Verifique los datos ingresados', 'images/iconos_alerta/error.png');
         }
         return false;
     }
 }
 
-$(document).ready(function() {
-    var today = new Date();
-    $('input.onepic').simpleDatepicker({
-        // chosendate:  $('input.onepic').attr("madate")? Number($('input.onepic').attr("madate")):today.getFullYear(),
-        startdate: $('input.onepic').attr("midate") ? Number($('input.onepic').attr("midate")) : today.getFullYear() - 100,
-        enddate: $('input.onepic').attr("madate") ? Number($('input.onepic').attr("madate")) : today.getFullYear(),
-        x: 20,
-        y: 20
-    });
+$(function() {
+    // var today = new Date();
+    // $('input.onepic').simpleDatePicker({
+    //     // chosendate:  $('input.onepic').attr("madate")? Number($('input.onepic').attr("madate")):today.getFullYear(),
+    //     startdate: $('input.onepic').attr("midate") ? Number($('input.onepic').attr("midate")) : today.getFullYear() - 100,
+    //     enddate: $('input.onepic').attr("madate") ? Number($('input.onepic').attr("madate")) : today.getFullYear(),
+    //     x: 20,
+    //     y: 20
+    // });
     /*
      $('input.onepic').click(function(){
      $("[name='year']").val($(this).attr("madate")? Number($(this).attr("madate")):2013);   
      });   
      */
+
 });

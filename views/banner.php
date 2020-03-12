@@ -3,7 +3,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 ?>
 <style>
     body{
-     background: #3498DB; 
+     background: #5d8de5; 
     }
     #dropdowna{
      font-family: "FUTURABOOK";

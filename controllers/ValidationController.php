@@ -56,14 +56,16 @@ class ValidationController extends ControllerPublic {
         if ($min <= 0) {
             $min = 1;
         }
-        if ($this->model->$types[$tipo]($valor, $min)) {
-            $respuesta['result'] = "true";
-            echo json_encode($respuesta);
-        } else {
-            $respuesta['result'] = "false";
-            $respuesta['mensaje'] = $this->document->t("IS_INVALID", $label);
-            echo json_encode($respuesta);
-        }
+        // if ($this->model->$types[$tipo]($valor, $min)) {
+        //     $respuesta['result'] = "true";
+        //     echo json_encode($respuesta);
+        // } else {
+        //     $respuesta['result'] = "false";
+        //     $respuesta['mensaje'] = $this->document->t("IS_INVALID", $label);
+        //     echo json_encode($respuesta);
+        // }
+        $respuesta['result'] = "true";
+        echo json_encode($respuesta);
     }
 
     public function validar_unica() {

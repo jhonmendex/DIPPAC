@@ -1,12 +1,13 @@
 <?php
+
 defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 $config = Config::singleton();
 $config->set('dbtype', 'postgres');
 $config->set('dbport', '5432');
 $config->set('dbhost', 'localhost'); 
-$config->set('dbname', 'procol');
+$config->set('dbname', 'dipaac');
 $config->set('dbuser', 'postgres');
-$config->set('dbpass', 'admin'); 
+$config->set('dbpass', 'postgres'); 
 
 $config->set('lang', 'es');
 $config->set('mail', 'jhon.mendez@docentes.umb.edu.co');

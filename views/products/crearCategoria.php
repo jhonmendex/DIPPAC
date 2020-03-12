@@ -19,7 +19,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
                             'text' => 'regular',
                             'minsize' => '3',
                             'norepeat' => 'val6'),                                
-                                array('maxlength' => '30',
+                            array('maxlength' => '30',
                             'size' => '28',
                             'style' => 'text-transform:uppercase;',
                             'id' => 'nombrecat'));

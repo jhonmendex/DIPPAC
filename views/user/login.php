@@ -36,12 +36,10 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 }
 </style>
 <body class="login">
-    <div class="logo"> 
-        <img src="images/logo.png"/>
-    </div>
+ 
     <div class="content">
         <form id="formlogin" method="post" action="index.php" class="form-vertical login-form" novalidate="novalidate">
-            <h3 class="form-title" style="text-align: center">Bienvenido a ACPAC</h3>
+        <img src="images/logo.png"/>
 			<div class="control-group">
 				<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
 				<label class="control-label visible-ie8 visible-ie9">Username</label>
@@ -78,7 +76,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 			</div>
 			<div class="create-account">
 				<p>
-					Aún no estas en ACPAC ?&nbsp; 
+					Aún no estas en DPAAC ?&nbsp; 
 					<a id="register-btn" class="various3" href="index.php?controlador=Novinculado">Registrate</a>
 				</p>
 			</div> 
@@ -86,9 +84,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
         </div>
     <script> 
     $.backstretch([
-        "images/bglogin/bg2.jpg",
-          "images/bglogin/bg1.jpg",
-          "images/bglogin/bg3.jpg"
+        "images/bglogin/vector.svg"
         ], {
             fade: 750,
             duration: 4000

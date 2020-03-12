@@ -3,7 +3,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 ?>
 <style>
     body{
-        background: #ECF0F5;
+        background: #fff;
         margin: 1px;
     }
     h1{

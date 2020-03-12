@@ -23,15 +23,13 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
                     <option value="Administrador">
                         Administrador
                     </option>
-                    <option value="Cajero">
-                        Cajero
+                    <option value="Profesional">
+                        Profesional
                     </option>
                     <option value="Estudiante">
                         Estudiante
                     </option>
-                    <option value="No usuario">
-                        No usuario
-                    </option>
+                    
                 </select>
             </td>
         </tr>
