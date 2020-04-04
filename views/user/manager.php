@@ -3,46 +3,46 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 ?>
 <div id="main"> 
     <div class="maxcontent" id="content"> 
-        <div id="fancybox-title" class="fancybox-title-float" style="display: block; z-index: 50"><table cellspacing="0" cellpadding="0" id="fancybox-title-float-wrap"><tbody><tr><td id="fancybox-title-float-left"></td><td id="fancybox-title-float-main">Administraci&oacute;n de Estudiantes</td><td id="fancybox-title-float-right"></td></tr></tbody></table></div>
+        <div id="fancybox-title" class="fancybox-title-float" style="display: block; z-index: 50"><table cellspacing="0" cellpadding="0" id="fancybox-title-float-wrap"><tbody><tr><td id="fancybox-title-float-left"></td><td id="fancybox-title-float-main">Administraci&oacute;n de usuarios</td><td id="fancybox-title-float-right"></td></tr></tbody></table></div>
 <div class="container" style="margin-bottom: 20px; margin-top: 15px"> 
     <div style="float: left;width: 40%;"> 
         <fieldset class="colorleyend" style="width: 100%">
             <legend class="colorleyendinto">Opciones</legend>           
             <div id="cajaselect" style="margin-bottom: 15px">
                 <a class="various3" title="Crear usuario" href="index.php?controlador=ManageUsers&accion=createUser" style="cursor: pointer; color: #005500; font-weight: bold;">
-                    + Crear nuevo estudiante
+                    + Crear nuevo usuario
                 </a>
             </div>
         </fieldset>
     </div>   
     <div style="clear: left"></div>
 <fieldset class="colorleyend" style="width: 100%;">
-                <legend class="colorleyendinto">Lista de Estudiantes</legend>
+                <legend class="colorleyendinto">Lista de usuarios</legend>
                 <div style="float: left;">
-                    <img class="delete" src="images/edit.png" width="15px" height="15px"/>: Editar un estudiante
+                    <img class="delete" src="images/edit.png" width="15px" height="15px"/>: Editar un usuario
                 </div>
                 <div style="float: left; margin-left: 30px">
-                    <img src="images/user_group.png" width="15px" height="15px"/>: Cambiar perfil de un estudiante
+                    <img src="images/user_group.png" width="15px" height="15px"/>: Cambiar perfil de un usuario
                 </div>
                 <div style="float: left; height: 16px; margin-left: 30px">
-                    <img src="images/enable.png"/>: Estudiante activo
+                    <img src="images/enable.png"/>: usuario activo
                 </div>                        
                 <div style="float: left; margin-left: 30px; height: 16px">
-                    <img class="delete" src="images/disable.png"/>: Estudiante inactivo
+                    <img class="delete" src="images/disable.png"/>: usuario inactivo
                 </div>                        
                 <div style="float: left; margin-left: 30px; height: 16px; padding-top: 7px;">
-                    (<a style="cursor: default; color: #005500; font-weight: bold;">inactivar</a>) : Inactivar un estudiante
+                    (<a style="cursor: default; color: #005500; font-weight: bold;">inactivar</a>) : Inactivar un usuario
                 </div>  
 
                 <div style="float: left;height: 16px; margin-top: 10px; padding-top: 7px;">
-                    (<a style="cursor: default; color: #005500; font-weight: bold;">activar</a>) : Activar un estudiante
+                    (<a style="cursor: default; color: #005500; font-weight: bold;">activar</a>) : Activar un usuario
                 </div>                  
                 <div style="clear: both; margin-bottom: 15px"></div>                
                     <div>
         <table class="table" border="0" cellspacing="0" cellpadding="3" id="mytable">        
             <thead>
                 <tr class="headall">                 
-                    <th class="headinit" style="cursor: pointer">Nombre de Estudiante</th>                        
+                    <th class="headinit" style="cursor: pointer">Nombre de usuario</th>                        
                     <th class="head">Nombre de usuario</th>
                     <th class="head" style="cursor: pointer">Codigo</th>
                     <th class="head">Cedula</th> 

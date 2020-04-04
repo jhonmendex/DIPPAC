@@ -7160,3 +7160,1115 @@ Controlador: ManageUsersController
 Accion: createUser 
 select * from perfiles 
             where grupo not in ('Estudiante','Superadministrador', 'No usuario') 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/NovinculadoController.php 
+Controlador: NovinculadoController 
+Accion: frmrecordarpass 
+SELECT * FROM usuarios WHERE alias='jmendezl' and idestado=2 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendezl' and idestado=2 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendezl' and idestado=2 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=8 
+SELECT * from perfiles_permisos where idsubmenu=31 and idperfil=28 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: createProfile 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 
+SELECT * from perfiles_permisos where idsubmenu=13 
+SELECT * from submenus where idmenu=8 
+SELECT * from perfiles_permisos where idsubmenu=31 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/NovinculadoController.php 
+Controlador: NovinculadoController 
+Accion: frmrecordarpass 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendezl' and idestado=2 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendezl' and idestado=2 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Accion: Logo 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: createUser 
+select * from perfiles 
+            where grupo not in ('Estudiante','Superadministrador', 'No usuario') 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where cedula=1234567 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where email='DOCENTES1@GMAILLCOM' or email='docentes1@gmaillcom' 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where alias='DOCENTE1' or alias='DOCENTE1' 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: insertUser 
+select nextval('usuarios_idusuario_seq'::regclass) limit 1 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Accion: Logo 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Accion: Banner 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Accion: Menu 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Accion: Logo 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Accion: Menu 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Accion: Logo 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Accion: Menu 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=8 
+SELECT * from perfiles_permisos where idsubmenu=31 and idperfil=28 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Accion: Menu 
+Controlador: IndexController 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+ 
+Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 

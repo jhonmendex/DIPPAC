@@ -140,3 +140,193 @@ LINE 2: ...NULL,NULL,'2020-03-12','user@domain.com', NULL,'',NULL,NULL,...
 ERROR:  column u.id_padre does not exist
 LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
                                                              ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: insert into usuarios
+        values(54,2,171,27,'DOCENTE1','DOCENTE1','40bd001563085fc35165329ea1ff5c5ecbdbbeef',1234567,'', NULL, NULL,NULL,'2020-04-04','docentes1@gmaillcom', NULL,'',NULL,NULL,NULL) 
+ERROR:  INSERT has more expressions than target columns
+LINE 2: ...,NULL,'2020-04-04','docentes1@gmaillcom', NULL,'',NULL,NULL,...
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
+
+ Error en la consulta: select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ERROR:  column u.id_padre does not exist
+LINE 2: ...ario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+                                                             ^
