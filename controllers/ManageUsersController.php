@@ -115,16 +115,7 @@ class ManageUsersController extends ControllerBase {
         $this->document->setHeader();
         $this->getModel("ManageUsers");
         $usuario = $this->model->getUserById($_GET['iduser']);
-        $perfiles;
-        if ($usuario['grupo'] == 'Administrador' || $usuario['grupo'] == 'Cajero') {
-            if ($usuario['idpadre']) {
-                $perfiles = $this->model->getPerfiles2(array('Administrador'));
-            }else{
-                $perfiles = $this->model->getPerfiles2(array('Administrador', 'Cajero'));
-            }
-        } else if ($usuario['grupo'] == 'Estudiante') {
-            $perfiles = $this->model->getPerfiles2(array('Estudiante', 'Administrador'));
-        }
+        $perfiles = $this->model->getPerfiles2(array('Estudiante', 'Profesional'));
         $this->view->setVars('usuario', $usuario);
         $this->view->setVars('perfiles', $perfiles);
         $this->view->show();

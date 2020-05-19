@@ -1,6 +1,9 @@
 <?php defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');?>
-    <ul class="sidebar-menu">
-        <li class="header"><?php echo $tituloMenu; ?></li>
+    
+<?php //echo $tituloMenu; ?>
+<div class="wrapper-menu">
+ 
+<ul class="sidebar-menu">   
         <?php foreach ($submenus as $value) { ?>
             <li class="treeview">
                 <a href="<?php echo $value['urlmenu']?>" target="contenido">
@@ -9,7 +12,8 @@
                 </a>
             </li>
         <?php } ?>        
-    </ul> 
+</ul> 
+</div>
 <script>
     $(document).ready(function() {
         $('img').css("border","0");                

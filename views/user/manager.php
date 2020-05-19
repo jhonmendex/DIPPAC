@@ -9,7 +9,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
         <fieldset class="colorleyend" style="width: 100%">
             <legend class="colorleyendinto">Opciones</legend>           
             <div id="cajaselect" style="margin-bottom: 15px">
-                <a class="various3" title="Crear usuario" href="index.php?controlador=ManageUsers&accion=createUser" style="cursor: pointer; color: #005500; font-weight: bold;">
+                <a class="various3" title="Crear usuario" href="index.php?controlador=ManageUsers&accion=createUser">
                     + Crear nuevo usuario
                 </a>
             </div>

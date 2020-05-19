@@ -7,7 +7,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
         margin: 1px;
     }
     h1{
-     color: #3c8dbc;
+     color: #212D32;
     font-family: "FUTURABOOK";
     font-size: 30px;
     font-weight: lighter;
@@ -57,6 +57,7 @@ Basados en esta idea nace el propósito del proyecto Detección de problemas de 
                   - Andres Fonseca (Investigador - Estudiante Ingeniería de software) b <br> 
                   - Harold Rodriguez (Investigador - Estudiante Ingeniería de software) <br> 
                   - Cristhian Rodriguez (Investigador - Estudiante Ingeniería de software)  <br> 
+                  - Andres Calderon (Investigador - Estudiante Ingeniería de software)  <br> 
                 </p>
             </div>
         </div>

@@ -6,7 +6,7 @@ class ManageUsersModel extends ModelBase {
 
     public function getUsers() {
         $consult = $this->db->executeQue("select u.idusuario, e.nombreestado, 
-            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo, u.id_padre
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
             from usuarios u, perfiles p, estados e 
             where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador'");
         while ($fila = $this->db->arrayResult($consult)) {
@@ -17,15 +17,14 @@ class ManageUsersModel extends ModelBase {
                 'perfil' => $fila['nombreperfil'],
                 'estado' => $fila['nombreestado'],
                 'fecha' => $fila['fechaingreso'],
-                'grupo' => $fila['grupo'],
-                'idpadre' => $fila['id_padre']);
+                'grupo' => $fila['grupo']);
         }
         return $usuarios;
     }
 
     public function getPerfiles() {
         $resultset = $this->db->executeQue("select * from perfiles 
-            where grupo not in ('Estudiante','Superadministrador', 'No usuario')");
+            where grupo not in ('Superadministrador', 'No usuario')");
         while ($fila = $this->db->arrayResult($resultset)) {
             $perfiles[] = array('id' => $fila['idperfil'],
                 'nombre' => $fila['nombreperfil'],
@@ -47,7 +46,7 @@ class ManageUsersModel extends ModelBase {
         $row = $this->db->arrayResult($consult);
         $idusuario = $row['nextval'];
         $consulta = "insert into usuarios
-        values($idusuario,2,171,$perfil,'$nombrecompleto','$alias','$password',$cedula,'', NULL, NULL,NULL,'$fechaingreso','$email', NULL,'',$fechanacimiento,NULL,NULL)";
+        values($idusuario,2,171,$perfil,'$nombrecompleto','$alias','$password',$cedula,'', NULL, NULL,NULL,'$fechaingreso','$email',$fechanacimiento,NULL)";
         if ($this->db->executeQue($consulta)) {
             $idverify = strrev(urlencode(base64_encode($idusuario)));
             $idid = sha1($idusuario);

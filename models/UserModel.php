@@ -168,7 +168,7 @@ class UserModel extends ModelBase {
     }
 
      public function verifyNet($user){
-        $consulta = $this->db->executeQue("select * from usuarios where id_padre=$user");
+        $consulta = $this->db->executeQue("select * from usuarios");
         $total = $this->db->numRows($consulta);
         if ($total >= 2)  
             {  

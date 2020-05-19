@@ -34,6 +34,7 @@ class ProfilesController extends ControllerBase {
         $this->view->setTemplate('user' . DS . 'editpermissions');
         $this->document->addCss("style");
         $this->document->addCss("orden");
+        $this->document->addCss("icomoon/style");
         $this->document->setHeader();
         $profiles = $this->getModel("Profiles");
         $menus = $profiles->getMenusAndSubmenus($_GET['profile']);

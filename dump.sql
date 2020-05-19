@@ -64,26 +64,6 @@ CREATE SEQUENCE public.beneficiarios_idbeneficiario_seq
 ALTER TABLE public.beneficiarios_idbeneficiario_seq OWNER TO postgres;
 
 --
--- Name: beneficiarios; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.beneficiarios (
-    idbeneficiario integer DEFAULT nextval('public.beneficiarios_idbeneficiario_seq'::regclass) NOT NULL,
-    ciudad integer,
-    nombreusuario character varying(255),
-    cedula bigint,
-    direccion character varying(255),
-    telefonocasa bigint,
-    email character varying(255),
-    id_usuario integer,
-    fechacumple date,
-    parentesco character varying(255)
-);
-
-
-ALTER TABLE public.beneficiarios OWNER TO postgres;
-
---
 -- Name: bodegas_idbodega_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -98,62 +78,6 @@ CREATE SEQUENCE public.bodegas_idbodega_seq
 ALTER TABLE public.bodegas_idbodega_seq OWNER TO postgres;
 
 --
--- Name: bodegas; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.bodegas (
-    bodegaid integer DEFAULT nextval('public.bodegas_idbodega_seq'::regclass) NOT NULL,
-    ciudad integer NOT NULL,
-    nombrebodega character varying(255) NOT NULL,
-    direccionbodega character varying(255) NOT NULL,
-    barrio integer,
-    inventarioinicial integer,
-    prefijobodega text
-);
-
-
-ALTER TABLE public.bodegas OWNER TO postgres;
-
---
--- Name: bodegasproductos; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.bodegasproductos (
-    idbodegaproductos integer NOT NULL,
-    idbodega integer,
-    idproducto integer,
-    stock double precision,
-    stockmaximo double precision,
-    stockminimo double precision,
-    costo double precision,
-    preciobase double precision
-);
-
-
-ALTER TABLE public.bodegasproductos OWNER TO postgres;
-
---
--- Name: bodegasproductos_idbodegaproductos_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.bodegasproductos_idbodegaproductos_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.bodegasproductos_idbodegaproductos_seq OWNER TO postgres;
-
---
--- Name: bodegasproductos_idbodegaproductos_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.bodegasproductos_idbodegaproductos_seq OWNED BY public.bodegasproductos.idbodegaproductos;
-
-
---
 -- Name: categoriasp_idcategoria_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -166,18 +90,6 @@ CREATE SEQUENCE public.categoriasp_idcategoria_seq
 
 
 ALTER TABLE public.categoriasp_idcategoria_seq OWNER TO postgres;
-
---
--- Name: categoriasp; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.categoriasp (
-    idcategoria integer DEFAULT nextval('public.categoriasp_idcategoria_seq'::regclass) NOT NULL,
-    nombrecategoria character varying(255) NOT NULL
-);
-
-
-ALTER TABLE public.categoriasp OWNER TO postgres;
 
 --
 -- Name: ciudades_id_ciudad_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -208,43 +120,6 @@ CREATE TABLE public.ciudades (
 ALTER TABLE public.ciudades OWNER TO postgres;
 
 --
--- Name: comisiones; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.comisiones (
-    idcomision integer NOT NULL,
-    idperiodo integer NOT NULL,
-    idusuario integer,
-    valortotal integer,
-    nousers integer,
-    fechacomision timestamp without time zone
-);
-
-
-ALTER TABLE public.comisiones OWNER TO postgres;
-
---
--- Name: comisiones_idcomision_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.comisiones_idcomision_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.comisiones_idcomision_seq OWNER TO postgres;
-
---
--- Name: comisiones_idcomision_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.comisiones_idcomision_seq OWNED BY public.comisiones.idcomision;
-
-
---
 -- Name: departamentos_iddepartamento_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -272,77 +147,6 @@ CREATE TABLE public.departamentos (
 ALTER TABLE public.departamentos OWNER TO postgres;
 
 --
--- Name: detallecomisiones; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.detallecomisiones (
-    iddetallecomision integer NOT NULL,
-    nivel integer,
-    idfrontal integer,
-    valordetalle integer
-);
-
-
-ALTER TABLE public.detallecomisiones OWNER TO postgres;
-
---
--- Name: detallecomisiones_iddetallecomision_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.detallecomisiones_iddetallecomision_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.detallecomisiones_iddetallecomision_seq OWNER TO postgres;
-
---
--- Name: detallecomisiones_iddetallecomision_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.detallecomisiones_iddetallecomision_seq OWNED BY public.detallecomisiones.iddetallecomision;
-
-
---
--- Name: detalledocumentos; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.detalledocumentos (
-    iddetallecodumentos integer NOT NULL,
-    cantidad double precision,
-    costo double precision,
-    idproducto integer,
-    iddocumento integer
-);
-
-
-ALTER TABLE public.detalledocumentos OWNER TO postgres;
-
---
--- Name: detalledocumentos_iddetallecodumentos_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.detalledocumentos_iddetallecodumentos_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.detalledocumentos_iddetallecodumentos_seq OWNER TO postgres;
-
---
--- Name: detalledocumentos_iddetallecodumentos_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.detalledocumentos_iddetallecodumentos_seq OWNED BY public.detalledocumentos.iddetallecodumentos;
-
-
---
 -- Name: detalleventas_iddetalleventa_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -355,72 +159,6 @@ CREATE SEQUENCE public.detalleventas_iddetalleventa_seq
 
 
 ALTER TABLE public.detalleventas_iddetalleventa_seq OWNER TO postgres;
-
---
--- Name: detalleventas; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.detalleventas (
-    iddetalleventa integer DEFAULT nextval('public.detalleventas_iddetalleventa_seq'::regclass) NOT NULL,
-    idproducto integer NOT NULL,
-    idventa integer NOT NULL,
-    cantidad double precision NOT NULL,
-    precioventa double precision,
-    nivel0 double precision,
-    nivel1 double precision,
-    nivel2 double precision,
-    nivel3 double precision,
-    niveli double precision,
-    valorpuntodetalle double precision,
-    costoalfacturar double precision,
-    cantidaddevuelta double precision
-);
-
-
-ALTER TABLE public.detalleventas OWNER TO postgres;
-
---
--- Name: documentos; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.documentos (
-    iddocumento integer NOT NULL,
-    prefijo character(6),
-    fecha timestamp without time zone,
-    observacion text,
-    tipodocumento text,
-    codigo bigint,
-    idtercero integer,
-    idbodega integer,
-    nombredocumento character(40),
-    codigodocumento bigint,
-    idfactura integer,
-    idperiodo integer
-);
-
-
-ALTER TABLE public.documentos OWNER TO postgres;
-
---
--- Name: documentos_iddocumento_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.documentos_iddocumento_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.documentos_iddocumento_seq OWNER TO postgres;
-
---
--- Name: documentos_iddocumento_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.documentos_iddocumento_seq OWNED BY public.documentos.iddocumento;
-
 
 --
 -- Name: estados_idestado_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -461,23 +199,6 @@ CREATE SEQUENCE public.facturaventas_idfactura_seq
 
 
 ALTER TABLE public.facturaventas_idfactura_seq OWNER TO postgres;
-
---
--- Name: facturaventas; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.facturaventas (
-    idfactura integer DEFAULT nextval('public.facturaventas_idfactura_seq'::regclass) NOT NULL,
-    idventa integer,
-    consecutivo integer,
-    seguimiento character varying(255),
-    fecha date,
-    idperiodo integer,
-    idbodega integer
-);
-
-
-ALTER TABLE public.facturaventas OWNER TO postgres;
 
 --
 -- Name: imagenes_idimagen_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -575,46 +296,6 @@ CREATE SEQUENCE public.modulos_idmodulo_seq
 ALTER TABLE public.modulos_idmodulo_seq OWNER TO postgres;
 
 --
--- Name: movimientos; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.movimientos (
-    idmovimiento integer NOT NULL,
-    idbodegasproductos integer,
-    fecha date,
-    tipomovimiento character varying(255),
-    idfacturaventa integer,
-    idocumento integer,
-    idbodega integer,
-    saldostock double precision,
-    costo double precision
-);
-
-
-ALTER TABLE public.movimientos OWNER TO postgres;
-
---
--- Name: movimientos_idmovimiento_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.movimientos_idmovimiento_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.movimientos_idmovimiento_seq OWNER TO postgres;
-
---
--- Name: movimientos_idmovimiento_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.movimientos_idmovimiento_seq OWNED BY public.movimientos.idmovimiento;
-
-
---
 -- Name: perfiles_id_perfil_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -669,41 +350,6 @@ CREATE TABLE public.perfiles_permisos (
 ALTER TABLE public.perfiles_permisos OWNER TO postgres;
 
 --
--- Name: periodos; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.periodos (
-    idperiodo integer NOT NULL,
-    fechainicio date,
-    fechafin date,
-    nombreperiodo character varying(255)
-);
-
-
-ALTER TABLE public.periodos OWNER TO postgres;
-
---
--- Name: periodos_idperiodo_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.periodos_idperiodo_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.periodos_idperiodo_seq OWNER TO postgres;
-
---
--- Name: periodos_idperiodo_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.periodos_idperiodo_seq OWNED BY public.periodos.idperiodo;
-
-
---
 -- Name: productos_idproducto_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -716,186 +362,6 @@ CREATE SEQUENCE public.productos_idproducto_seq
 
 
 ALTER TABLE public.productos_idproducto_seq OWNER TO postgres;
-
---
--- Name: productos; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.productos (
-    idproducto integer DEFAULT nextval('public.productos_idproducto_seq'::regclass) NOT NULL,
-    idcategoria integer NOT NULL,
-    nombreproducto character varying(255) NOT NULL,
-    puntos double precision NOT NULL,
-    idimagen bigint,
-    referencia character varying(255) NOT NULL,
-    iva integer,
-    estado character varying(50),
-    precio double precision,
-    precioiva double precision,
-    utilidadtotal double precision,
-    utilidadplentiful double precision,
-    nivel0 double precision,
-    nivel1 double precision,
-    nivel2 double precision,
-    nivel3 double precision,
-    niveli double precision,
-    porcentajeutilidad integer,
-    unidadmedida text
-);
-
-
-ALTER TABLE public.productos OWNER TO postgres;
-
---
--- Name: productos_nivel1_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.productos_nivel1_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.productos_nivel1_seq OWNER TO postgres;
-
---
--- Name: productos_nivel1_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.productos_nivel1_seq OWNED BY public.productos.nivel1;
-
-
---
--- Name: productos_porcentajeutilidad_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.productos_porcentajeutilidad_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.productos_porcentajeutilidad_seq OWNER TO postgres;
-
---
--- Name: productos_porcentajeutilidad_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.productos_porcentajeutilidad_seq OWNED BY public.productos.porcentajeutilidad;
-
-
---
--- Name: productosproveedores; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.productosproveedores (
-    idproductosproveedores integer NOT NULL,
-    idproducto integer,
-    idproveedor integer,
-    ultimocosto double precision
-);
-
-
-ALTER TABLE public.productosproveedores OWNER TO postgres;
-
---
--- Name: productosproveedores_idproductosproveedores_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.productosproveedores_idproductosproveedores_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.productosproveedores_idproductosproveedores_seq OWNER TO postgres;
-
---
--- Name: productosproveedores_idproductosproveedores_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.productosproveedores_idproductosproveedores_seq OWNED BY public.productosproveedores.idproductosproveedores;
-
-
---
--- Name: remisiones; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.remisiones (
-    idremision integer NOT NULL,
-    idbodega integer,
-    iddocumento integer,
-    estado text,
-    emisor integer,
-    receptor integer
-);
-
-
-ALTER TABLE public.remisiones OWNER TO postgres;
-
---
--- Name: remisiones_idremision_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.remisiones_idremision_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.remisiones_idremision_seq OWNER TO postgres;
-
---
--- Name: remisiones_idremision_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.remisiones_idremision_seq OWNED BY public.remisiones.idremision;
-
-
---
--- Name: resolucionfacturas; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.resolucionfacturas (
-    idresolucionfactura integer NOT NULL,
-    idbodega integer,
-    minvalue bigint,
-    maxvalue bigint,
-    prefijo text,
-    descripcion text
-);
-
-
-ALTER TABLE public.resolucionfacturas OWNER TO postgres;
-
---
--- Name: resolucionfacturas_idresolucionfactura_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.resolucionfacturas_idresolucionfactura_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.resolucionfacturas_idresolucionfactura_seq OWNER TO postgres;
-
---
--- Name: resolucionfacturas_idresolucionfactura_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.resolucionfacturas_idresolucionfactura_seq OWNED BY public.resolucionfacturas.idresolucionfactura;
-
 
 --
 -- Name: subcategorias_idsubcategoria_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -941,67 +407,6 @@ CREATE TABLE public.submenus (
 ALTER TABLE public.submenus OWNER TO postgres;
 
 --
--- Name: terceros; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.terceros (
-    idtercero integer NOT NULL,
-    nombretercero character varying(255),
-    direccion character varying(255),
-    telefono bigint,
-    nit bigint,
-    ciudad integer,
-    celulartercero bigint,
-    contactotercero text,
-    emailtercero text
-);
-
-
-ALTER TABLE public.terceros OWNER TO postgres;
-
---
--- Name: terceros_idtercero_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.terceros_idtercero_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.terceros_idtercero_seq OWNER TO postgres;
-
---
--- Name: terceros_idtercero_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.terceros_idtercero_seq OWNED BY public.terceros.idtercero;
-
-
---
--- Name: terceros_nit_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.terceros_nit_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.terceros_nit_seq OWNER TO postgres;
-
---
--- Name: terceros_nit_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.terceros_nit_seq OWNED BY public.terceros.nit;
-
-
---
 -- Name: usuarios_idusuario_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -1034,52 +439,12 @@ CREATE TABLE public.usuarios (
     fax bigint,
     fechaingreso date,
     email character varying(255) NOT NULL,
-    id_padre integer,
-    rango character varying(255) NOT NULL,
     fechacumple date,
-    idbarrio integer,
-    idbodega integer
+    idbarrio integer
 );
 
 
 ALTER TABLE public.usuarios OWNER TO postgres;
-
---
--- Name: vencimientoproductos; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.vencimientoproductos (
-    idvencimientoproducto integer NOT NULL,
-    fechavencimiento date,
-    idproducto integer,
-    cantidad integer,
-    alerta integer,
-    idbodega integer
-);
-
-
-ALTER TABLE public.vencimientoproductos OWNER TO postgres;
-
---
--- Name: vencimientoproductos_idvencimientoproducto_seq; Type: SEQUENCE; Schema: public; Owner: postgres
---
-
-CREATE SEQUENCE public.vencimientoproductos_idvencimientoproducto_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.vencimientoproductos_idvencimientoproducto_seq OWNER TO postgres;
-
---
--- Name: vencimientoproductos_idvencimientoproducto_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
---
-
-ALTER SEQUENCE public.vencimientoproductos_idvencimientoproducto_seq OWNED BY public.vencimientoproductos.idvencimientoproducto;
-
 
 --
 -- Name: ventas_idventa_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1094,25 +459,6 @@ CREATE SEQUENCE public.ventas_idventa_seq
 
 
 ALTER TABLE public.ventas_idventa_seq OWNER TO postgres;
-
---
--- Name: ventas; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.ventas (
-    idventa integer DEFAULT nextval('public.ventas_idventa_seq'::regclass) NOT NULL,
-    idusuario integer NOT NULL,
-    fecha date NOT NULL,
-    estado_venta character varying(255) NOT NULL,
-    puntos_venta double precision NOT NULL,
-    precio_venta double precision NOT NULL,
-    tipoenvio character varying(255),
-    idperiodo integer,
-    urlorden text
-);
-
-
-ALTER TABLE public.ventas OWNER TO postgres;
 
 --
 -- Data for Name: barrios; Type: TABLE DATA; Schema: public; Owner: postgres
@@ -2037,34 +1383,6 @@ INSERT INTO public.barrios VALUES (967, 19, 'LAGUNITAS URBANO', 1, NULL);
 INSERT INTO public.barrios VALUES (968, 19, 'MOCHUELO ALTO', 1, NULL);
 INSERT INTO public.barrios VALUES (969, 19, 'EL MOCHUELO II URBANO', 1, NULL);
 INSERT INTO public.barrios VALUES (970, 19, 'GUADALUPE', 1, NULL);
-
-
---
--- Data for Name: beneficiarios; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- Data for Name: bodegas; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.bodegas VALUES (18, 171, 'BODEGA PRINCIPAL', 'Cr 92# 146-48', 619, NULL, NULL);
-
-
---
--- Data for Name: bodegasproductos; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.bodegasproductos VALUES (36487, 18, 2, 89, 1000, 100, 10000, 30000);
-INSERT INTO public.bodegasproductos VALUES (36489, 18, 1, 100000000, 100000000, 1, 0, 40000);
-
-
---
--- Data for Name: categoriasp; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.categoriasp VALUES (9, 'Lectura');
 
 
 --
@@ -3225,14 +2543,6 @@ INSERT INTO public.ciudades VALUES (2, 1, 'El Encanto (CD)', 91263);
 
 
 --
--- Data for Name: comisiones; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.comisiones VALUES (2, 2, 1, 0, NULL, '2016-07-12 00:11:23');
-INSERT INTO public.comisiones VALUES (3, 2, 3, 0, NULL, '2016-07-12 00:11:23');
-
-
---
 -- Data for Name: departamentos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -3275,94 +2585,12 @@ INSERT INTO public.departamentos VALUES (36, 'VICHADA', 99);
 
 
 --
--- Data for Name: detallecomisiones; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- Data for Name: detalledocumentos; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- Data for Name: detalleventas; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.detalleventas VALUES (2, 1, 2, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (3, 2, 3, 1, 40000, NULL, NULL, NULL, NULL, NULL, 4000, NULL, NULL);
-INSERT INTO public.detalleventas VALUES (4, 1, 4, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (5, 1, 5, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (6, 2, 6, 1, 40000, NULL, NULL, NULL, NULL, NULL, 4000, NULL, NULL);
-INSERT INTO public.detalleventas VALUES (7, 1, 7, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (8, 1, 8, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (9, 1, 9, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (10, 1, 10, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (11, 1, 11, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (12, 1, 12, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (13, 1, 13, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (14, 1, 14, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (15, 1, 15, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (16, 1, 16, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (17, 1, 17, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (18, 1, 18, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (19, 1, 19, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (20, 1, 20, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (21, 1, 21, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (22, 1, 22, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (23, 1, 23, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (24, 1, 24, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (25, 1, 25, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (26, 1, 26, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (27, 1, 27, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (28, 1, 28, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (29, 1, 29, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (30, 1, 30, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (31, 1, 31, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (32, 1, 32, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (33, 1, 33, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (34, 1, 34, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (35, 1, 35, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (36, 1, 36, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (37, 1, 37, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (38, 1, 38, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (39, 1, 39, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (40, 1, 40, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (41, 1, 41, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (42, 1, 42, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (43, 1, 43, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (44, 1, 44, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (45, 1, 45, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (46, 1, 46, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (47, 1, 47, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (48, 1, 48, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (49, 1, 49, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (50, 1, 50, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (51, 1, 51, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (52, 1, 52, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-INSERT INTO public.detalleventas VALUES (53, 1, 53, 1, 40000, 0, 0, 0, 0, 0, 4000, 0, NULL);
-
-
---
--- Data for Name: documentos; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
 -- Data for Name: estados; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.estados VALUES (1, 'inactivo');
 INSERT INTO public.estados VALUES (2, 'activo');
 INSERT INTO public.estados VALUES (3, 'en espera');
-
-
---
--- Data for Name: facturaventas; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
 
 
 --
@@ -3402,301 +2630,65 @@ INSERT INTO public.localidades VALUES (19, 'CIUDAD BOLIVAR', 1);
 --
 
 INSERT INTO public.menus VALUES (3, 'Usuarios', 'index.php?controlador=Index&accion=Logo');
-INSERT INTO public.menus VALUES (4, 'Reportes', 'index.php?controlador=Index&accion=Logo');
-INSERT INTO public.menus VALUES (7, 'Caja', 'index.php?controlador=Pos');
-INSERT INTO public.menus VALUES (2, 'Inventario', 'index.php?controlador=Index&accion=Logo');
-INSERT INTO public.menus VALUES (1, 'Oficina personal', 'index.php?controlador=Index&accion=Logo');
-INSERT INTO public.menus VALUES (8, 'Pruebas', 'index.php?controlador=Index&accion=Logo');
-
-
---
--- Data for Name: movimientos; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
+INSERT INTO public.menus VALUES (2, 'Pruebas', 'index.php?controlador=Test&accion=main');
 
 
 --
 -- Data for Name: perfiles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.perfiles VALUES (3, 'Vinculado', 'Vinculado');
-INSERT INTO public.perfiles VALUES (2, 'administrador1', 'Administrador');
 INSERT INTO public.perfiles VALUES (1, 'superadministrador', 'Superadministrador');
-INSERT INTO public.perfiles VALUES (20, 'no vinculado', 'No vinculado');
-INSERT INTO public.perfiles VALUES (26, 'Estudiante', '');
+INSERT INTO public.perfiles VALUES (27, 'Profesor', 'Profesional');
+INSERT INTO public.perfiles VALUES (28, 'Estudiante', 'Estudiante');
+INSERT INTO public.perfiles VALUES (31, 'Tutor', 'Profesional');
 
 
 --
 -- Data for Name: perfiles_permisos; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.perfiles_permisos VALUES (13, 3, 1);
-INSERT INTO public.perfiles_permisos VALUES (16, 3, 4);
-INSERT INTO public.perfiles_permisos VALUES (17, 3, 5);
-INSERT INTO public.perfiles_permisos VALUES (18, 3, 6);
-INSERT INTO public.perfiles_permisos VALUES (19, 3, 7);
 INSERT INTO public.perfiles_permisos VALUES (40, 1, 14);
 INSERT INTO public.perfiles_permisos VALUES (41, 1, 13);
-INSERT INTO public.perfiles_permisos VALUES (49, 2, 1);
-INSERT INTO public.perfiles_permisos VALUES (52, 2, 4);
-INSERT INTO public.perfiles_permisos VALUES (53, 2, 5);
-INSERT INTO public.perfiles_permisos VALUES (54, 2, 6);
-INSERT INTO public.perfiles_permisos VALUES (55, 2, 7);
 INSERT INTO public.perfiles_permisos VALUES (65, 1, 25);
-INSERT INTO public.perfiles_permisos VALUES (119, 20, 1);
-INSERT INTO public.perfiles_permisos VALUES (120, 20, 2);
-INSERT INTO public.perfiles_permisos VALUES (121, 20, 3);
-INSERT INTO public.perfiles_permisos VALUES (122, 20, 7);
 INSERT INTO public.perfiles_permisos VALUES (123, 1, 27);
 INSERT INTO public.perfiles_permisos VALUES (124, 1, 28);
 INSERT INTO public.perfiles_permisos VALUES (125, 1, 29);
-INSERT INTO public.perfiles_permisos VALUES (139, 3, 2);
-INSERT INTO public.perfiles_permisos VALUES (140, 2, 11);
-INSERT INTO public.perfiles_permisos VALUES (141, 2, 16);
 INSERT INTO public.perfiles_permisos VALUES (142, 1, 11);
 INSERT INTO public.perfiles_permisos VALUES (143, 1, 26);
-INSERT INTO public.perfiles_permisos VALUES (144, 2, 26);
 INSERT INTO public.perfiles_permisos VALUES (145, 1, 8);
-INSERT INTO public.perfiles_permisos VALUES (146, 2, 15);
-INSERT INTO public.perfiles_permisos VALUES (147, 2, 8);
-INSERT INTO public.perfiles_permisos VALUES (148, 2, 2);
-INSERT INTO public.perfiles_permisos VALUES (149, 2, 12);
 INSERT INTO public.perfiles_permisos VALUES (150, 1, 2);
 INSERT INTO public.perfiles_permisos VALUES (151, 1, 4);
-INSERT INTO public.perfiles_permisos VALUES (152, 26, 31);
-
-
---
--- Data for Name: periodos; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.periodos VALUES (14, '2017-01-01', '2017-01-31', 'ENERO2017');
-INSERT INTO public.periodos VALUES (15, '2017-02-01', '2017-02-28', 'FEBRERO2017');
-INSERT INTO public.periodos VALUES (16, '2017-03-01', '2017-03-31', 'MARZO2017');
-INSERT INTO public.periodos VALUES (17, '2017-04-01', '2017-04-30', 'ABRIL2017');
-INSERT INTO public.periodos VALUES (18, '2017-05-01', '2017-05-31', 'MAYO2017');
-INSERT INTO public.periodos VALUES (19, '2017-06-01', '2017-06-30', 'JUNIO2017');
-INSERT INTO public.periodos VALUES (20, '2017-07-01', '2017-07-31', 'JULIO2017');
-INSERT INTO public.periodos VALUES (21, '2017-08-01', '2017-08-31', 'AGOSTO2017');
-INSERT INTO public.periodos VALUES (22, '2017-09-01', '2017-09-30', 'SEPTIEMBRE2017');
-INSERT INTO public.periodos VALUES (23, '2017-10-01', '2017-10-31', 'OCTUBRE2017');
-INSERT INTO public.periodos VALUES (24, '2017-11-01', '2017-11-30', 'NOVIEMBRE2017');
-INSERT INTO public.periodos VALUES (25, '2017-12-01', '2017-12-31', 'DICIEMBRE2017');
-INSERT INTO public.periodos VALUES (26, '2018-01-01', '2018-01-31', 'ENERO2018');
-INSERT INTO public.periodos VALUES (27, '2018-02-01', '2018-02-28', 'FEBRERO2018');
-INSERT INTO public.periodos VALUES (28, '2018-03-01', '2018-03-31', 'MARZO2018');
-INSERT INTO public.periodos VALUES (29, '2018-04-01', '2018-04-30', 'ABRIL2018');
-INSERT INTO public.periodos VALUES (30, '2018-05-01', '2018-05-31', 'MAYO2018');
-INSERT INTO public.periodos VALUES (31, '2018-06-01', '2018-06-30', 'JUNIO2018');
-INSERT INTO public.periodos VALUES (32, '2018-07-01', '2018-07-31', 'JULIO2018');
-INSERT INTO public.periodos VALUES (33, '2018-08-01', '2018-08-31', 'AGOSTO2018');
-INSERT INTO public.periodos VALUES (34, '2018-09-01', '2018-09-30', 'SEPTIEMBRE2018');
-INSERT INTO public.periodos VALUES (35, '2018-10-01', '2018-10-31', 'OCTUBRE2018');
-INSERT INTO public.periodos VALUES (36, '2018-11-01', '2018-11-30', 'NOVIEMBRE2018');
-INSERT INTO public.periodos VALUES (2, '20156-01-01', '2016-01-31', 'ENERO 2016');
-INSERT INTO public.periodos VALUES (3, '2016-02-01', '2016-02-29', 'FEBRERO 2016');
-INSERT INTO public.periodos VALUES (4, '2016-03-01', '2016-03-31', 'MARZO 2016');
-INSERT INTO public.periodos VALUES (5, '2016-04-01', '2016-04-30', 'ABRIL 2016');
-INSERT INTO public.periodos VALUES (37, '2018-12-01', '2018-12-31', 'DICIEMBRE2018');
-INSERT INTO public.periodos VALUES (6, '2016-05-01', '2016-05-31', 'MAYO 2016');
-INSERT INTO public.periodos VALUES (7, '2016-06-01', '2016-06-30', 'JUNIO 2016');
-INSERT INTO public.periodos VALUES (8, '2016-07-01', '2016-07-31', 'JULIO 2016');
-INSERT INTO public.periodos VALUES (9, '2016-08-01', '2016-08-31', 'AGOSTO 2016');
-INSERT INTO public.periodos VALUES (10, '2016-09-01', '2016-09-30', 'SEPTIEMBRE 2016');
-INSERT INTO public.periodos VALUES (11, '2016-10-01', '2016-10-31', 'OCTUBRE 2016');
-INSERT INTO public.periodos VALUES (12, '2016-11-01', '2016-11-30', 'NOVIEMBRE 2016');
-INSERT INTO public.periodos VALUES (13, '2016-12-01', '2016-12-31', 'DICIEMBRE 2016');
-
-
---
--- Data for Name: productos; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.productos VALUES (1, 9, 'LICENCIA DE AFILIACION', 4000, 1, 'LICINS', 0, 'activo', 40000, 40000, 0, 0, 0, 0, 2, 0, 0, 100, 'und');
-INSERT INTO public.productos VALUES (2, 9, 'REVISTA TOMO1', 4000, 1, '111111', 0, 'activo', 40000, 40000, 0, 0, 0, 0, 0, 0, 0, 10, 'und');
-
-
---
--- Data for Name: productosproveedores; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- Data for Name: remisiones; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- Data for Name: resolucionfacturas; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
+INSERT INTO public.perfiles_permisos VALUES (153, 28, 31);
+INSERT INTO public.perfiles_permisos VALUES (154, 27, 6);
+INSERT INTO public.perfiles_permisos VALUES (157, 31, 14);
+INSERT INTO public.perfiles_permisos VALUES (159, 31, 6);
+INSERT INTO public.perfiles_permisos VALUES (160, 27, 32);
+INSERT INTO public.perfiles_permisos VALUES (161, 31, 32);
+INSERT INTO public.perfiles_permisos VALUES (162, 28, 6);
+INSERT INTO public.perfiles_permisos VALUES (163, 28, 32);
+INSERT INTO public.perfiles_permisos VALUES (164, 27, 14);
+INSERT INTO public.perfiles_permisos VALUES (165, 27, 13);
 
 
 --
 -- Data for Name: submenus; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.submenus VALUES (3, 1, 'compras recientes', 'index.php?controlador=Purchases', 'images/imagenes-menu/comprasr.png');
-INSERT INTO public.submenus VALUES (11, 2, 'Productos', 'index.php?controlador=Products', 'images/imagenes-menu/products.png');
-INSERT INTO public.submenus VALUES (12, 2, 'proveedores', 'index.php?controlador=Suppliers', 'images/imagenes-menu/proveedores.png');
-INSERT INTO public.submenus VALUES (14, 3, 'Perfiles', 'index.php?controlador=Profiles', 'images/imagenes-menu/profiles.png');
-INSERT INTO public.submenus VALUES (13, 3, 'Usuarios', 'index.php?controlador=ManageUsers', 'images/imagenes-menu/managerusers.png');
-INSERT INTO public.submenus VALUES (15, 2, 'Compra a proveedor', 'index.php?controlador=SupplierBuy', 'images/imagenes-menu/csupplier.png');
-INSERT INTO public.submenus VALUES (16, 2, 'Administrar ordenes de pedido', 'index.php?controlador=ManPurchaseOrder', 'images/imagenes-menu/admonordenespedido.png');
-INSERT INTO public.submenus VALUES (18, 2, 'Devolucion en ventas', 'index.php?controlador=ReturnSales', 'images/imagenes-menu/devolucionventa.png');
-INSERT INTO public.submenus VALUES (19, 2, 'remisiones', 'index.php?controlador=Remissions', 'images/imagenes-menu/remisiones.png');
-INSERT INTO public.submenus VALUES (20, 2, 'Retiros', 'index.php?controlador=Retiros', 'images/imagenes-menu/retiros.png');
-INSERT INTO public.submenus VALUES (21, 2, 'Reorganizar productos', 'index.php?controlador=Reorganization', 'images/imagenes-menu/reorganization.png');
-INSERT INTO public.submenus VALUES (22, 4, 'Resumen de saldos', 'index.php?controlador=Reports&accion=resumenSaldos', 'images/imagenes-menu/resumensaldos.png');
-INSERT INTO public.submenus VALUES (23, 4, 'Reporte de ventas', 'index.php?controlador=Reports&accion=reporteVentas', 'images/imagenes-menu/reportedeventas.png');
-INSERT INTO public.submenus VALUES (24, 4, 'Resumen de compras', 'index.php?controlador=Reports&accion=resumenCompras', 'images/imagenes-menu/resumencompras.png');
-INSERT INTO public.submenus VALUES (17, 4, 'stock y movimientos', 'index.php?controlador=StockMovements', 'images/imagenes-menu/movimientos.png');
-INSERT INTO public.submenus VALUES (25, 3, 'inscripciones', 'index.php?controlador=Associated', 'images/imagenes-menu/add_user.png');
-INSERT INTO public.submenus VALUES (26, 2, 'Ajuste de inventario', 'index.php?controlador=InventoryAdjust', 'images/imagenes-menu/ajuste.png');
-INSERT INTO public.submenus VALUES (27, 3, 'Generar comisiones', 'index.php?controlador=GenerateCommission', 'images/imagenes-menu/generarcomisiones.png');
-INSERT INTO public.submenus VALUES (28, 3, 'Configuracion general', 'index.php?controlador=Configuration', 'images/imagenes-menu/configuraciongeneral.png');
-INSERT INTO public.submenus VALUES (29, 3, 'Visor de volumen', 'index.php?controlador=TreeCheck', 'images/imagenes-menu/user_group.png');
-INSERT INTO public.submenus VALUES (30, 7, 'Caja', 'index.php?controlador=Pos', 'images/imagenes-menu/caja.png');
 INSERT INTO public.submenus VALUES (1, 1, 'Inicio', 'index.php?controlador=Index&accion=Logo', 'icon-inicio');
-INSERT INTO public.submenus VALUES (2, 1, 'Carrito de compras', 'index.php?controlador=Shopping', 'icon-shopping-cart');
-INSERT INTO public.submenus VALUES (4, 1, 'Mis comisiones', 'index.php?controlador=Commission', 'icon-comisiones');
-INSERT INTO public.submenus VALUES (5, 1, 'Visor de volumen', 'index.php?controlador=TreeCheck', 'icon-visor-de-volumen');
-INSERT INTO public.submenus VALUES (6, 1, 'Inscripciones', 'index.php?controlador=Associated', 'icon-inscripciones');
 INSERT INTO public.submenus VALUES (7, 1, 'Perfil', 'index.php?controlador=Profile', 'icon-perfil');
-INSERT INTO public.submenus VALUES (8, 2, 'Bodegas', 'index.php?controlador=Warehouse', 'images/imagenes-menu/warehouse.png');
-INSERT INTO public.submenus VALUES (31, 8, 'configuración', 'index.php?controlador=Warehouse', 'icon-perfil');
-
-
---
--- Data for Name: terceros; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.terceros VALUES (43, 'RED SOLIDARIA', 'Cra.75 06-30', 2556441, 900355612, 171, NULL, 'James rodriguez', NULL);
+INSERT INTO public.submenus VALUES (6, 2, 'Pruebas', 'index.php?controlador=Test', 'images/imagenes-menu/test.svg');
+INSERT INTO public.submenus VALUES (32, 2, 'Informe', 'index.php?controlador=Test&accion=testResult', 'images/imagenes-menu/test.svg');
+INSERT INTO public.submenus VALUES (14, 3, 'Perfiles', 'index.php?controlador=Profiles', 'icon-perfil');
+INSERT INTO public.submenus VALUES (13, 3, 'Usuarios', 'index.php?controlador=ManageUsers', 'icon-inscripciones');
 
 
 --
 -- Data for Name: usuarios; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.usuarios VALUES (1, 2, 171, 1, 'RESOL', 'resol', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 9003656096, 'Carrera 92#146-48, Edificio Jerry Of. 201', 11111, 1111, 1111, '2012-01-01', 'info@glugg.net', 0, 'primero', '2012-01-01', NULL, NULL);
-INSERT INTO public.usuarios VALUES (7, 2, 171, 3, 'MARLENY YANETH GONZALEZ', 'MAR7', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 51719353, 'Calle 36S No. 50B - 02', 4001760, 3222152564, 0, '2016-07-18', 'yanethgonzalez_2009@hotmail.es', 3, '', '1963-06-23', 813, NULL);
-INSERT INTO public.usuarios VALUES (5, 2, 171, 3, 'ANA MARIA UYABAN BLANCO', 'ANA5', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 41691081, 'Cra 94 No. 152-50', 6856799, 3114469336, 0, '2016-07-18', 'aniuyaban@gmail.com', 4, '', '1955-07-17', 643, NULL);
-INSERT INTO public.usuarios VALUES (4, 2, 171, 2, 'CAROL QUINTERO UYABAN', 'CAR4', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 52850897, 'CR 94 152 #50', 6856799, 3213314427, 0, '2016-07-12', 'carolginethq@yahoo.com', 1, '', '1980-08-18', 643, 18);
-INSERT INTO public.usuarios VALUES (8, 2, 171, 3, 'JACKELIN ESCORCIA MONTERO', 'JAC8', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1047400649, 'Cra 91 No. 148-56 Apto 301', 6843410, 3005546629, 0, '2016-07-18', 'jescorm88@gmail.com', 3, '', '1988-09-18', 662, NULL);
-INSERT INTO public.usuarios VALUES (3, 2, 171, 2, 'JENNY PAOLA CASTRO DAZA', 'JEN3', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1013527369, 'Cra 92 No. 146-48', 0, 3503146976, 0, '2016-07-11', 'paitopast21@gmail.com', 1, '', '1987-01-24', 647, 18);
-INSERT INTO public.usuarios VALUES (23, 2, 171, 3, 'DERVI MARCELA PORRAS GAITAN', 'DER23', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 35498666, 'Calle 148 No. 91 - 12', 4729550, 3118581360, 0, '2016-07-18', 'marcelitaoriflame@gmail.com', 21, '', '1959-10-27', 661, NULL);
-INSERT INTO public.usuarios VALUES (9, 2, 171, 3, 'GLORIA ELISA CHIPATECUA MOLINA', 'GLO9', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1030524582, 'Cra 92 No. 146-40', 0, 3503146972, 0, '2016-07-18', 'gloriaelisa1986@hotmail.com', 6, '', '1986-04-09', 615, NULL);
-INSERT INTO public.usuarios VALUES (19, 2, 171, 3, 'NICOLAS ANDRES CARDONA ORJUELA', 'NIC19', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1018427306, 'Avenida Calle 80 No. 93-26', 2520132, 3177578758, 0, '2016-07-18', 'djnico149@hotmail.com', 17, '', '1989-07-31', 512, NULL);
-INSERT INTO public.usuarios VALUES (20, 2, 171, 3, 'CECILIA CARVAJAL DE CARDONA', 'CEC20', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 41432993, 'Avenida calle 80 No. 93 - 26', 2520132, 3158994776, 0, '2016-07-18', 'ceciliacarvajal27@hotmail.com', 19, '', '1949-01-31', 512, NULL);
-INSERT INTO public.usuarios VALUES (21, 2, 171, 3, 'LILIAN ANDREA ALVAREZ PORRAS', 'LIL21', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 52797993, 'Calle 148 No. 91-12', 7747911, 3192088897, 0, '2016-07-18', 'lilianalvarez09@gmail.com', 8, '', '1980-05-09', 661, NULL);
-INSERT INTO public.usuarios VALUES (15, 2, 171, 3, 'ALIX PATRICIA FERNANDEZ NUMA', 'ALI15', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 60290673, 'Calle 26 Sur No. 78H - 30', 0, 3192338383, 0, '2016-07-18', 'alixpatriciafernadeznuma@hotmail.com', 13, '', '1959-12-12', 803, NULL);
-INSERT INTO public.usuarios VALUES (12, 2, 171, 3, 'YEIMMY VIVIANA DUARTE ORJUELA', 'YEI12', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 53097290, 'Cra 81H No. 49-08 Sur', 0, 3212265939, 0, '2016-07-18', 'yeimmyduarte13@hotmail.com', 11, '', '1984-06-14', 267, NULL);
-INSERT INTO public.usuarios VALUES (11, 2, 171, 3, 'JHEFFERSON RODRIGUEZ GONZALEZ', 'JHE11', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1045854251, 'Calle 36S No. 50B - 02', 4001760, 0, 0, '2016-07-18', 'sincorreo1@gmail.com', 7, '', '1998-07-01', 803, NULL);
-INSERT INTO public.usuarios VALUES (26, 2, 171, 3, 'MARISOL PORRAS GAITAN', 'MAR26', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 52358005, 'calle 148 No. 91 - 12', 4729550, 3142887313, 0, '2016-07-19', 'maryj056@live.com', 24, '', '1961-09-25', 661, NULL);
-INSERT INTO public.usuarios VALUES (25, 2, 171, 3, 'MARY LUZ BARRERA ALVARADO', 'MAR25', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 52356696, 'Cra 91 No. 148 - 37', 0, 3165445152, 0, '2016-07-18', 'maju9691@gmail.com', 22, '', '1977-08-28', 613, NULL);
-INSERT INTO public.usuarios VALUES (16, 2, 171, 3, 'MARIA AURORA PAEZ ARIAS', 'MAR16', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 35373614, 'Calle 6B No. 79C - 81', 8001583, 3203427787, 0, '2016-07-18', 'sincorreo2@gmail.com', 15, '', '1954-06-29', 803, NULL);
-INSERT INTO public.usuarios VALUES (24, 2, 171, 3, 'MARTHA LUCIA VASQUEZ GOMEZ', 'MAR24', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 41622361, 'Calle 148 No. 91 - 12', 0, 3125176537, 0, '2016-07-18', 'vasquezgomez@hotmail.com', 23, '', '1954-04-29', 623, NULL);
-INSERT INTO public.usuarios VALUES (22, 2, 171, 3, 'JAIRO ALBERTO ARIAS RUBIANO', 'JAI22', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 79601962, 'Calle 148 No. 91 - 12', 7747911, 3192088897, 0, '2016-07-18', 'jariasrubiano@gmail.com', 21, '', '1973-12-14', 661, NULL);
-INSERT INTO public.usuarios VALUES (18, 2, 171, 3, 'HUGO MALDONADO BELTRAN', 'HUG18', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 79893674, 'Calle 86 No. 95D - 03 apto 204 Bloque 3', 2275043, 3124543301, 0, '2016-07-18', 'sincorreo3@gmail.com', 17, '', '1976-08-14', 521, NULL);
-INSERT INTO public.usuarios VALUES (17, 2, 171, 3, 'ANA JULIA DAZA SANCHEZ', 'ANA17', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 39721871, 'Calle 86 No. 95D - 03 apto 204 Bloque 3', 2275043, 3107878999, 0, '2016-07-18', 'anajuliadaza@gmail.com', 10, '', '1976-03-30', 521, NULL);
-INSERT INTO public.usuarios VALUES (14, 2, 171, 3, 'CARLOS ANDRES LOBATON RAMOS', 'CAR14', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 80151330, 'Cra 93D No. 6 - 37 interior 5 apto 501', 0, 3223613998, 0, '2016-07-18', 'carlosacomercial@hotmail.com', 12, '', '1980-11-15', 803, NULL);
-INSERT INTO public.usuarios VALUES (13, 2, 171, 3, 'TRANSITO DIAZ BERMUDEZ', 'TRA13', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 41378803, 'Calle 26 Sur No. 78H - 30', 2731660, 3144095118, 0, '2016-07-18', 'funjuncol@gmail.com', 12, '', '1947-05-09', 267, NULL);
-INSERT INTO public.usuarios VALUES (10, 2, 171, 3, 'DAVID DUEÑAS RUEDA', 'DAV10', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 13839788, 'Calle 36S No. 50B - 02', 4001760, 3153273548, 0, '2016-07-18', 'daviddr_1383@hotmail.com', 7, '', '1955-04-01', 803, NULL);
-INSERT INTO public.usuarios VALUES (6, 2, 171, 3, 'LAURA CAMILA MORENO CRISTANCHO', 'LAU6', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1018484681, 'calle 8C No. 87B - 75', 7519777, 3214955771, 0, '2016-07-18', 'disenolauramoreno@gmail.com', 4, '', '1996-03-12', 661, NULL);
-INSERT INTO public.usuarios VALUES (28, 2, 171, 3, 'ANA FELISA QUESADA', 'ANA28', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 21168167, 'Calle 26S No. 78-30', 2930681, 3155686595, 0, '2016-07-22', 'anafeliq@gmail.com', 13, '', '1951-12-27', 803, NULL);
-INSERT INTO public.usuarios VALUES (27, 2, 171, 3, 'DERLY CRISTINA SIERRA', 'DER27', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 52705253, 'Calle 158 No. 96A-25', 8034557, 3158369129, 0, '2016-07-22', 'criss1102@hotmail.com', 24, '', '1979-07-08', 619, NULL);
-INSERT INTO public.usuarios VALUES (34, 2, 171, 3, 'OLGA PAEZ ARIAS', 'OLG34', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 35374004, 'Calle 6 B No. 79C - 81', 0, 3138998642, 0, '2016-08-02', 'sincorreo06@gmail.com', 16, '', '1947-08-05', 416, NULL);
-INSERT INTO public.usuarios VALUES (35, 2, 171, 3, 'NESTOR NOE ORTIZ ALVAREZ', 'NES35', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 8001665, 'Calle 34Sur No. 78C - 54', 3056840, 3124828589, 0, '2016-08-03', 'nestorortiz2006@yahoo.es', 31, '', '1966-03-01', 417, NULL);
-INSERT INTO public.usuarios VALUES (32, 2, 171, 3, 'MARLEN BALLESTEROS', 'MAR32', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 51980815, 'Carrera 80 No. 10A - 43', 0, 3145732377, 0, '2016-08-02', 'marball057@gmail.com', 29, '', '1968-02-02', 417, NULL);
-INSERT INTO public.usuarios VALUES (30, 2, 171, 3, 'ANA BERTHA VANEGAS', 'ANA30', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 41384720, 'Cra 78A No. 6B-28', 4498554, 3219264031, 0, '2016-07-27', 'vanegas20bertha@gmail.com', 28, '', '1945-10-24', 415, NULL);
-INSERT INTO public.usuarios VALUES (29, 2, 171, 3, 'LUIS ELADIO BELTRAN ALFARO', 'LUI29', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 80269594, 'Carrera 80 No. 10A - 43', 0, 3215522665, 0, '2016-07-25', 'lubeltran.beltran4@gmail.com', 15, '', '1965-11-30', 417, NULL);
-INSERT INTO public.usuarios VALUES (33, 2, 171, 3, 'LUIS GERARDO BELTRAN BALLESTEROS', 'LUI33', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1012356985, 'Carrera 80 No. 10A - 43', NULL, 3002220919, NULL, '2016-08-02', 'luiguibeltran14@gmail.com', 29, '', '1989-04-14', 417, NULL);
-INSERT INTO public.usuarios VALUES (31, 2, 171, 3, 'MARIA CRISTINA TORRES OLIVEROS', 'MAR31', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 28844645, 'Calle 34Sur No. 78C - 54', 3056840, 3112339195, 0, '2016-07-27', 'mariacristi30@hotmail.com', 16, '', '1960-07-09', 354, NULL);
-INSERT INTO public.usuarios VALUES (36, 2, 171, 3, 'JHON ORTIZ TORRES', 'JHO36', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1030611216, 'Calle 34Sur No. 78C - 54', 3056840, 3188981429, 0, '2016-08-03', 'jhonortiz@hotmail.com', 31, '', '1992-07-06', 417, NULL);
-INSERT INTO public.usuarios VALUES (39, 2, 171, 3, 'EDNA YADIRA PINZON', 'EDN39', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 52833852, 'Calle 48 Sur No. 87 - 86', 7530828, 3156023127, 0, '2016-08-10', 'sstyadira@gmail.com', 28, '', '1980-09-30', 32, NULL);
-INSERT INTO public.usuarios VALUES (38, 2, 171, 3, 'CRISTIAN ANDRES ORTIZ', 'CRI38', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1030647340, 'Calle 34Sur No. 78C - 54', 0, 0, 0, '2016-08-10', 'ortizcristhianor@hotmail.com', 35, '', '1994-06-11', 272, NULL);
-INSERT INTO public.usuarios VALUES (37, 2, 171, 3, 'ANGELICA MARIA GARCIA PAIPILLA', 'ANG37', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 52381694, 'Cra 119A No. 63K - 42', 0, 3112825661, 0, '2016-08-10', 'agpbodega08@gmail.com', 32, '', '1977-07-08', 530, NULL);
-INSERT INTO public.usuarios VALUES (41, 1, 171, 3, 'SEGUNDO OLIVEROS RIOS ALARCON', 'SEG41', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 79584852, 'Cra 119A No. 63K - 42', 0, 3115420273, 0, '2016-08-30', 'usuariosincorreo1@gmail.com', 32, '', '1971-05-16', 760, NULL);
-INSERT INTO public.usuarios VALUES (42, 1, 171, 3, 'LAURA CATALINA GUEVARA PAEZ', 'LAU42', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1022386597, 'Carrera 80 No. 10A - 43', 0, 3057758615, 0, '2016-08-30', 'kta1708@gmail.com', 33, '', '1993-08-17', 760, NULL);
-INSERT INTO public.usuarios VALUES (43, 1, 171, 3, 'YOLIMA PAEZ ESCALANTE', 'YOL43', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 39624750, 'Carrera 80 No. 10A - 43', 0, 3123474254, 0, '2016-08-30', 'yolypaezescalante@hotmail.com', 42, '', '1973-09-29', 760, NULL);
-INSERT INTO public.usuarios VALUES (44, 1, 171, 3, 'ANDRES DUQUE SEICHTER', 'AND44', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 9524837, 'Carrera 80 No. 10A - 43', 0, 3202278610, 0, '2016-08-30', 'dogeandres@gmail.com', 43, '', '1962-03-04', 760, NULL);
-INSERT INTO public.usuarios VALUES (45, 1, 171, 3, 'CARLOS JULIO LOBATON', 'CAR45', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 17127126, 'calle 48 No. 80I - 16', 2995960, 3214040895, 0, '2016-08-30', 'usuariosincorreo2@gmail.com', 14, '', '1944-06-01', 760, NULL);
-INSERT INTO public.usuarios VALUES (46, 1, 171, 3, 'GRACIELA NARANJO NARANJO', 'GRA46', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 41331536, 'Cra 79 A No. 6B - 84', 4941558, 3106877171, 0, '2016-08-30', 'usuariosincorreo3@gmail.com', 34, '', '1944-11-10', 760, NULL);
-INSERT INTO public.usuarios VALUES (47, 1, 171, 3, 'NESTOR HARBEY ORTIZ', 'NES47', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1106891381, 'Calle 34Sur No. 78C - 54', 0, 3219337242, 0, '2016-08-30', 'usuariosincorreo4@gmail.co', 35, '', '1989-08-11', 760, NULL);
-INSERT INTO public.usuarios VALUES (48, 1, 171, 3, 'FANY ROCIO ZUARES', 'FAN48', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1106892661, 'Calle 34Sur No. 78C - 54', 0, 3115343189, 0, '2016-08-30', 'farsuare@bancolombia.com.co', 47, '', '1990-12-27', 760, NULL);
-INSERT INTO public.usuarios VALUES (49, 1, 171, 3, 'MABEL CASTILLO SANCHES', 'MAB49', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 52314935, 'Calle 34Sur No. 78C - 39', 2647609, 3192552121, 0, '2016-08-30', 'usuariosincorreo5@gmail.com', 36, '', '1976-03-09', 760, NULL);
-INSERT INTO public.usuarios VALUES (50, 1, 171, 3, 'ANGIE TATIANA CASALLAS CASTILLO', 'ANG50', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1030665382, 'Calle 34Sur No. 78C - 39', 2647609, 3144246339, 0, '2016-08-30', 'usuariosincorreo6@gmail.com', 49, '', '1996-05-01', 760, NULL);
-INSERT INTO public.usuarios VALUES (51, 1, 171, 3, 'ASCENETH MEJIA OSORIO', 'ASC51', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 41417217, 'Calle 34Sur No. 78C - 61', 2732669, 3115817217, 0, '2016-08-30', 'antonioalvaro35@gmail.com', 49, '', '1947-03-08', 760, NULL);
-INSERT INTO public.usuarios VALUES (40, 2, 171, 3, 'JURGEN KHAUL FLOREZ GAITAN', 'JUR40', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1016033083, 'calle 15 No. 119A -40 bloque 9 casa 8', 4180624, 3222786398, 0, '2016-08-22', 'jfgel3@gmail.com', 9, '', '1991-01-11', 460, NULL);
-INSERT INTO public.usuarios VALUES (52, 2, 171, 26, 'javier', 'javier', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 23234, 'safsf', NULL, NULL, NULL, NULL, 'javier@gmail.com', NULL, 'primero', NULL, NULL, NULL);
-
-
---
--- Data for Name: vencimientoproductos; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-
-
---
--- Data for Name: ventas; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.ventas VALUES (2, 31, '2016-07-11', 'espera', 0, 40000, NULL, 8, 'C:Bitnamiwappstack-5.6.20-1apache2htdocs
-edsolapp	mpOrdenDePedido00021468293580.pdf');
-INSERT INTO public.ventas VALUES (3, 1, '2016-07-11', 'espera', 4000, 40000, '', 8, 'C:Bitnamiwappstack-5.6.20-1apache2htdocs
-edsolapp	mpOrdenDePedido00031468294200.pdf');
-INSERT INTO public.ventas VALUES (4, 3, '2016-07-11', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido00041468299568.pdf');
-INSERT INTO public.ventas VALUES (5, 4, '2016-07-12', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido00051468344968.pdf');
-INSERT INTO public.ventas VALUES (6, 4, '2016-07-12', 'espera', 4000, 40000, '', 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido00061468346659.pdf');
-INSERT INTO public.ventas VALUES (7, 5, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido00071468860236.pdf');
-INSERT INTO public.ventas VALUES (8, 6, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido00081468860485.pdf');
-INSERT INTO public.ventas VALUES (9, 7, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido00091468861691.pdf');
-INSERT INTO public.ventas VALUES (10, 8, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000101468861995.pdf');
-INSERT INTO public.ventas VALUES (11, 9, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000111468862435.pdf');
-INSERT INTO public.ventas VALUES (12, 10, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000121468862862.pdf');
-INSERT INTO public.ventas VALUES (13, 11, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000131468863066.pdf');
-INSERT INTO public.ventas VALUES (14, 12, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000141468863380.pdf');
-INSERT INTO public.ventas VALUES (15, 13, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000151468863816.pdf');
-INSERT INTO public.ventas VALUES (16, 14, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000161468865173.pdf');
-INSERT INTO public.ventas VALUES (17, 15, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000171468865439.pdf');
-INSERT INTO public.ventas VALUES (18, 16, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000181468865659.pdf');
-INSERT INTO public.ventas VALUES (19, 17, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000191468865887.pdf');
-INSERT INTO public.ventas VALUES (20, 18, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000201468866131.pdf');
-INSERT INTO public.ventas VALUES (21, 19, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000211468866364.pdf');
-INSERT INTO public.ventas VALUES (22, 20, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000221468866527.pdf');
-INSERT INTO public.ventas VALUES (23, 21, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000231468866694.pdf');
-INSERT INTO public.ventas VALUES (24, 22, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000241468866859.pdf');
-INSERT INTO public.ventas VALUES (25, 23, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000251468867023.pdf');
-INSERT INTO public.ventas VALUES (26, 24, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000261468867185.pdf');
-INSERT INTO public.ventas VALUES (27, 25, '2016-07-18', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000271468867377.pdf');
-INSERT INTO public.ventas VALUES (28, 26, '2016-07-19', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000281468944103.pdf');
-INSERT INTO public.ventas VALUES (29, 27, '2016-07-22', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000291469196607.pdf');
-INSERT INTO public.ventas VALUES (30, 28, '2016-07-22', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000301469196829.pdf');
-INSERT INTO public.ventas VALUES (31, 29, '2016-07-25', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000311469473491.pdf');
-INSERT INTO public.ventas VALUES (32, 30, '2016-07-27', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000321469628731.pdf');
-INSERT INTO public.ventas VALUES (33, 31, '2016-07-27', 'espera', 0, 40000, NULL, 8, '/home/gluggnet/public_html/redsolcolombia.com/app/tmp/OrdenDePedido000331469642297.pdf');
-INSERT INTO public.ventas VALUES (34, 32, '2016-08-02', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000341470150328.pdf');
-INSERT INTO public.ventas VALUES (35, 33, '2016-08-02', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000351470150473.pdf');
-INSERT INTO public.ventas VALUES (36, 34, '2016-08-02', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000361470150822.pdf');
-INSERT INTO public.ventas VALUES (37, 35, '2016-08-03', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000371470240554.pdf');
-INSERT INTO public.ventas VALUES (38, 36, '2016-08-03', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000381470240816.pdf');
-INSERT INTO public.ventas VALUES (39, 37, '2016-08-10', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000391470842758.pdf');
-INSERT INTO public.ventas VALUES (40, 38, '2016-08-10', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000401470844176.pdf');
-INSERT INTO public.ventas VALUES (41, 39, '2016-08-10', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000411470849086.pdf');
-INSERT INTO public.ventas VALUES (42, 40, '2016-08-22', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000421471886346.pdf');
-INSERT INTO public.ventas VALUES (43, 41, '2016-08-30', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000431472590860.pdf');
-INSERT INTO public.ventas VALUES (44, 42, '2016-08-30', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000441472591184.pdf');
-INSERT INTO public.ventas VALUES (45, 43, '2016-08-30', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000451472591512.pdf');
-INSERT INTO public.ventas VALUES (46, 44, '2016-08-30', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000461472591671.pdf');
-INSERT INTO public.ventas VALUES (47, 45, '2016-08-30', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000471472592640.pdf');
-INSERT INTO public.ventas VALUES (48, 46, '2016-08-30', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000481472592923.pdf');
-INSERT INTO public.ventas VALUES (49, 47, '2016-08-30', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000491472593245.pdf');
-INSERT INTO public.ventas VALUES (50, 48, '2016-08-30', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000501472593553.pdf');
-INSERT INTO public.ventas VALUES (51, 49, '2016-08-30', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000511472593809.pdf');
-INSERT INTO public.ventas VALUES (52, 50, '2016-08-30', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000521472594093.pdf');
-INSERT INTO public.ventas VALUES (53, 51, '2016-08-30', 'espera', 0, 40000, NULL, 9, '/home/gluggnet/public_html/resol.com.co/app/tmp/OrdenDePedido000531472594242.pdf');
+INSERT INTO public.usuarios VALUES (1, 2, 171, 1, 'jhon mendez', 'jmendez', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 9003656096, 'Carrera 92#146-48, Edificio Jerry Of. 201', 11111, 1111, 1111, '2012-01-01', 'jhonmendex@gmail.com', '2012-01-01', NULL);
+INSERT INTO public.usuarios VALUES (58, 2, 171, 27, 'ESTUDIANTE1', 'ESTUDIANTE1', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 123456, '', NULL, NULL, NULL, '2020-05-19', 'estudiante1@gmail.com', '2020-05-05', NULL);
+INSERT INTO public.usuarios VALUES (57, 2, 171, 31, 'TUTOR1', 'TUTOR1', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 12345678, '', NULL, NULL, NULL, '2020-05-19', 'tutor1@gmaillcom', '2020-05-05', NULL);
 
 
 --
@@ -3714,17 +2706,10 @@ SELECT pg_catalog.setval('public.bodegas_idbodega_seq', 23, true);
 
 
 --
--- Name: bodegasproductos_idbodegaproductos_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.bodegasproductos_idbodegaproductos_seq', 36488, true);
-
-
---
 -- Name: categoriasp_idcategoria_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.categoriasp_idcategoria_seq', 42, true);
+SELECT pg_catalog.setval('public.categoriasp_idcategoria_seq', 44, true);
 
 
 --
@@ -3735,13 +2720,6 @@ SELECT pg_catalog.setval('public.ciudades_id_ciudad_seq', 1, false);
 
 
 --
--- Name: comisiones_idcomision_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.comisiones_idcomision_seq', 3, true);
-
-
---
 -- Name: departamentos_iddepartamento_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -3749,31 +2727,10 @@ SELECT pg_catalog.setval('public.departamentos_iddepartamento_seq', 1, false);
 
 
 --
--- Name: detallecomisiones_iddetallecomision_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.detallecomisiones_iddetallecomision_seq', 3, true);
-
-
---
--- Name: detalledocumentos_iddetallecodumentos_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.detalledocumentos_iddetallecodumentos_seq', 110, true);
-
-
---
 -- Name: detalleventas_iddetalleventa_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.detalleventas_iddetalleventa_seq', 53, true);
-
-
---
--- Name: documentos_iddocumento_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.documentos_iddocumento_seq', 49, true);
 
 
 --
@@ -3808,7 +2765,7 @@ SELECT pg_catalog.setval('public.localidades_idlocalidad_seq', 1, false);
 -- Name: menus_idmenu_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.menus_idmenu_seq', 1, true);
+SELECT pg_catalog.setval('public.menus_idmenu_seq', 2, true);
 
 
 --
@@ -3819,31 +2776,17 @@ SELECT pg_catalog.setval('public.modulos_idmodulo_seq', 1, false);
 
 
 --
--- Name: movimientos_idmovimiento_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.movimientos_idmovimiento_seq', 1, true);
-
-
---
 -- Name: perfiles_id_perfil_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.perfiles_id_perfil_seq', 26, true);
+SELECT pg_catalog.setval('public.perfiles_id_perfil_seq', 31, true);
 
 
 --
 -- Name: perfiles_permisos_id_idperfilespermisos_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.perfiles_permisos_id_idperfilespermisos_seq', 152, true);
-
-
---
--- Name: periodos_idperiodo_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.periodos_idperiodo_seq', 21, true);
+SELECT pg_catalog.setval('public.perfiles_permisos_id_idperfilespermisos_seq', 165, true);
 
 
 --
@@ -3851,41 +2794,6 @@ SELECT pg_catalog.setval('public.periodos_idperiodo_seq', 21, true);
 --
 
 SELECT pg_catalog.setval('public.productos_idproducto_seq', 3109, true);
-
-
---
--- Name: productos_nivel1_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.productos_nivel1_seq', 1554, true);
-
-
---
--- Name: productos_porcentajeutilidad_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.productos_porcentajeutilidad_seq', 1554, true);
-
-
---
--- Name: productosproveedores_idproductosproveedores_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.productosproveedores_idproductosproveedores_seq', 56, true);
-
-
---
--- Name: remisiones_idremision_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.remisiones_idremision_seq', 2, true);
-
-
---
--- Name: resolucionfacturas_idresolucionfactura_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.resolucionfacturas_idresolucionfactura_seq', 1, false);
 
 
 --
@@ -3899,35 +2807,14 @@ SELECT pg_catalog.setval('public.subcategorias_idsubcategoria_seq', 1, false);
 -- Name: submenus_idsubmenu_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.submenus_idsubmenu_seq', 31, true);
-
-
---
--- Name: terceros_idtercero_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.terceros_idtercero_seq', 43, true);
-
-
---
--- Name: terceros_nit_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.terceros_nit_seq', 1, false);
+SELECT pg_catalog.setval('public.submenus_idsubmenu_seq', 32, true);
 
 
 --
 -- Name: usuarios_idusuario_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.usuarios_idusuario_seq', 52, true);
-
-
---
--- Name: vencimientoproductos_idvencimientoproducto_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.vencimientoproductos_idvencimientoproducto_seq', 20, true);
+SELECT pg_catalog.setval('public.usuarios_idusuario_seq', 58, true);
 
 
 --

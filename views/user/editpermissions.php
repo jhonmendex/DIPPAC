@@ -36,7 +36,7 @@
                                     foreach ($value as $value2) { ?>
                                         <tr class="class<?php echo $estilo; ?>">   
                                             <th class="init" style="text-align: center;width: 105px;">
-                                                <img src="<?php echo $value2['iconsub']; ?>" height="45"/>
+                                                <i class="<?php echo $value2['iconsub']; ?>"></i>
                                             </th>
                                             <th class="item" style="text-align: left;padding-left: 10px"> 
                                                 <?php echo $value2['nombresub']; ?>

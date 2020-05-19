@@ -35,13 +35,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
             <tr>
                 <td><?php $doc->texto('BORN_DATE') ?>: </td> 
                 <td> 
-                    <?php $view->input("born_date", 
-                            "calendar",
-                            $doc->t('BORN_DATE'),
-                            array(), 
-                            array('readonly' => 'readonly',
-                                'midate' => 1920,
-                                'madate' => ((int) date("Y")) - 18)); ?>                    
+                                <input type="date" name="born_date">                 
                 </td>               
                 <td><?php $doc->texto('MAIL') ?>: </td>
                 <td>
@@ -172,116 +166,11 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
                     parent.$.fancybox.close();
                 }else if(responseText.respuesta=='no'){
                     parent.message('No se ha podido crear el usuario','images/iconos_alerta/error.png');
-                    parent.$.fancybox.close();
+                    pçarent.$.fancybox.close();
                 }
             }
         });       
-        $('input.onepic').click(function(){
-            $("[name='year']").val(<?php echo $ano ?>);   
-            $("[name='month']").val(<?php echo $mes ?>); 
-            var dia =<?php echo $dia ?>;
-            var $ttd = $('td.date');             
-            $ttd.each(function() { 
-                if($.trim($(this).html())>dia){                    
-                    $(this).removeClass("chosen");
-                    $(this).css("color","#555555");
-                    $(this).css("cursor","default"); 
-                    $(this).unbind();
-                }
-            });
 
-            $("select[name='year']").change(function(){                
-                var ano =  $(this).val();
-                var mes =  $("[name='month']").val();
-                var diamax =<?php echo $dia ?>;
-                var mesmax =<?php echo $mes ?>;
-                var anomax =<?php echo $ano ?>; 
-                var $ttd = $('td.date');
-                if(ano<anomax){
-                    $ttd.each(function() {                                                                           
-                        $(this).css("color","#000000");
-                        $(this).css("cursor","pointer");                                                    
-                    });
-                }else if(ano==anomax){
-                    if(mes<mesmax){                         
-                        $ttd.each(function() {  
-                            $(this).css("color","#000000");
-                            $(this).css("cursor","pointer"); 
-                        });
-                    }else if(mes==mesmax){
-                        $ttd.each(function() { 
-                            if($.trim($(this).html())>diamax){                    
-                                $(this).css("color","#555555");
-                                $(this).css("cursor","default"); 
-                                $(this).unbind();
-                            }else{
-                                $(this).css("color","#000000");
-                                $(this).css("cursor","pointer");   
-                            }
-                        });
-                    }else if(mes>mesmax){                            
-                        $ttd.each(function() {                                                                
-                            $(this).css("color","#555555");
-                            $(this).css("cursor","default"); 
-                            $(this).unbind();              
-                        }); 
-                    }
-                }else if(ano>anomax){                            
-                    $ttd.each(function() {                                                            
-                        $(this).css("color","#555555");
-                        $(this).css("cursor","default"); 
-                        $(this).unbind();               
-                    }); 
-                }
-            });
-            $("[name='month']").change(function(){
-                var ano =  $("[name='year']").val();
-                var mes =  $("[name='month']").val();
-                var diamax =<?php echo $dia ?>;
-                var mesmax =<?php echo $mes ?>;
-                var anomax =<?php echo $ano ?>; 
-                var $ttd = $('td.date');
-                if(ano<anomax){
-                    $ttd.each(function() { 
-                        $(this).css("color","#000000");
-                        $(this).css("cursor","pointer");
-                    });
-                }else if(ano==anomax){
-                    if(mes<mesmax){
-                        $ttd.each(function() { 
-                            $(this).css("color","#000000");
-                            $(this).css("cursor","pointer"); 
-                        });
-                    }else if(mes==mesmax){
-                        $ttd.each(function() { 
-                            if($.trim($(this).html())>diamax){                    
-                                $(this).css("color","#555555");
-                                $(this).css("cursor","default"); 
-                                $(this).unbind();
-                            }else{
-                                $(this).css("color","#000000");
-                                $(this).css("cursor","pointer");   
-                            }
-                        });
-                    }else if(mes>mesmax){                            
-                        $ttd.each(function() {                                    
-                            $(this).css("color","#555555");
-                            $(this).css("cursor","default"); 
-                            $(this).unbind();               
-                        }); 
-                    }
-                }else if(ano>anomax){                            
-                    $ttd.each(function() {                                    
-                        $(this).css("color","#555555");
-                        $(this).css("cursor","default"); 
-                        $(this).unbind();               
-                    }); 
-                }
-            });
-            $("#myform input").not(".onepic").click(function(){
-                $(".close").click();
-            });
-        }); 
         $("#myform input").focus(function(){
             $(this).css("background-color","#FFF");
             $(this).nextAll().remove();

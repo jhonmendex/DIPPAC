@@ -3,26 +3,27 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 ?>
 <style>
     body{
-     background: #5d8de5; 
+     background: #fff; 
     }
     #dropdowna{
-     font-family: "FUTURABOOK";
-     color: #fff;
+     font-family: 'Arial';
+     color: #000;
      text-decoration: none;
     }
     button{
-      color:rgb(102, 102, 102);
-      border-radius: 0;
-    border-width: 1px;
-    box-shadow: none;
-    background-color: rgb(244, 244, 244);
-    border-color: rgb(221, 221, 221);
-    cursor:pointer;
+color: rgb(102, 102, 102);
+border-radius: 5px;
+box-shadow: none;
+background-color: orange;
+cursor: pointer;
+padding: 1px 40px;
+cursor:pointer;
+border: none;
     }
     #sesion{
-     color: #ffffff;
+     color: #423F54;
     float: right;
-    font-family: "FUTURABOOK";
+    font-family: Arial;
     font-size: 11px;
     margin-right: 20px;
     margin-top: 20px;

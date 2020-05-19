@@ -8,12 +8,16 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
     <HEAD>
         <TITLE>DPAAC</TITLE> 
     </HEAD> 
-    
+    <style>
+        .border-left{
+            border-left: 5px solid #453D71;
+        }
+    </style>
     <frameset border="0px" rows="50,*" cols="*" bordercolor="#FFFFFF">
-        <frame name="banner" scrolling="no" noresize src="<?php echo $arreglo[0] ?>">
+        <frame class="border-left" name="banner" scrolling="no" noresize src="<?php echo $arreglo[0] ?>">
         <?php if ($idmenu != 7) { ?>
             <frameset id="nopos" border="0px" rows="*" cols="230,*" >     
-                    <frame name="menu" scrolling="auto" noresize src="<?php echo $arreglo[1] ?>">  
+                    <frame name="menu" class="border-left" scrolling="auto" noresize src="<?php echo $arreglo[1] ?>">  
                 <frame name="contenido" scrolling="auto" noresize src="<?php echo $arreglo[2] ?>"> 
             </frameset>
             <frameset id="sipos" border="0px" rows="*" cols="0,*" >                     

@@ -1,131 +1,115 @@
 .container {
-    font-family: "FUTURABOOK";
-    font-size: 12px;
-    width: 90%;	
-    margin-left: auto;
-    margin-right: auto; 
-    padding: 30px 60px 10px 30px;
-    color: #666;
-
+  font-family: "FUTURABOOK";
+  font-size: 12px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 60px 10px 30px;
+  color: #666;
 }
 
-.table{
-    width: 100%;
-    line-height: 15px
+.table {
+  width: 100%;
+  line-height: 15px;
 }
-tr.headall{
-    background: none repeat scroll 0 0 #666;
-    border:#f2f2f2;
+tr.headall {
+  background: none repeat scroll 0 0 #666;
+  border: #f2f2f2;
 }
 
 th.head {
-
-    font-size: 14px;
-    border: #f2f2f2 1px solid;
-    color: #FFFFFF;
-    letter-spacing: 1px;
-    padding: 6px 18px 12px 6px;
-    text-align: center;   
-
+  font-size: 14px;
+  border: #f2f2f2 1px solid;
+  color: #ffffff;
+  letter-spacing: 1px;
+  padding: 6px 18px 12px 6px;
+  text-align: center;
 }
 th.headinit {
-
-    font-size: 14px;
-    border: #f2f2f2 1px solid;
-    color: #FFFFFF;
-    letter-spacing: 1px;
-    padding: 6px 5px 12px;
-    text-align: center;   
-
+  font-size: 14px;
+  border: #f2f2f2 1px solid;
+  color: #ffffff;
+  letter-spacing: 1px;
+  padding: 6px 5px 12px;
+  text-align: center;
 }
 
-tr.class2{
-    background: #fff;
-    padding: 6px 6px 6px 12px;
-    color: #000;
+tr.class2 {
+  background: #fff;
+  padding: 6px 6px 6px 12px;
+  color: #000;
 }
-
 
 tr.class1 {
-
-    background: #E4E4E4;
-    color: #000;    
+  background: #e4e4e4;
+  color: #000;
 }
 th.item {
-
-    border: 1px solid #f2f2f2;
-    padding-top:  8px;
-    padding-bottom:  8px;
-
+  border: 1px solid #f2f2f2;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 th.init {
-
-    padding-top:  8px;
-    padding-bottom:  8px;
-    border: 1px solid #f2f2f2;
-
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 1px solid #f2f2f2;
 }
 
 td.item2 {
-
-    border: 1px solid #f2f2f2;
-    padding-top:  8px;
-    padding-bottom:  8px;
-
+  border: 1px solid #f2f2f2;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 td.init2 {
-
-    padding-top:  8px;
-    padding-bottom:  8px;
-    border: 1px solid #f2f2f2;
-
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 1px solid #f2f2f2;
 }
 
-.buscarButton{
-    background-color: #3c8dbc;
-    border: 1px solid #cccccc;
-    border-radius: 2px;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 10px;
-    font-weight: bold;
-    margin: 1px 1px 1px 10px;
-    padding: 4px;
-    text-transform: uppercase;
-    vertical-align: middle;
-    width: 97%;   
+.buscarButton {
+  background-color: #3c8dbc;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  margin: 1px 1px 1px 10px;
+  padding: 4px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 97%;
 }
 
-.buscarButton:hover{
-      background-color: #286090;
-    border: 1px solid #204d74;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 4px;
+.buscarButton:hover {
+  background-color: #286090;
+  border: 1px solid #204d74;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 4px;
 }
 
-.buscarButtonDis{
-    background-color: #999;
-    margin: 1px;    
-    font-size: 10px;
-    border: 1px solid #B8B8B6;
-    border-radius: 5px 5px 5px 5px;
-    color: #444;
-    font-weight: bold;    
-    height: 22px;
-    padding: 2px 8px;
-    text-transform: uppercase;
-    vertical-align: middle; 
-    cursor:default;    
+.buscarButtonDis {
+  background-color: #999;
+  margin: 1px;
+  font-size: 10px;
+  border: 1px solid #b8b8b6;
+  border-radius: 5px 5px 5px 5px;
+  color: #444;
+  font-weight: bold;
+  height: 22px;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: default;
 }
 
-.buscarButtonDis:hover{
-    color: #444;
-    background-color: #999;
-    border: 1px solid #B8B8B6;
-    cursor:default; 
-    padding: 2px 8px;
+.buscarButtonDis:hover {
+  color: #444;
+  background-color: #999;
+  border: 1px solid #b8b8b6;
+  cursor: default;
+  padding: 2px 8px;
 }
-
