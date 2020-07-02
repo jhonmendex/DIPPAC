@@ -1,0 +1,60 @@
+label{
+    font-family: cursive;
+}
+
+input{
+    width: 26px;
+    height: 26px;
+    font-family: cursive;
+    font-size: large;
+    text-align: center;
+    box-shadow: 3PX 3PX 2px #c1c1c1;
+    border-color:#C1C1C1;
+    outline: 0px;
+ 
+}
+
+#helper{
+position: relative;
+width: 7%;
+left: 46.5%;
+right: 46.5%;
+
+}
+
+#result{
+    text-align: center;
+}
+
+hr{
+    width: 12%;
+    height: 2px;
+    border: 0px;
+    background-color:#000000;
+}
+
+#answer1{
+    margin-right: 20px;
+    background-color: #60A917;
+    border: rgb(75, 139, 10) 2px solid;
+}
+
+#answer2{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #D80073;
+    border: rgb(161, 5, 88) 2px solid;
+    border-style: solid;
+}
+
+#answer3{
+    margin-left: 20px;
+    background-color: #0050EF;
+    border: rgb(1, 62, 184) 2px solid;
+}
+
+#finish{
+    text-align: center;
+    margin-top: 3%;
+
+}
