@@ -19097,3 +19097,2949 @@ Accion: testResult
 Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
 Controlador: DyscalculiaIndexController 
 Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+select nombreperfil from perfiles where idperfil=1 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Logo 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Accion: Menu 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /var/www/html/project/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Accion: Logo 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Accion: Menu 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Accion: Menu 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Accion: Menu 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Logo 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Banner 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaController.php 
+Controlador: DyscalculiaController 
+Accion: test 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Banner 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: test 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: test 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Accion: Menu 
+Accion: main 
+Controlador: IndexController 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Banner 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Accion: Menu 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic18 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic19 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic19 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Accion: main 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic18 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic19 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic28 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic29 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical178 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical19 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical27 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical28 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical29 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Banner 
+Accion: Menu 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Banner 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Banner 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: main 
+Accion: Banner 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Accion: main 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+select nombreperfil from perfiles where idperfil=1 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Banner 
+Accion: Menu 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Banner 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Menu 
+Controlador: IndexController 
+Accion: main 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select * from menus where idmenu=2 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Menu 
+Controlador: IndexController 
+Accion: main 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Banner 
+Accion: Menu 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Accion: main 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic18 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic19 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Banner 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Accion: main 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Accion: main 
+Accion: Menu 
+Controlador: IndexController 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic18 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic19 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+Controlador: DyscalculiaIndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Accion: main 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Accion: main 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic18 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Accion: Banner 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+Accion: main 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+Controlador: DyscalculiaIndexController 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Accion: Menu 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Menu 
+Controlador: IndexController 
+Accion: main 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+Controlador: DyscalculiaIndexController 
+select * from menus where idmenu=2 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Banner 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Banner 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Accion: Banner 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select * from menus where idmenu=2 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Banner 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic18 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic19 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Menu 
+Accion: main 
+Accion: Banner 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Banner 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Accion: main 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic18 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic19 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic28 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic29 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical178 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical19 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical27 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical28 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical29 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic18 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic19 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+select nombreperfil from perfiles where idperfil=1 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Banner 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+Accion: main 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Accion: Banner 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select nombreperfil from perfiles where idperfil=1 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic18 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Banner 
+Accion: Menu 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+select nombreperfil from perfiles where idperfil=1 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Banner 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+Accion: main 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+select nombreperfil from perfiles where idperfil=1 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+Accion: Banner 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Banner 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Controlador: DyscalculiaIndexController 
+select nombreperfil from perfiles where idperfil=1 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Banner 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Controlador: DyscalculiaIndexController 
+Accion: Menu 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Accion: main 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: main 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic18 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic19 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic28 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic29 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical178 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: main 
+Accion: Banner 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/project/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Banner 
+Accion: main 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Accion: main 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic1 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic16 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic17 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic18 
+ 
+Ruta: /var/www/html/project/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic19 

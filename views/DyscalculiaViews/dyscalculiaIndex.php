@@ -1,77 +1,85 @@
 <?php
 defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 ?>
-<div id="fancybox-title" class="fancybox-title-float" style="display: block; z-index: 50"><table cellspacing="0" cellpadding="0" id="fancybox-title-float-wrap"><tbody><tr><td id="fancybox-title-float-left"></td><td id="fancybox-title-float-main">Discalculia</td><td id="fancybox-title-float-right"></td></tr></tbody></table></div>
- <div class="container" style="margin-bottom: 20px; margin-top: 15px"> 
-<head>
-    <meta charset="UTF-8">
+<div id="fancybox-title" class="fancybox-title-float" style="display: block; z-index: 50">
+    <table cellspacing="0" cellpadding="0" id="fancybox-title-float-wrap">
+        <tbody>
+            <tr>
+                <td id="fancybox-title-float-left"></td>
+                <td id="fancybox-title-float-main">Discalculia</td>
+                <td id="fancybox-title-float-right"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container" style="margin-bottom: 20px; margin-top: 15px">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <title>Inicio</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
 
-<body>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <title>Inicio</title>
+    </head>
 
-    <div id="container">
+    <body>
 
-        <p class="index-introduction-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
-            up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
-            Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
-            from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
-            original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+        <div id="container">
 
-        <button class="accordion">Discalculia 1</button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="index-introduction-text">Se conoce como discalculia a aquellas limitaciones que impactan en la formación de los principios de cálculo. Su importancia en cuanto al impacto referente a la población infantil es algo más que un aspecto a tener en cuenta, pues se estima que entre el 3% y el 6% de esta población existen infantes con este tipo de dificultad (De-La-Peña, C. & Bernabéu, E, 2018).El proceso de reconocimiento y detección de problemas de aprendizaje es vital para el correcto desarrollo de habilidades matemáticas y del pensamiento racional, viéndose favorecido por los beneficios de la época actual, donde el mundo tecnológico brinda un sin fin de soluciones que en tiempos pasados eran casi imposibles de imaginar. Por eso, mediante este conjunto de pruebas, se buscará brindar una visión general de cómo está el niño frente a este trastorno, y los distintos tipos de discalculia que este puede sufrir.</p>
+
+            <button class="accordion">Discalculia verbal</button>
+            <div class="panel">
+                <p>Se pretende evaluar la capacidad que tienen los niños para nombrar y comprender conceptos matemáticos de forma verbal. Se presentarán diferentes audios con números y operaciones, esperando que el niño los escuche, entienda, y por último seleccione o escriba la opción correcta.</p>
+            </div>
+
+            <button class="accordion">Discalculia practognóstica</button>
+            <div class="panel">
+                <p>Se busca evaluar las competencias comparación, enumeración de los niños. Se presentarán diferentes elementos en pantalla buscando que el niño las enumere e identifique el grupo con mayor o menor elementos.</p>
+            </div>
+
+            <button class="accordion">Discalculia léxica</button>
+            <div class="panel">
+                <p>Se quiere estimar la habilidad de los niños para comprender la lectura de símbolos, números y expresiones matemáticas. Para ello se mostrará en pantalla diferentes operaciones matemáticas y se espera que el niño reconozca los números y sus signos.</p>
+            </div>
+
+            <button class="accordion">Discalculia gráfica</button>
+            <div class="panel">
+                <p>Se pretende evaluar la capacidad que tienen los niños para escribir los símbolos matemáticos. Se pondrá a disposición un panel, esperando que dentro de este, el niño trate de dibujar el signo matemático que se le demanda.</p>
+            </div>
+
+            <button class="accordion">Discalculia ideognóstica</button>
+            <div class="panel">
+                <p>Se busca evaluar la habilidad de los niños para realizar operaciones de forma mental. Se mostrarán diferentes operaciones matemáticas, esperando que el niño las desarrolle de forma mental, u en otro caso que identifique el signo correspondiente para que el resultado tenga sentido.</p>
+            </div>
+
+            <button class="accordion">Discalculia operacional</button>
+            <div class="panel">
+                <p>Se quiere estimar la habilidad de los niños para solucionar operaciones aritméticas básicas de forma escrita y verbal, para ello se presentarán diferentes operaciones, en algunos casos dictadas por audio, y se espera que el niño las solucione teniendo como ayuda campos de texto que le sirvieran para escribir.</p>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a style="margin-left: 50%;" id="startTest" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Ideognostic1">Empezar prueba</a>
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                            panel.style.display = "none";
+                        } else {
+                            panel.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+
         </div>
 
-        <button class="accordion">Discalculia 2</button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
 
-        <button class="accordion">Discalculia 3</button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-
-        <button class="accordion">Discalculia 4</button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-
-        <button class="accordion">Discalculia 5</button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-
-        <button class="accordion">Discalculia 6</button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-
-
-        <input style="margin-left: 50%;" id="startTest" type="button" value="Empezar pruebas">
-
-        <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.display === "block") {
-                        panel.style.display = "none";
-                    } else {
-                        panel.style.display = "block";
-                    }
-                });
-            }
-        </script>
-
-
-    </div>
-
-
-</body>
+    </body>
