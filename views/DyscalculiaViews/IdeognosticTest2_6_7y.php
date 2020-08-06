@@ -30,22 +30,46 @@
             <br>
             <div id="buttons">
                 <div id="row1">
-                    <button id="answer1" class="btn btn-warning">Suma</button>
-                    <button id="answer2" class="btn btn-success ">Resta</button>
+                    <button id="answer1" class="btn btn-warning answer">Suma</button>
+                    <button id="answer2" class="btn btn-success answer">Resta</button>
                 </div>
 
                 <div id="row2">
-                    <button id="answer3" class="btn btn-danger">Multiplicación</button>
-                    <button id="answer4" class="btn btn-secondary">División</button>
+                    <button id="answer3" class="btn btn-danger answer">Multiplicación</button>
+                    <button id="answer4" class="btn btn-secondary answer">División</button>
                 </div>
 
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Ideognostic28">Continuar</a>
+                    <a id="continue" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Lexical16">Continuar</a>
                 </div>
             </div>
         </div>
     </div>
     </div>
 </body>
+
+<script>
+    $(document).ready(function() {
+        document.querySelectorAll('button.answer').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+
+                // Get the existing data
+                var currentData = localStorage.getItem('dippacAnswers');
+
+                currentData = JSON.parse(currentData);
+
+                var answer2 = {
+                    question: 2,
+                    answer: e.target.innerText
+                };
+
+                // Add new data to localStorage Array
+                currentData[1] = answer2;
+
+                localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+            })
+        })
+    })
+</script>
 
 </html>

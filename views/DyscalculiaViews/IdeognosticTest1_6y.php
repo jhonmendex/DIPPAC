@@ -29,22 +29,43 @@
             <br>
             <div id="buttons">
                 <div id="row1">
-                    <button id="answer1" class="btn btn-warning">65</button>
-                    <button id="answer2" class="btn btn-success ">55</button>
+                    <button id="answer1" class="btn btn-warning answer">65</button>
+                    <button id="answer2" class="btn btn-success answer">55</button>
                 </div>
 
                 <div id="row2">
-                    <button id="answer3" class="btn btn-danger">95</button>
-                    <button id="answer4" class="btn btn-secondary">55</button>
+                    <button id="answer3" class="btn btn-danger answer">95</button>
+                    <button id="answer4" class="btn btn-secondary answer">55</button>
                 </div>
 
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Ideognostic17">Continuar</a>
+                    <a id="continue" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Ideognostic267">Continuar</a>
                 </div>
             </div>
         </div>
     </div>
     </div>
 </body>
+
+<script>
+$(document).ready(function () {
+    document.querySelectorAll('button.answer').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            
+            var answer1 = {
+                question: 1,
+                answer: e.target.innerText
+            };
+
+            var array = [];
+
+            array.push(answer1);
+
+            localStorage.setItem('dippacAnswers', JSON.stringify(array));
+        })
+    })
+})
+
+</script>
 
 </html>

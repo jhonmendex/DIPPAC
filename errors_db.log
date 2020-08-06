@@ -1,1 +1,18 @@
 ﻿
+
+ Error en la consulta: INSERT INTO public.respuestas(respuesta, "cuestionarioId")
+            VALUES (, 1); 
+ERROR:  syntax error at or near ","
+LINE 2:             VALUES (, 1);
+                            ^
+
+ Error en la consulta: INSERT INTO public.respuestas(respuesta, "cuestionarioId")
+            VALUES (, 1); 
+ERROR:  syntax error at or near ","
+LINE 2:             VALUES (, 1);
+                            ^
+
+ Error en la consulta: INSERT INTO public.respuestas(respuesta, "cuestionarioId")
+            VALUES (55, 1); 
+ERROR:  insert or update on table "respuestas" violates foreign key constraint "respuestas_id_too_cuestionario"
+DETAIL:  Key (cuestionarioId)=(1) is not present in table "cuestionarios".

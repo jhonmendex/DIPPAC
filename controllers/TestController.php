@@ -29,7 +29,24 @@ class TestController extends ControllerBase {
         $this->view->show();
     }
 
+    public function saveAnswer() {
+        echo ('test');
+        $this->view->setTemplate('DyscalculiaViews' . DS . 'dyscalculiaIndex');
+        $this->view->show();
+        if (isset($_POST['answer'])) {
+            $respuesta = $_POST['answer'];
+            $this->getModel("Cuestionario");
+            // $cuestionarios = $this->model->addAnswers($respuesta);
+            $this->model->addAnswers($respuesta);
+            print_r ($respuesta);
+        }
 
+        // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        //     $this->getModel("Cuestionario");
+        //     $cuestionarios = $this->model->addAnswers($_POST['answer']);
+        //     echo json_encode($cuestionarios);
+        // }
+    }
 
 }
 

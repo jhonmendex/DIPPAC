@@ -45,6 +45,14 @@ class UserModel extends ModelBase {
         return $row["nombreperfil"];
     }
 
+    public function getUserProfileBirthDate() {
+        $usuario = unserialize($_SESSION['user']);
+        $idperfil= $usuario->getPerfilUser();
+        $result=$this->db->executeQue("select nombreperfil from perfiles where idperfil=$idperfil");
+        $row=$this->db->arrayResult($result);        
+        return $row["nombreperfil"];
+    }
+
     public function getUserBodega() {
         $usuario = unserialize($_SESSION['user']);
         return $usuario->getBodega();
@@ -125,7 +133,7 @@ class UserModel extends ModelBase {
                 $name_user['cedula'] = $row['cedula'];
                 $name_user['email'] = $row['email'];
                 $name_user['direcion'] = $row['direccion'];
-                $name_user['fechacumple'] = $row['nombreusuario'];
+                $name_user['fechacumple'] = $row['fechacumple'];
                 $name_user['fax'] = $row['fax'];
                 $name_user['telefono'] = $row['telefonocasa'];
                 $name_user['celular'] = $row['telefonooficina'];

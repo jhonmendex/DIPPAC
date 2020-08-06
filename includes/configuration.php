@@ -5,7 +5,7 @@ $config = Config::singleton();
 $config->set('dbtype', 'postgres');
 $config->set('dbport', '5432');
 $config->set('dbhost', 'localhost'); 
-$config->set('dbname', 'dipaac');
+$config->set('dbname', 'dippac');
 $config->set('dbuser', 'admin');
 $config->set('dbpass', 'Inicio.123'); 
 

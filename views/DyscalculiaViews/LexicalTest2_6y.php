@@ -29,22 +29,63 @@
             <br>
             <div id="buttons">
                 <div id="row1">
-                    <button id="answer1" class="btn btn-warning">Diez + Veinte</button>
-                    <button id="answer2" class="btn btn-success ">Diez + Diez</button>
+                    <button id="answer1" class="btn btn-warning answer">Diez + Veinte</button>
+                    <button id="answer2" class="btn btn-success answer">Diez + Diez</button>
                 </div>
 
                 <div id="row2">
-                    <button id="answer3" class="btn btn-danger">Diez + Quince</button>
-                    <button id="answer4" class="btn btn-secondary">Diez + Ocho</button>
+                    <button id="answer3" class="btn btn-danger answer">Diez + Quince</button>
+                    <button id="answer4" class="btn btn-secondary answer">Diez + Ocho</button>
                 </div>
 
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Lexical27">Continuar</a>
+                    <a id="continue" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=main">Continuar</a>
                 </div>
             </div>
         </div>
     </div>
     </div>
 </body>
+
+<script>
+    $(document).ready(function() {
+        document.querySelectorAll('button.answer').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+
+                // Get the existing data
+                var currentData = localStorage.getItem('dippacAnswers');
+
+                currentData = JSON.parse(currentData);
+
+                var answer4 = {
+                    question: 4,
+                    answer: e.target.innerText
+                };
+
+                // Add new data to localStorage Array
+                currentData[3] = answer4;
+
+                localStorage.setItem('dippacAnswers', JSON.stringify(currentData))
+
+                console.log(currentData);
+            })
+        })
+        $('#continue').on('click', sendAnswer)
+    })
+
+    function sendAnswer(e) {
+        e.preventDefault()
+        $.ajax({
+            url: "index.php?controlador=DyscalculiaIndex&accion=saveAnswer", //Leerá la url en la etiqueta action del formulario (archivo.php)
+            method: "POST", //Leerá el método en etiqueta method del formulario
+            data: {
+                data: JSON.parse(localStorage.getItem('dippacAnswers'))
+            },
+            dataType: "json"
+        }).done(function(respuesta) {
+            console.log(respuesta);
+        });
+    }
+</script>
 
 </html>

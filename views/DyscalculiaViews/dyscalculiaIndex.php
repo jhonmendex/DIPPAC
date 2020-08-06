@@ -25,7 +25,6 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
     <body>
 
         <div id="container">
-
             <p class="index-introduction-text">Se conoce como discalculia a aquellas limitaciones que impactan en la formación de los principios de cálculo. Su importancia en cuanto al impacto referente a la población infantil es algo más que un aspecto a tener en cuenta, pues se estima que entre el 3% y el 6% de esta población existen infantes con este tipo de dificultad (De-La-Peña, C. & Bernabéu, E, 2018).El proceso de reconocimiento y detección de problemas de aprendizaje es vital para el correcto desarrollo de habilidades matemáticas y del pensamiento racional, viéndose favorecido por los beneficios de la época actual, donde el mundo tecnológico brinda un sin fin de soluciones que en tiempos pasados eran casi imposibles de imaginar. Por eso, mediante este conjunto de pruebas, se buscará brindar una visión general de cómo está el niño frente a este trastorno, y los distintos tipos de discalculia que este puede sufrir.</p>
 
             <button class="accordion">Discalculia verbal</button>
@@ -59,7 +58,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
             </div>
 
             <div style="margin-top: 20px;">
-                <a style="margin-left: 50%;" id="startTest" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Ideognostic1">Empezar prueba</a>
+                <a style="margin-left: 50%;" id="startTest" class="btn btn-primary btn-start-test" href="index.php?controlador=DyscalculiaIndex&accion=ValidateInitialTest">Empezar prueba</a>
             </div>
 
             <script>
