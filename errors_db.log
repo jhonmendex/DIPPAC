@@ -16,3 +16,111 @@ LINE 2:             VALUES (, 1);
             VALUES (55, 1); 
 ERROR:  insert or update on table "respuestas" violates foreign key constraint "respuestas_id_too_cuestionario"
 DETAIL:  Key (cuestionarioId)=(1) is not present in table "cuestionarios".
+
+ Error en la consulta: INSERT INTO public.respuestas(imagen, esCorrecta, respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (, false, 65, 1,1, Prueba de discalculia ideognóstica 1 - 6 años); 
+ERROR:  syntax error at or near ","
+LINE 2:             VALUES (, false, 65, 1,1, Prueba de discalculia ...
+                            ^
+
+ Error en la consulta: INSERT INTO public.respuestas(imagen, esCorrecta, respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (null, false, 65, 1,1, Prueba de discalculia ideognóstica 1 - 6 años); 
+ERROR:  syntax error at or near "de"
+LINE 2:             VALUES (null, false, 65, 1,1, Prueba de discalcu...
+                                                         ^
+
+ Error en la consulta: INSERT INTO public.respuestas(esCorrecta, respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES ("false, "65, 1, 1, "Prueba de discalculia ideognóstica 1 - 6 años"); 
+ERROR:  syntax error at or near "65"
+LINE 2:             VALUES ("false, "65, 1, 1, "Prueba de discalculi...
+                                     ^
+
+ Error en la consulta: INSERT INTO public.respuestas(esCorrecta, respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES ("false, "Suma, 1, 1, "Prueba de discalculia ideognóstica 2 - 6 años"); 
+ERROR:  syntax error at or near "Suma"
+LINE 2:             VALUES ("false, "Suma, 1, 1, "Prueba de discalcu...
+                                     ^
+
+ Error en la consulta: INSERT INTO public.respuestas(esCorrecta, respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, "65", 1, 1, "Prueba de discalculia ideognóstica 1 - 6 años"); 
+ERROR:  column "escorrecta" of relation "respuestas" does not exist
+LINE 1: INSERT INTO public.respuestas(esCorrecta, respuesta, "cuesti...
+                                      ^
+
+ Error en la consulta: INSERT INTO public.respuestas(esCorrecta, respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, "Suma", 1, 1, "Prueba de discalculia ideognóstica 2 - 6 años"); 
+ERROR:  column "escorrecta" of relation "respuestas" does not exist
+LINE 1: INSERT INTO public.respuestas(esCorrecta, respuesta, "cuesti...
+                                      ^
+
+ Error en la consulta: INSERT INTO public.respuestas(esCorrecta, respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (, "", 1, , ""); 
+ERROR:  syntax error at or near ","
+LINE 2:             VALUES (, "", 1, , "");
+                            ^
+
+ Error en la consulta: INSERT INTO public.respuestas(esCorrecta, respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, "Diez + Veinte", 1, 1, "Prueba de discalculia léxica 2 - 6 años"); 
+ERROR:  column "escorrecta" of relation "respuestas" does not exist
+LINE 1: INSERT INTO public.respuestas(esCorrecta, respuesta, "cuesti...
+                                      ^
+
+ Error en la consulta: INSERT INTO public.respuestas(esCorrecta, respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, "65", 1, 1, "Prueba de discalculia ideognóstica 1 - 6 años"); 
+ERROR:  column "escorrecta" of relation "respuestas" does not exist
+LINE 1: INSERT INTO public.respuestas(esCorrecta, respuesta, "cuesti...
+                                      ^
+
+ Error en la consulta: INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, "65", 1, 1, "Prueba de discalculia ideognóstica 1 - 6 años"); 
+ERROR:  column "65" does not exist
+LINE 2:             VALUES (false, "65", 1, 1, "Prueba de discalculi...
+                                   ^
+
+ Error en la consulta: INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, "Suma", 1, 1, "Prueba de discalculia ideognóstica 2 - 6 años"); 
+ERROR:  column "Suma" does not exist
+LINE 2:             VALUES (false, "Suma", 1, 1, "Prueba de discalcu...
+                                   ^
+
+ Error en la consulta: INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (, "", 1, , ""); 
+ERROR:  syntax error at or near ","
+LINE 2:             VALUES (, "", 1, , "");
+                            ^
+
+ Error en la consulta: INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, "Diez + Veinte", 1, 1, "Prueba de discalculia léxica 2 - 6 años"); 
+ERROR:  column "Diez + Veinte" does not exist
+LINE 2:             VALUES (false, "Diez + Veinte", 1, 1, "Prueba de...
+                                   ^
+
+ Error en la consulta: INSERT INTO public.respuestas("esCorrecta", "respuesta", "cuestionarioId", "tipo", "nombreprueba")
+            VALUES (false, "65", 1, 1, "Prueba de discalculia ideognóstica 1 - 6 años"); 
+ERROR:  column "65" does not exist
+LINE 2:             VALUES (false, "65", 1, 1, "Prueba de discalculi...
+                                   ^
+
+ Error en la consulta: INSERT INTO public.respuestas("esCorrecta", "respuesta", "cuestionarioId", "tipo", "nombreprueba")
+            VALUES (false, "Suma", 1, 1, "Prueba de discalculia ideognóstica 2 - 6 años"); 
+ERROR:  column "Suma" does not exist
+LINE 2:             VALUES (false, "Suma", 1, 1, "Prueba de discalcu...
+                                   ^
+
+ Error en la consulta: INSERT INTO public.respuestas("esCorrecta", "respuesta", "cuestionarioId", "tipo", "nombreprueba")
+            VALUES (, "", 1, , ""); 
+ERROR:  syntax error at or near ","
+LINE 2:             VALUES (, "", 1, , "");
+                            ^
+
+ Error en la consulta: INSERT INTO public.respuestas("esCorrecta", "respuesta", "cuestionarioId", "tipo", "nombreprueba")
+            VALUES (false, "Diez + Veinte", 1, 1, "Prueba de discalculia léxica 2 - 6 años"); 
+ERROR:  column "Diez + Veinte" does not exist
+LINE 2:             VALUES (false, "Diez + Veinte", 1, 1, "Prueba de...
+                                   ^
+
+ Error en la consulta: INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (, '', 1, , ''); 
+ERROR:  syntax error at or near ","
+LINE 2:             VALUES (, '', 1, , '');
+                            ^

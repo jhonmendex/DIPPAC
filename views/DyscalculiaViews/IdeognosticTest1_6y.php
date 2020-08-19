@@ -53,8 +53,11 @@ $(document).ready(function () {
         btn.addEventListener('click', function (e) {
             
             var answer1 = {
-                question: 1,
-                answer: e.target.innerText
+                // image: "null",
+                isCorrect: false,
+                answer: e.target.innerText,
+                type: 1,
+                testName: "Prueba de discalculia ideognóstica 1 - 6 años"
             };
 
             var array = [];

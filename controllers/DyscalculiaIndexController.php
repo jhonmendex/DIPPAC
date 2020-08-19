@@ -22,19 +22,21 @@ class DyscalculiaIndexController extends ControllerBase
         $this->getModel("Cuestionario");
         $cuestionarios = $this->model->getCuestionarios();
         $this->view->setVars('cuestionarios', $cuestionarios);
-        //$this->getModel("TestDiscalculia");
-        // $objeto = $this->model->getTest();
-        // $this->view->setVars('objeto', $objeto);
         $this->view->show();
     }
 
     public function saveAnswer()
     {
+        $this->getModel("User");
+
+        $idUser = $this->model->getUserId();
+
         $res = $_POST;    
+        
         if (isset($_POST['data'])) {
             $respuesta = $_POST['data'];
             $this->getModel("Cuestionario");
-            $this->model->addAnswers($respuesta);
+            $this->model->addAnswers($respuesta, $idUser);
         }
     }
 

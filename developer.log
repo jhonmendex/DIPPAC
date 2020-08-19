@@ -4439,3 +4439,876 @@ Accion: Lexical26
 Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
 Controlador: DyscalculiaIndexController 
 Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Menu 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', 1, 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Diez + Veinte', 1, 1, 'Prueba de discalculia léxica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', 1, 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', 1, 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Multiplicación', 1, 1, 'Prueba de discalculia léxica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Diez + Diez', 1, 1, 'Prueba de discalculia léxica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', 1, 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', 1, 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Multiplicación', 1, 1, 'Prueba de discalculia léxica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Diez + Diez', 1, 1, 'Prueba de discalculia léxica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', 1, 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', 1, 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', 1, 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Multiplicación', 1, 1, 'Prueba de discalculia léxica 1 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', 1, 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical26 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', 1, 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Resta', 1, 1, 'Prueba de discalculia léxica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Diez + Veinte', 1, 1, 'Prueba de discalculia léxica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', 1, 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT 1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', 1, 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT 1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.cuestionarios("usuarioId") VALUES (1); 
+SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT 1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.cuestionarios("usuarioId") VALUES (1); 
+SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT 1 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', '3', 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', '3', 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Resta', '3', 1, 'Prueba de discalculia léxica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Diez + Veinte', '3', 1, 'Prueba de discalculia léxica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+INSERT INTO public.cuestionarios("usuarioId") VALUES (1); 
+SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT 1 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, '65', '4', 1, 'Prueba de discalculia ideognóstica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Suma', '4', 1, 'Prueba de discalculia ideognóstica 2 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Resta', '4', 1, 'Prueba de discalculia léxica 1 - 6 años'); 
+INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (false, 'Diez + Veinte', '4', 1, 'Prueba de discalculia léxica 2 - 6 años'); 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical16 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic267 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=1 

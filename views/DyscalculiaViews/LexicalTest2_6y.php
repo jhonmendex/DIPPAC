@@ -58,8 +58,11 @@
                 currentData = JSON.parse(currentData);
 
                 var answer4 = {
-                    question: 4,
-                    answer: e.target.innerText
+                    // image: "null",
+                    isCorrect: false,
+                    answer: e.target.innerText,
+                    type: 1,
+                    testName: "Prueba de discalculia léxica 2 - 6 años"
                 };
 
                 // Add new data to localStorage Array
