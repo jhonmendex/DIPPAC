@@ -5,9 +5,9 @@ $config = Config::singleton();
 $config->set('dbtype', 'postgres');
 $config->set('dbport', '5432');
 $config->set('dbhost', 'localhost'); 
-$config->set('dbname', 'dipaac');
+$config->set('dbname', 'dippac');
 $config->set('dbuser', 'postgres');
-$config->set('dbpass', 'postgres'); 
+$config->set('dbpass', 'andres112'); 
 
 $config->set('lang', 'es');
 $config->set('mail', 'jhon.mendez@docentes.umb.edu.co');

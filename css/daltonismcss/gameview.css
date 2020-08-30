@@ -1,0 +1,7 @@
+#gamebackground {
+  background-image: url('images/gamebackground.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  background-size: 100% 100%;
+}

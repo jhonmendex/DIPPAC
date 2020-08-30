@@ -13408,3 +13408,3408 @@ Accion: testResult
 Ruta: /Applications/mappstack-7.3.7-1/apache2/htdocs/dipaac/controllers/TestController.php 
 Controlador: TestController 
 Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: createUser 
+select * from perfiles 
+            where grupo not in ('Superadministrador', 'No usuario') 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where cedula=1077974701 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where email='ANDRESFCAALDERON@GMAIL.COM' or email='andresfcaalderon@gmail.com' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where alias='ACALDERON' or alias='ACALDERON' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: insertUser 
+select nextval('usuarios_idusuario_seq'::regclass) limit 1 
+insert into usuarios
+        values(59,2,171,27,'ANDRES FELIPE CALDERON','ACALDERON','5f78226c178e1c28302fed4138d483a54446f597',1077974701,'', NULL, NULL,NULL,'2020-08-29','andresfcaalderon@gmail.com','1996-11-09',NULL) 
+select * from perfiles where idperfil=27 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: editUser 
+select * 
+from usuarios u left outer join barrios b on u.idbarrio=b.idbarrio left join ciudades c on u.ciudad=c.idciudad
+left join perfiles p on u.perfil=p.idperfil where u.idusuario=58 
+select * from departamentos order by nombredepartamento 
+select * from ciudades where iddepartamento=6  order by nombreciudad 
+select * from localidades order by nombre 
+select * from barrios where idlocalidad=15 order by nombre 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: editProfile 
+select * 
+from usuarios u left outer join barrios b on u.idbarrio=b.idbarrio left join ciudades c on u.ciudad=c.idciudad
+left join perfiles p on u.perfil=p.idperfil where u.idusuario=58 
+select * from perfiles 
+            where grupo='Estudiante' or grupo='Profesional' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: updateProfile 
+update usuarios set perfil=28 where idusuario=58 
+select * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='acalderon' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='acalderon' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=27 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=27 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=27 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=27 
+SELECT * from perfiles where idperfil=27 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='ACALDERON' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=27 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\TestController.php 
+Controlador: TestController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\TestController.php 
+Controlador: TestController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=27 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=27 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=27 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=27 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=27 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=27 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: createUser 
+select * from perfiles 
+            where grupo not in ('Superadministrador', 'No usuario') 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where cedula=1077978546 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where email='PRUEBA@HOTMAIL.COM' or email='prueba@hotmail.com' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where alias='JOSE' or alias='JOSE' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: insertUser 
+select nextval('usuarios_idusuario_seq'::regclass) limit 1 
+insert into usuarios
+        values(60,2,171,28,'ESTUDIANTE2','JOSE','40bd001563085fc35165329ea1ff5c5ecbdbbeef',1077978546,'', NULL, NULL,NULL,'2020-08-29','prueba@hotmail.com','2013-11-09',NULL) 
+select * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='JOSE' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\TestController.php 
+Controlador: TestController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\TestController.php 
+Controlador: TestController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\TestController.php 
+Accion: Menu 
+Controlador: TestController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: delSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+DELETE from perfiles_permisos where idsubmenu=6 and idperfil=28 and idperfilespermisos=162 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: delSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+DELETE from perfiles_permisos where idsubmenu=32 and idperfil=28 and idperfilespermisos=163 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: delSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: delSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=27 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=27 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=27 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=27 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=27 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=27 
+SELECT * from perfiles where idperfil=27 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: delSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: delSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=27 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=27 
+SELECT * from perfiles where idperfil=27 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=27 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=27 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles where idperfil=27 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=31 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=31 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles where idperfil=31 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: createUser 
+select * from perfiles 
+            where grupo not in ('Superadministrador', 'No usuario') 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where cedula=1077974701 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where email='PRUEBA@HOTMAIL.COM' or email='prueba@hotmail.com' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where alias='PRUEBA' or alias='PRUEBA' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: insertUser 
+select nextval('usuarios_idusuario_seq'::regclass) limit 1 
+insert into usuarios
+        values(59,2,171,28,'ESTUDIANTE PRUEBA','PRUEBA','40bd001563085fc35165329ea1ff5c5ecbdbbeef',1077974701,'', NULL, NULL,NULL,'2020-08-29','prueba@hotmail.com','1996-11-09',NULL) 
+select * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=27 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=27 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=27 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=27 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles where idperfil=27 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=31 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=31 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=31 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=31 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles where idperfil=31 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='PRUEBA' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\TestController.php 
+Controlador: TestController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\TestController.php 
+Controlador: TestController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles_permisos where idsubmenu=36 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=37 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=38 and idperfil=28 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: addSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: addSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: addSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=36 and idperfil=28 
+select nextval('perfiles_permisos_id_idperfilespermisos_seq'::regclass) from perfiles_permisos limit 1 
+insert into perfiles_permisos values(166,28,36) 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: addSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=37 and idperfil=28 
+select nextval('perfiles_permisos_id_idperfilespermisos_seq'::regclass) from perfiles_permisos limit 1 
+insert into perfiles_permisos values(167,28,37) 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: delSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=38 and idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: assingPermissions 
+SELECT * from menus 
+SELECT * from submenus where idmenu=3 
+SELECT * from perfiles_permisos where idsubmenu=14 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=13 and idperfil=28 
+SELECT * from submenus where idmenu=2 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+SELECT * from submenus where idmenu=4 
+SELECT * from perfiles_permisos where idsubmenu=36 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=37 and idperfil=28 
+SELECT * from perfiles_permisos where idsubmenu=38 and idperfil=28 
+SELECT * from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: delSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=6 and idperfil=28 
+DELETE from perfiles_permisos where idsubmenu=6 and idperfil=28 and idperfilespermisos=162 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: delSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=32 and idperfil=28 
+DELETE from perfiles_permisos where idsubmenu=32 and idperfil=28 and idperfilespermisos=163 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: addSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=36 and idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: addSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=37 and idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: delSubMenu 
+SELECT * from perfiles_permisos where idsubmenu=38 and idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Logo 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Accion: Logo 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+select * from menus where idmenu=4 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Accion: Banner 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+Accion: main 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Logo 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\UserController.php 
+Controlador: UserController 
+Accion: Login 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
+Controlador: DaltonismController 
+Accion: testStartScreen 

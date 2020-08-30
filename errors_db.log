@@ -1,1 +1,21 @@
 ﻿
+
+ Error en la consulta: select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: ...d submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=
+                                                                       ^
+
+ Error en la consulta: select * from menus where idmenu= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: select * from menus where idmenu=
+                                         ^
+
+ Error en la consulta: select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: ...d submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=
+                                                                       ^
+
+ Error en la consulta: select * from menus where idmenu= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: select * from menus where idmenu=
+                                         ^
