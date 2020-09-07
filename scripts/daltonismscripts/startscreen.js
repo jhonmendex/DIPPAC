@@ -1,5 +1,12 @@
+
 $(function () {
   $(document).on('click', 'startbutton', function (event) {
-    alert('Se presionó el Boton:');
+    
   });
+$("#startbutton").on('click',function (event) {
+ window.open('index.php?controlador=Daltonism&accion=gameScren','_blank','fullscreen');
 });
+
+});
+
+

@@ -13,6 +13,7 @@
   margin-left: 33%;
   opacity: 90%;
   color: #333333;
+  outline: none;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 4%;
@@ -27,3 +28,5 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+

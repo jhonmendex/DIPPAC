@@ -20,13 +20,15 @@ class DaltonismController extends ControllerBase {
     public function testStartScreen(){
         $this->view->setTemplate('daltonismviews' . DS . 'startingscreen');
         $this->document->addCss('daltonismcss' . DS . 'daltonismstartingscreen');   
-        $this->document->addScript('daltonismscripts' . DS . 'startscreen');   
+        $this->document->addScript('daltonismscripts' . DS . 'startscreen'); 
+        $this->document->addScript( 'jquery');     
         $this->document->setHeader();
         $this->view->show();
     }
-    public function gameScren(){
+    public function gameScreen(){
         $this->view->setTemplate('daltonismviews' . DS . 'gameview');
-        $this->document->addCss('daltonismcss' . DS . 'gameview');       
+        $this->document->addCss('daltonismcss' . DS . 'gameview');  
+        $this->document->addScript( 'jquery');        
          $this->document->setHeader();
         $this->view->show();
     }
