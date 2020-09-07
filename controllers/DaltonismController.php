@@ -29,7 +29,16 @@ class DaltonismController extends ControllerBase {
         $this->view->setTemplate('daltonismviews' . DS . 'gameview');
         $this->document->addCss('daltonismcss' . DS . 'gameview');  
         $this->document->addScript( 'jquery');        
-         $this->document->setHeader();
+        $this->document->addScript('daltonismscripts' . DS . 'startscreen'); 
+        $this->document->setHeader(); 
+        $this->view->show();
+    }
+    public function endGameScreen(){
+        $this->view->setTemplate('daltonismviews' . DS . 'endgameview');
+        $this->document->addCss('daltonismcss' . DS . 'gameview');  
+        $this->document->addScript( 'jquery');        
+        $this->document->addScript('daltonismscripts' . DS . 'startscreen'); 
+        $this->document->setHeader(); 
         $this->view->show();
     }
 
