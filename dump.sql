@@ -2631,6 +2631,7 @@ INSERT INTO public.localidades VALUES (19, 'CIUDAD BOLIVAR', 1);
 
 INSERT INTO public.menus VALUES (3, 'Usuarios', 'index.php?controlador=Index&accion=Logo');
 INSERT INTO public.menus VALUES (2, 'Pruebas', 'index.php?controlador=Test&accion=main');
+INSERT INTO public.menus VALUES (4, 'Daltonismo', 'index.php?controlador=Daltonism&accion=main');
 
 
 --
@@ -2679,7 +2680,8 @@ INSERT INTO public.submenus VALUES (7, 1, 'Perfil', 'index.php?controlador=Profi
 INSERT INTO public.submenus VALUES (6, 2, 'Pruebas', 'index.php?controlador=Test', 'images/imagenes-menu/test.svg');
 INSERT INTO public.submenus VALUES (32, 2, 'Informe', 'index.php?controlador=Test&accion=testResult', 'images/imagenes-menu/test.svg');
 INSERT INTO public.submenus VALUES (14, 3, 'Perfiles', 'index.php?controlador=Profiles', 'icon-perfil');
-INSERT INTO public.submenus VALUES (13, 3, 'Usuarios', 'index.php?controlador=ManageUsers', 'icon-inscripciones');
+INSERT INTO public.submenus VALUES (15, 4, 'Prueba', 'index.php?controlador=ManageUsers', 'icon-inscripciones');
+INSERT INTO public.submenus VALUES (16, 4, 'Informes', 'index.php?controlador=Daltonism&accion=testStartScreen', 'icon-inscripciones');
 
 
 --

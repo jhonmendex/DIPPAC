@@ -6,6 +6,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
     <div>
     <div id='endgamebackground'></div>
     <div id='endGame'></div>
+    <div id='endGameButton'></div>
     </div>
 
 
