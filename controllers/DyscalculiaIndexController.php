@@ -11,9 +11,12 @@ class DyscalculiaIndexController extends ControllerBase
         $this->document->addScript("test");
         $this->document->addScript("font-awesome");
         $this->document->addCss('indexStyle');
+        $this->document->addCss('orden');
         $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
-        $this->document->addCss("orden");
+        $this->document->addCss('dyscaulculiaCss' . DS . 'operationalTestsStyle');
+        $this->document->addCss('dyscaulculiaCss' . DS . 'PractognosticTestsStyle');
         $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
         $this->document->addScript("jquery.mousewheel-3.0.4.pack");
         $this->document->addScript("jquery.fancybox-1.3.4.pack");
         $this->document->addScript("jquery.dataTables");
@@ -29,28 +32,21 @@ class DyscalculiaIndexController extends ControllerBase
     {
         $this->getModel("User");
 
-        $idUser = $this->model->getUserId();
-
-        $res = $_POST;    
+        $idUser = $this->model->getUserId();  
         
         if (isset($_POST['data'])) {
-            $respuesta = $_POST['data'];
+            $datos = $_POST['data'];
             $this->getModel("Cuestionario");
-            $this->model->addAnswers($respuesta, $idUser);
+            $res = $this->model->addAnswers($datos, $idUser);
+            echo json_encode($res);
+        } else {
+            echo json_encode("Error: No es un método POST");
         }
     }
 
     public function testResult()
     {
         $this->view->setTemplate('DyscalculiaViews' . DS . 'result');
-        $this->document->setHeader();
-        $this->getModel("TestDiscalculia");
-        $this->view->show();
-    }
-
-    public function test()
-    {
-        $this->view->setTemplate('DyscalculiaViews' . DS . 'test');
         $this->document->setHeader();
         $this->getModel("TestDiscalculia");
         $this->view->show();
@@ -79,12 +75,7 @@ class DyscalculiaIndexController extends ControllerBase
             }
 
             if ($finalDate == 6) {
-                $this->view->setTemplate('DyscalculiaViews' . DS . 'IdeognosticTest1_6y');
-                $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
-                $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
-                $this->document->setHeader();
-                $this->getModel("TestDiscalculia");
-                $this->view->show();
+                $this->Ideognostic16();
             } elseif ($finalDate == 7) {
                 
             }elseif ($finalDate == 8) {
@@ -102,16 +93,18 @@ class DyscalculiaIndexController extends ControllerBase
         $this->view->setTemplate('DyscalculiaViews' . DS . 'IdeognosticTest1_6y');
         $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
         $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
         $this->document->setHeader();
         $this->getModel("TestDiscalculia");
         $this->view->show();
     }
 
-    public function Ideognostic267()
+    public function Ideognostic26()
     {
-        $this->view->setTemplate('DyscalculiaViews' . DS . 'IdeognosticTest2_6_7y');
+        $this->view->setTemplate('DyscalculiaViews' . DS . 'IdeognosticTest2_6y');
         $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
         $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
         $this->document->setHeader();
         $this->getModel("TestDiscalculia");
         $this->view->show();
@@ -122,6 +115,7 @@ class DyscalculiaIndexController extends ControllerBase
         $this->view->setTemplate('DyscalculiaViews' . DS . 'LexicalTest1_6y');
         $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
         $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
         $this->document->setHeader();
         $this->getModel("TestDiscalculia");
         $this->view->show();
@@ -132,6 +126,54 @@ class DyscalculiaIndexController extends ControllerBase
         $this->view->setTemplate('DyscalculiaViews' . DS . 'LexicalTest2_6y');
         $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
         $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
+        $this->document->setHeader();
+        $this->getModel("TestDiscalculia");
+        $this->view->show();
+    }
+
+    public function Operational16()
+    {
+        $this->view->setTemplate('DyscalculiaViews' . DS . 'OperationalTest1_6y');
+        $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
+        $this->document->addCss('dyscaulculiaCss' . DS . 'operationalTestsStyle');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
+        $this->document->setHeader();
+        $this->getModel("TestDiscalculia");
+        $this->view->show();
+    }
+
+    public function Operational26()
+    {
+        $this->view->setTemplate('DyscalculiaViews' . DS . 'OperationalTest2_6y');
+        $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
+        $this->document->addCss('dyscaulculiaCss' . DS . 'operationalTestsStyle');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
+        $this->document->setHeader();
+        $this->getModel("TestDiscalculia");
+        $this->view->show();
+    }
+
+    public function Practognostic16()
+    {
+        $this->view->setTemplate('DyscalculiaViews' . DS . 'PractognosticTest1_6y');
+        $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
+        $this->document->addCss('dyscaulculiaCss' . DS . 'PractognosticTestsStyle');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
+        $this->document->setHeader();
+        $this->getModel("TestDiscalculia");
+        $this->view->show();
+    }
+
+    public function Verbal16()
+    {
+        $this->view->setTemplate('DyscalculiaViews' . DS . 'VerbalTest1_6y');
+        $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
+        $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
         $this->document->setHeader();
         $this->getModel("TestDiscalculia");
         $this->view->show();

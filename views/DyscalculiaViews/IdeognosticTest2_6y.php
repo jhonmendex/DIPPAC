@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Discalculia Léxica - Prueba 1 - 6 años</title>
+    <title>Prueba de discalculia ideognostica 2 - 6 años</title>
 </head>
 
 <body>
     <div id="background">
         <br>
+
         <div id="iconTime">
             <img src="images/discalculia/clock.png">
             <div class="item">
@@ -20,12 +21,12 @@
         </div>
 
         <div id="statement">
-            <h1>Escoge el signo matemático de<br>la siguiente operación</h1>
+            <h1>Busca el signo correspondiente<br> para realizar la operación</h1>
 
         </div>
 
         <div id="operation">
-            <h1>45 + 20</h1>
+            <h1>52 <label id="sign">_</label> 40 = 12</h1>
             <br>
             <div id="buttons">
                 <div id="row1">
@@ -39,13 +40,14 @@
                 </div>
 
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Lexical26">Continuar</a>
+                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Lexical16">Continuar</a>
                 </div>
             </div>
         </div>
     </div>
     </div>
 </body>
+
 <script>
     $(document).ready(function() {
         document.querySelectorAll('button.answer').forEach(function(btn) {
@@ -56,21 +58,22 @@
 
                 currentData = JSON.parse(currentData);
 
-                var isCorrect = e.target.innerText == "Suma" ? true : false;
+                var isCorrect = e.target.innerText == "Resta" ? true : false;
 
-                var answer3 = {
+                var answer2 = {
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 2,
-                    testName: "Prueba de discalculia léxica 1 - 6 años"
+                    type: 1,
+                    testName: "Prueba de discalculia ideognostica 2 - 6 años"
                 };
 
                 // Add new data to localStorage Array
-                currentData[2] = answer3;
+                currentData[1] = answer2;
 
                 localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
             })
         })
     })
 </script>
+
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Discalculia ideognostica - Prueba 1 - 6 años</title>
+    <title>Prueba de discalculia ideognostica 1 - 6 años</title>
 </head>
 
 <body>
@@ -37,9 +37,8 @@
                     <button id="answer3" class="btn btn-danger answer">95</button>
                     <button id="answer4" class="btn btn-secondary answer">55</button>
                 </div>
-
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Ideognostic267">Continuar</a>
+                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Ideognostic26">Continuar</a>
                 </div>
             </div>
         </div>
@@ -52,12 +51,13 @@ $(document).ready(function () {
     document.querySelectorAll('button.answer').forEach(function (btn) {
         btn.addEventListener('click', function (e) {
             
+            var isCorrect = e.target.innerText == 65 ? true : false;
+
             var answer1 = {
-                // image: "null",
-                isCorrect: false,
+                isCorrect: isCorrect,
                 answer: e.target.innerText,
                 type: 1,
-                testName: "Prueba de discalculia ideognóstica 1 - 6 años"
+                testName: "Prueba de discalculia ideognostica 1 - 6 años"
             };
 
             var array = [];
