@@ -43,7 +43,7 @@
                 </div>
 
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Verbal26">Continuar</a>
+                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Verbal29">Continuar</a>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
 
                 var isCorrect = e.target.innerText == "17" ? true : false;
 
-                var answer9 = {
+                var answer8 = {
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
                     type: 5,
@@ -69,12 +69,29 @@
                 };
 
                 // Add new data to localStorage Array
-                currentData[8] = answer9;
+                currentData[7] = answer8;
 
                 localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
             })
         })
+        $('#continue').on('click', sendAnswer)
     })
+
+    function sendAnswer(e) {
+        e.preventDefault()
+        $.ajax({
+            url: "index.php?controlador=DyscalculiaIndex&accion=saveAnswer", //Leerá la url en la etiqueta action del formulario (archivo.php)
+            method: "POST", //Leerá el método en etiqueta method del formulario
+            data: {
+                data: JSON.parse(localStorage.getItem('dippacAnswers'))
+            },
+            dataType: "json"
+        }).done(function(respuesta) {
+            console.log(respuesta);
+        }).fail(function(error) {
+            console.log(error);
+        });
+    }
 </script>
 
 </html>

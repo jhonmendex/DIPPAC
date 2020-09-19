@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Discalculia ideognostica - Prueba 2 - 6 y 7 años</title>
+    <title>Discalculia Léxica - Prueba 1 - 7 años</title>
 </head>
 
 <body>
@@ -40,14 +40,13 @@
                 </div>
 
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Lexical16">Continuar</a>
+                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Lexical17">Continuar</a>
                 </div>
             </div>
         </div>
     </div>
     </div>
 </body>
-
 <script>
     $(document).ready(function() {
         document.querySelectorAll('button.answer').forEach(function(btn) {
@@ -58,12 +57,13 @@
 
                 currentData = JSON.parse(currentData);
 
+                var isCorrect = e.target.innerText == "Resta" ? true : false;
+
                 var answer2 = {
-                    // image: "null",
-                    isCorrect: false,
+                    isCorrect: isCorrect,
                     answer: e.target.innerText,
                     type: 1,
-                    testName: "Prueba de discalculia ideognóstica 2 - 6 años"
+                    testName: "Prueba de discalculia ideognostica 2 - 7 años"
                 };
 
                 // Add new data to localStorage Array

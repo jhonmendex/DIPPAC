@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Discalculia ideognostica - Prueba 1 - 7 años</title>
+    <title>Prueba de discalculia ideognostica 1 - 7 años</title>
 </head>
 
 <body>
@@ -29,22 +29,44 @@
             <br>
             <div id="buttons">
                 <div id="row1">
-                    <button id="answer1" class="btn btn-warning">68</button>
+                    <button id="answer1" class="btn btn-warning answer">68</button>
                     <button id="answer2" class="btn btn-success ">75</button>
                 </div>
 
                 <div id="row2">
-                    <button id="answer3" class="btn btn-danger">95</button>
-                    <button id="answer4" class="btn btn-secondary">65</button>
+                    <button id="answer3" class="btn btn-danger answer">95</button>
+                    <button id="answer4" class="btn btn-secondary answer">65</button>
                 </div>
 
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Ideognostic18">Continuar</a>
+                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Ideognostic27">Continuar</a>
                 </div>
             </div>
         </div>
     </div>
     </div>
 </body>
+<script>
+    $(document).ready(function() {
+        document.querySelectorAll('button.answer').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
 
+                var isCorrect = e.target.innerText == 65 ? true : false;
+
+                var answer1 = {
+                    isCorrect: isCorrect,
+                    answer: e.target.innerText,
+                    type: 1,
+                    testName: "Prueba de discalculia ideognostica 1 - 7 años"
+                };
+
+                var array = [];
+
+                array.push(answer1);
+
+                localStorage.setItem('dippacAnswers', JSON.stringify(array));
+            })
+        })
+    })
+</script>
 </html>

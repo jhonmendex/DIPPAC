@@ -150,7 +150,7 @@
             </div>
 
             <div id="finish" style="margin-top: -5px;">
-                <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Practognostic26">Continuar</a>
+                <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Verbal16">Continuar</a>
             </div>
         </div>
     </div>

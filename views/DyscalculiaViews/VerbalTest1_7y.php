@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Prueba de discalculia verbal 1 - 6 años</title>
+    <title>Prueba de discalculia verbal 1 - 7 años</title>
 </head>
 
 <body>
@@ -33,17 +33,17 @@
             <br>
             <div id="buttons">
                 <div id="row1">
-                    <button id="answer1" class="btn btn-warning answer">2</button>
-                    <button id="answer2" class="btn btn-success answer">7</button>
+                    <button id="answer1" class="btn btn-warning answer">50 + 11</button>
+                    <button id="answer2" class="btn btn-success answer">50 - 11</button>
                 </div>
 
                 <div id="row2">
-                    <button id="answer3" class="btn btn-danger answer">17</button>
-                    <button id="answer4" class="btn btn-secondary answer">37</button>
+                    <button id="answer3" class="btn btn-danger answer">11 - 50</button>
+                    <button id="answer4" class="btn btn-secondary answer">11 + 50</button>
                 </div>
 
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Verbal26">Continuar</a>
+                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Verbal27">Continuar</a>
                 </div>
             </div>
         </div>
@@ -59,13 +59,13 @@
 
                 currentData = JSON.parse(currentData);
 
-                var isCorrect = e.target.innerText == "17" ? true : false;
+                var isCorrect = e.target.innerText == "11 - 50" ? true : false;
 
                 var answer9 = {
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
                     type: 5,
-                    testName: "Prueba de discalculia verbal 1 - 6 años"
+                    testName: "Prueba de discalculia verbal 1 - 7 años"
                 };
 
                 // Add new data to localStorage Array

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Prueba de discalculia verbal 1 - 6 años</title>
+    <title>Prueba de discalculia verbal 1 - 8 años</title>
 </head>
 
 <body>
@@ -43,7 +43,7 @@
                 </div>
 
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Verbal26">Continuar</a>
+                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Verbal28">Continuar</a>
                 </div>
             </div>
         </div>
@@ -61,19 +61,20 @@
 
                 var isCorrect = e.target.innerText == "17" ? true : false;
 
-                var answer9 = {
+                var answer8 = {
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
                     type: 5,
-                    testName: "Prueba de discalculia verbal 1 - 6 años"
+                    testName: "Prueba de discalculia verbal 1 - 8 años"
                 };
 
                 // Add new data to localStorage Array
-                currentData[8] = answer9;
+                currentData[7] = answer8;
 
                 localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
             })
         })
+        $('#continue').on('click', sendAnswer)
     })
 </script>
 

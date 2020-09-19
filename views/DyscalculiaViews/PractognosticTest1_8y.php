@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Prueba de discalculia practognostica 1 - 6 años</title>
+    <title>Prueba de discalculia practognostica 1 - 8 años</title>
 </head>
 
 <body>
@@ -150,7 +150,7 @@
             </div>
 
             <div id="finish" style="margin-top: -5px;">
-                <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Practognostic26">Continuar</a>
+                <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Verbal16">Continuar</a>
             </div>
         </div>
     </div>
@@ -172,7 +172,7 @@
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
                     type: 4,
-                    testName: "Prueba de discalculia practognostica 1 - 6 años"
+                    testName: "Prueba de discalculia practognostica 1 - 8 años"
                 };
 
                 // Add new data to localStorage Array
