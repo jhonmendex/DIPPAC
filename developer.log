@@ -23145,3 +23145,11 @@ Accion: gameScreen
 Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\DaltonismController.php 
 Controlador: DaltonismController 
 Accion: endGameScreen 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: C:\Bitnami\wappstack-7.4.9-0\apache2\htdocs\DIPPAC\controllers\IndexController.php 
+Controlador: IndexController 
+Accion: main 
