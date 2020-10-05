@@ -67,6 +67,27 @@ class DataBase {
 
         return self::$instance;
     }
+    function selectLastRegister($query)
+    {
+        $rs = null;
+
+        if ($this->config->get('dbtype') == "postgres") {
+            $rs = pg_query($this->conexion, $query);
+            if ($rs) {
+                error_log($query . " \n", 3, LOG);
+            } else {
+                error_log("\n\n Error en la consulta: " . $query . " \n" . pg_last_error($this->conexion), 3, LOGDB);
+                return false;
+            }
+        } elseif ($this->config->get('dbtype') == "mysql") {
+            $rs = mysql_query($query, $this->conexion);
+            error_log($query . " \n", 3, LOG);
+        }
+        
+        $row = pg_fetch_row($rs);
+
+        return $row;
+    }
 
 }
 

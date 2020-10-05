@@ -2,9 +2,11 @@
 
 defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 
-class DaltonismController extends ControllerBase {
+class DaltonismController extends ControllerBase
+{
 
-    public function main() {
+    public function main()
+    {
         $this->view->setTemplate('daltonismviews' . DS . 'principal');
         $this->document->addScript("test");
         $this->document->addScript("font-awesome");
@@ -12,38 +14,68 @@ class DaltonismController extends ControllerBase {
         $this->document->addScript("jquery.fancybox-1.3.4.pack");
         $this->document->addScript("jquery.dataTables");
         $this->document->addCss("daltonismstartingscreen");
+        $this->getModel("Daltonism");
+        $cuestionarios = $this->model->getCuestionarios();
         $this->document->addCss("jquery.fancybox-1.3.4");
         $this->document->setHeader();
         $this->view->show();
     }
 
-    public function testStartScreen(){
+    public function testStartScreen()
+    {
         $this->view->setTemplate('daltonismviews' . DS . 'startingscreen');
-        $this->document->addCss('daltonismcss' . DS . 'daltonismstartingscreen');   
-        $this->document->addScript('daltonismscripts' . DS . 'startscreen'); 
-        $this->document->addScript( 'jquery');     
+        $this->document->addCss('daltonismcss' . DS . 'daltonismstartingscreen');
+        $this->document->addScript('daltonismscripts' . DS . 'daltonism');
+        $this->document->addScript('jquery');
+        $this->getModel("Daltonism");
+        $cuestionarios = $this->model->getCuestionarios();
         $this->document->setHeader();
         $this->view->show();
     }
-    public function gameScreen(){
+    public function gameScreen()
+    {
         $this->view->setTemplate('daltonismviews' . DS . 'gameview');
-        $this->document->addCss('daltonismcss' . DS . 'gameview');  
-        $this->document->addScript( 'jquery');        
-        $this->document->addScript('daltonismscripts' . DS . 'startscreen'); 
-        $this->document->setHeader(); 
+        $this->document->addCss('daltonismcss' . DS . 'gameview');
+        $this->document->addScript('jquery');
+        $this->document->addScript('daltonismscripts' . DS . 'daltonism');
+        $this->getModel("Daltonism");
+        $cuestionarios = $this->model->getCuestionarios();
+        $this->document->setHeader();
         $this->view->show();
     }
-    public function endGameScreen(){
+    public function endGameScreen()
+    {
         $this->view->setTemplate('daltonismviews' . DS . 'endgameview');
-        $this->document->addCss('daltonismcss' . DS . 'gameview');  
-        $this->document->addScript( 'jquery');        
-        $this->document->addScript('daltonismscripts' . DS . 'startscreen'); 
-        $this->document->setHeader(); 
+        $this->document->addCss('daltonismcss' . DS . 'gameview');
+        $this->document->addScript('jquery');
+        $this->document->addScript('daltonismscripts' . DS . 'daltonism');
+        $this->document->setHeader();
         $this->view->show();
     }
+    public function saveAnswer()
+    {
+        $this->getModel("User");
+        $idUser = $this->model->getUserId();
+        $user = $this->model->getUserById($idUser);
+        if ($user != false) {
 
+            $birthDate = $user['fechacumple'];
 
+            $birthDateYear = date("Y", strtotime($birthDate));
 
+            $today = getdate();
+
+            $todayYear = $today['year'];
+
+            $finalDate = $todayYear - $birthDateYear;
+        }
+        if (isset($_POST['data'])) {
+            $datos = $_POST['data'];
+            $this->getModel("Daltonism");
+            $res = $this->model->addAnswer($datos, $idUser, $finalDate);
+            echo json_encode($res);
+        } else {
+            echo json_encode("Error: No es un método POST");
+        }
+    }
 }
-
-?>
