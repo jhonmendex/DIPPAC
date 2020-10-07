@@ -52,6 +52,18 @@ class DaltonismController extends ControllerBase
         $this->document->setHeader();
         $this->view->show();
     }
+    public function testReports()
+    {
+        $this->view->setTemplate('daltonismviews' . DS . 'reportsview');
+        $this->document->addCss('daltonismcss' . DS . 'reportview');
+        //$this->document->addScript('daltonismscripts' . DS . 'daltonism');
+        $this->document->addScript('jquery');
+        $this->getModel("Daltonism");
+        $reporte = $this->model->getReport();
+        $this->view->setVars('reporte', $reporte);
+        $this->document->setHeader();
+        $this->view->show();
+    }
     public function saveAnswer()
     {
         $this->getModel("User");

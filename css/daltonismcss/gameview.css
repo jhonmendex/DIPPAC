@@ -32,7 +32,8 @@
   position: absolute;
   left: 45%;
   top: 1%;
-  background-size: 100% 100%;
+  background-size: 80% 80%;
+  background-position: center;
   height: 25%;
   background-repeat: no-repeat;
   background-image: url('images/Normal/Tucan.png');
@@ -50,7 +51,7 @@
   top: 35%;
   border: none;
   position: absolute;
-  background-size: 100% 100%;
+  background-size: inherit;
   height: 25%;
   background-repeat: no-repeat;
   background-image: url('images/Deutaronapia/Tucan.png');
@@ -71,7 +72,7 @@
   outline: none;
   border: none;
   position: absolute;
-  background-size: 100% 100%;
+  background-size: inherit;
   height: 25%;
   background-repeat: no-repeat;
   background-image: url('images/Protanopia/Tucan.png');
@@ -89,7 +90,7 @@
   top: 50%;
   border: none;
   position: absolute;
-  background-size: 100% 100%;
+  background-size: inherit;
   height: 25%;
   background-repeat: no-repeat;
   background-image: url('images/Tritanopia/Tucan.png');
@@ -107,7 +108,7 @@
   top: 35%;
   border: none;
   position: absolute;
-  background-size: 100% 100%;
+  background-size: inherit;
   height: 25%;
   background-repeat: no-repeat;
   background-image: url('images/Deutanomalia/Tucan.png');
@@ -125,7 +126,7 @@
   top: 70%;
   border: none;
   position: absolute;
-  background-size: 100% 100%;
+  background-size: inherit;
   height: 25%;
   background-repeat: no-repeat;
   background-image: url('images/Tritanomalia/Tucan.png');
@@ -143,7 +144,7 @@
   top: 35%;
   border: none;
   position: absolute;
-  background-size: 100% 100%;
+  background-size: inherit;
   height: 25%;
   background-repeat: no-repeat;
   background-image: url('images/Protanomalia/Tucan.png');
@@ -161,6 +162,10 @@
   top: 70%;
   border: none;
   position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25%;
+  background-image: url('images/Ninguna.gif');
 
 }
 

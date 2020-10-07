@@ -50,4 +50,28 @@ class DaltonismModel extends ModelBase
 
         return "success";
     }
+    public function getReport()
+    {
+        $consult = $this->db->executeQue('select u.idusuario,u.nombreusuario,c.edad,c.fechapresentacion,p.normales,p.deutaronapia,p.deutoronomalia,
+        p.protanomalia,p.protanopia,p.tritanomalia,p.tritanopia,c.conclusion
+        from usuarios u, cuestionarios c,respuestas p
+        where u.idusuario=c."usuarioId" and c."Id"=p."cuestionarioId" and p.tipo=6');
+        while ($fila = $this->db->arrayResult($consult)) {
+            $usuarios[] = array(
+                'id' => $fila['idusuario'],
+                'nombre' => $fila['nombreusuario'],
+                'edad' => $fila['edad'],
+                'fechapresentacion' => $fila['fechapresentacion'],
+                'normales' => $fila['normales'],
+                'deutaronapia' => $fila['deutaronapia'],
+                'deutoronomalia' => $fila['deutoronomalia'],
+                'protanomalia' => $fila['protanomalia'],
+                'protanopia' => $fila['protanopia'],
+                'tritanomalia' => $fila['tritanomalia'],
+                'tritanopia' => $fila['tritanopia'],
+                'conclusion' => $fila['conclusion']
+            );
+        }
+        return $usuarios;
+    }
 }

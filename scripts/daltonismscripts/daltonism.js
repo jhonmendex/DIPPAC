@@ -231,6 +231,7 @@ function randomPosition() {
 function endGame(x, e) {
   if (x == 20) {
     var answersDaltonism;
+    var resultado;
     deunapiaButton.style.visibility = "hidden";
     protnapiaButton.style.visibility = "hidden";
     tritanopiaButton.style.visibility = "hidden";
@@ -242,6 +243,43 @@ function endGame(x, e) {
     normalButton.style.visibility = "hidden";
     monkey.style.visibility = "hidden";
     elijeEste.style.visibility = "hidden";
+    if (normalContador > deumaliaContador && normalContador > deunapiacontador
+      && normalContador > protanomaliaContador && normalContador > protnapiaContador
+      && normalContador > tritanomaliaContador && normalContador > tritanopiaContador) {
+      resultado = "Normal";
+    } else if (deumaliaContador > normalContador && deumaliaContador > deunapiacontador &&
+      deumaliaContador > protanomaliaContador && deumaliaContador > protnapiaContador &&
+      deumaliaContador > tritanomaliaContador && deumaliaContador > tritanopiaContador) {
+      resultado = "deutoronomalia";
+
+    } else if (deunapiacontador > normalContador && deunapiacontador > deumaliaContador &&
+      deunapiacontador > protanomaliaContador && deunapiacontador > protnapiaContador &&
+      deunapiacontador > tritanomaliaContador && deunapiacontador > tritanopiaContador) {
+      resultado = "deutaronapia";
+
+    } else if (protanomaliaContador > normalContador && protanomaliaContador > deumaliaContador &&
+      protanomaliaContador > deunapiacontador && protanomaliaContador > protnapiaContador &&
+      protanomaliaContador > tritanomaliaContador && protanomaliaContador > tritanopiaContador) {
+      resultado = "protanomalia";
+
+    } else if (protnapiaContador > normalContador && protnapiaContador > deumaliaContador &&
+      protnapiaContador > deunapiacontador && protnapiaContador > protanomaliaContador &&
+      protnapiaContador > tritanomaliaContador && protnapiaContador > tritanopiaContador) {
+      resultado = "protanopia";
+
+    } else if (tritanomaliaContador > normalContador && tritanomaliaContador > deumaliaContador &&
+      tritanomaliaContador > deunapiacontador && tritanomaliaContador > protanomaliaContador &&
+      tritanomaliaContador > protnapiaContador && tritanomaliaContador > tritanopiaContador) {
+      resultado = "tritanomalia";
+
+    } else if (tritanopiaContador > normalContador && tritanopiaContador > deumaliaContador &&
+      tritanopiaContador > deunapiacontador && tritanopiaContador > protanomaliaContador &&
+      tritanopiaContador > protnapiaContador && tritanopiaContador > tritanomaliaContador) {
+      resultado = "tritanopia";
+
+    } else
+      resultado = "Inconcluso";
+
     answersDaltonism = {
       type: 6,
       testName: "Prueba de daltonismo",
@@ -252,7 +290,7 @@ function endGame(x, e) {
       protanopia: protnapiaContador,
       tritanomalia: tritanomaliaContador,
       tritanopia: tritanopiaContador,
-      resultado: "Protanopia"
+      resultado: resultado
     };
     localStorage.setItem('dippacAnswers', JSON.stringify(answersDaltonism));
     sendAnswer(e);
