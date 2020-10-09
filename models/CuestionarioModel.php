@@ -24,9 +24,9 @@ class CuestionarioModel extends ModelBase
         return $send;
     }
 
-    public function addAnswers($answers, $idUser)
+    public function addAnswers($answers, $idUser, $edad)
     {
-        $cuestionario = "INSERT INTO public.cuestionarios(\"usuarioId\") VALUES (" . $idUser . ");";
+        $cuestionario = "INSERT INTO public.cuestionarios(\"usuarioId\", \"edad\") VALUES (" . $idUser . "," . $edad . ");";
 
         $resultRespuesta = $this->db->executeQue($cuestionario);
 
@@ -38,9 +38,11 @@ class CuestionarioModel extends ModelBase
             return "error";
         }
 
+        sort($answers);
+
         foreach ($answers as $index => $answer) {
-            $respuesta = "INSERT INTO public.respuestas(\"esCorrecta\", respuesta, \"cuestionarioId\", tipo, nombreprueba)
-            VALUES (" . $answer['isCorrect'] . ", '" . $answer['answer'] . "', '" . $resultConsulta[0] . "', " . $answer['type'] . ", '" . $answer['testName'] . "');";
+            $respuesta = "INSERT INTO public.respuestas(tipo, respuesta, imagen, \"cuestionarioId\", \"esCorrecta\", nombreprueba)
+            VALUES (" . $answer['type'] . ", '" . $answer['answer'] . "', '" . $answer['image'] . "', '" . $resultConsulta[0] . "', " . $answer['isCorrect'] . ", '" . $answer['testName'] . "');";
 
             $resultRespuesta = $this->db->executeQue($respuesta);
 
@@ -48,7 +50,7 @@ class CuestionarioModel extends ModelBase
                 return "error";
             }
         }
-        
+
         return "success";
     }
 }

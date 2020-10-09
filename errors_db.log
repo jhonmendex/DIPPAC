@@ -124,3 +124,27 @@ LINE 2:             VALUES (false, "Diez + Veinte", 1, 1, "Prueba de...
 ERROR:  syntax error at or near ","
 LINE 2:             VALUES (, '', 1, , '');
                             ^
+
+ Error en la consulta: INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (, '', '34', 0, 'Prueba de discalculia gráfica 1 - 6 años'); 
+ERROR:  syntax error at or near ","
+LINE 2:             VALUES (, '', '34', 0, 'Prueba de discalculia gr...
+                            ^
+
+ Error en la consulta: INSERT INTO public.respuestas("esCorrecta", respuesta, "cuestionarioId", tipo, nombreprueba)
+            VALUES (, '', '35', 0, 'Prueba de discalculia gráfica 1 - 6 años'); 
+ERROR:  syntax error at or near ","
+LINE 2:             VALUES (, '', '35', 0, 'Prueba de discalculia gr...
+                            ^
+
+ Error en la consulta: INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (n, 'n', 'n', '50', n, 'n'); 
+ERROR:  column "n" does not exist
+LINE 2:             VALUES (n, 'n', 'n', '50', n, 'n');
+                            ^
+
+ Error en la consulta: INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (n, 'n', 'n', '51', n, 'n'); 
+ERROR:  column "n" does not exist
+LINE 2:             VALUES (n, 'n', 'n', '51', n, 'n');
+                            ^

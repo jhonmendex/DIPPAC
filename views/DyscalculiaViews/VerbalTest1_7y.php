@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement" style="margin-bottom: 4%;">
-            <h1>Escucha el siguiente audio</h1>
+            <h1>Escucha el siguiente audio:</h1>
         </div>
 
         <div id="operation">
@@ -28,7 +28,7 @@
                 <audio id="audio" src="audios/audio.mpeg" preload="none" controls></audio>
             </div>
             <div style="margin-top: 2%;">
-                <h4>¿Qué número escuchaste?</h4>
+                <h4>¿Qué operación escuchaste?</h4>
             </div>
             <br>
             <div id="buttons">
@@ -62,9 +62,10 @@
                 var isCorrect = e.target.innerText == "11 - 50" ? true : false;
 
                 var answer9 = {
+                    type: 5,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 5,
+                    image: null,
                     testName: "Prueba de discalculia verbal 1 - 7 años"
                 };
 

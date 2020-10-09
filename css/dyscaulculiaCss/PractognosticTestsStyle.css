@@ -11,6 +11,10 @@ h1, h2 {
   text-align: center;
 }
 
+h6 {
+  pointer-events: none;
+}
+
 #statement {
   margin-bottom: 5%;
 }
@@ -33,6 +37,7 @@ h1, h2 {
   margin-left: 30px;
   margin-top: 20px;
   margin-right: 25px;
+  align-items: center;
 }
 
 #elements {
@@ -50,15 +55,31 @@ h1, h2 {
   margin-left: 5%;
 }
 
+#element1 {
+  width: 50%;
+  height: 50%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+}
+
 #elements {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
 }
 
+#circleElements {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 150px;
+  pointer-events: none;
+}
+
 #information {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  pointer-events: none;
 }
 
 #item {
@@ -78,19 +99,53 @@ h4 {
 
 #continue {
   margin-bottom: 5%;
-  margin-top: 3%;
+  margin-top: 1%;
 }
 
 #circle1 {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 8%;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  margin-left: 20%;
+  background-color: #50A4CD;
+  border-color: #000000;
+  padding: 4%;
+  margin-right: 5%;
   border-radius: 50%;
+  outline: none;
+}
+
+#circle2 {
+  background-color: #50A4CD;
+  border-color: #000000;
+  padding: 4%;
+  margin-left: 5%;
+  border-radius: 50%;
+  outline: none;
+}
+
+#inputs {
+  background-color: #F7FF19;
+  position: relative;
+  margin-top: 1%;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 16%;
+  border-radius: 5%;
+}
+
+#inputUno, #inputDos {
+  margin-top: 20%;
+  margin-left: 10%;
+}
+
+#col1, #col2 {
+  margin-top: 15%;
+}
+
+#operator {
+  text-align: center;
+  margin-top: -10%;
+}
+
+#equality {
+  font-size: 600%;
 }

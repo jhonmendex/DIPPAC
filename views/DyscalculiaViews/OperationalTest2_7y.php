@@ -29,7 +29,7 @@
             </div>
             <br>
             <div style="margin-bottom: 1%;">
-                <h4>Escribe la operación e intenta desarrollarla</h4>
+                <h4>Escribe la operación e intenta desarrollarla:</h4>
             </div>
             <br>
             <div id="result">
@@ -73,9 +73,10 @@
                 var isCorrect = e.target.innerText == "510" ? true : false;
 
                 var answer6 = {
+                    type: 3,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 3,
+                    image: null,
                     testName: "Prueba de discalculia operacional 2 - 7 años"
                 };
 

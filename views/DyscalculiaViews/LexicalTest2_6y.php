@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement">
-            <h1>Escoge los números<br>presentes en la operación</h1>
+            <h1>Escoge los números<br>presentes en la operación:</h1>
 
         </div>
 
@@ -60,9 +60,10 @@
                 var isCorrect = e.target.innerText == "Diez + Veinte" ? true : false;
 
                 var answer4 = {
+                    type: 2,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 2,
+                    image: null,
                     testName: "Prueba de discalculia léxica 2 - 6 años"
                 };
 

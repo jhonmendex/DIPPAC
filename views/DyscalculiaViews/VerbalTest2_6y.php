@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement" style="margin-bottom: 4%;">
-            <h1>Escucha el siguiente audio</h1>
+            <h1>Escucha el siguiente audio:</h1>
         </div>
 
         <div id="operation">
@@ -43,7 +43,7 @@
                 </div>
 
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=main">Continuar</a>
+                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Graphic16">Continuar</a>
                 </div>
             </div>
         </div>
@@ -62,9 +62,10 @@
                 var isCorrect = e.target.innerText == "17" ? true : false;
 
                 var answer10 = {
+                    type: 5,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 5,
+                    image: null,
                     testName: "Prueba de discalculia verbal 2 - 6 años"
                 };
 
@@ -74,24 +75,7 @@
                 localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
             })
         })
-        $('#continue').on('click', sendAnswer)
     })
-
-    function sendAnswer(e) {
-        e.preventDefault()
-        $.ajax({
-            url: "index.php?controlador=DyscalculiaIndex&accion=saveAnswer", //Leerá la url en la etiqueta action del formulario (archivo.php)
-            method: "POST", //Leerá el método en etiqueta method del formulario
-            data: {
-                data: JSON.parse(localStorage.getItem('dippacAnswers'))
-            },
-            dataType: "json"
-        }).done(function(respuesta) {
-            console.log(respuesta);
-        }).fail(function(error) {
-            console.log(error);
-        });
-    }
 </script>
 
 </html>

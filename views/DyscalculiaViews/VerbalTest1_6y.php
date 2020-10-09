@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement" style="margin-bottom: 4%;">
-            <h1>Escucha el siguiente audio</h1>
+            <h1>Escucha el siguiente audio:</h1>
         </div>
 
         <div id="operation">
@@ -59,12 +59,13 @@
 
                 currentData = JSON.parse(currentData);
 
-                var isCorrect = e.target.innerText == "17" ? true : false;
+                var isCorrect = e.target.innerText == "7" ? true : false;
 
                 var answer9 = {
+                    type: 5,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 5,
+                    image: null,
                     testName: "Prueba de discalculia verbal 1 - 6 años"
                 };
 

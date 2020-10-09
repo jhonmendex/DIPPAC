@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement">
-            <h1>Escoge los números<br>presentes en la operación</h1>
+            <h1>Escoge los números<br>presentes en la operación:</h1>
 
         </div>
 
@@ -39,7 +39,7 @@
                 </div>
 
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Operational17">Continuar</a>
+                    <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Operational17">Continuar</a>
                 </div>
             </div>
         </div>
@@ -60,9 +60,10 @@
                 var isCorrect = e.target.innerText == "Cuarenta y cinco X veinte" ? true : false;
 
                 var answer4 = {
+                    type: 2,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 2,
+                    image: null,
                     testName: "Prueba de discalculia léxica 2 - 7 años"
                 };
 

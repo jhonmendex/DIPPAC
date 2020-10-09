@@ -169,9 +169,10 @@
                 var isCorrect = e.target.innerText.includes("10") && e.target.innerText.includes("9") ? true : false;
 
                 var answer7 = {
+                    type: 4,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 4,
+                    image: null,
                     testName: "Prueba de discalculia practognostica 1 - 6 años"
                 };
 

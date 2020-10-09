@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement" style="margin-bottom: 2%;">
-            <h1>Escucha el siguiente audio.</h1>
+            <h1>Escucha el siguiente audio:</h1>
         </div>
 
         <div id="operation">
@@ -29,7 +29,7 @@
             </div>
             <br>
             <div style="margin-bottom: 1%;">
-                <h4>Escribe la operación e intenta desarrollarla</h4>
+                <h4>Escribe la operación e intenta desarrollarla:</h4>
             </div>
             <br>
             <div id="result">
@@ -49,10 +49,10 @@
 
 
             <div id="buttons">
-                <button id="answer1" class="btn btn-warning answer">710</button>
-                <button id="answer2" class="btn btn-success answer">720</button>
-                <button id="answer3" class="btn btn-danger answer">730</button>
-                <button id="answer4" class="btn btn-secondary answer">740</button>
+                <button id="answer1" class="btn btn-warning answer">35</button>
+                <button id="answer2" class="btn btn-success answer">25</button>
+                <button id="answer3" class="btn btn-danger answer">20</button>
+                <button id="answer4" class="btn btn-secondary answer">10</button>
                 <div id="finish">
                     <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Practognostic16">Continuar</a>
                 </div>
@@ -70,12 +70,13 @@
 
                 currentData = JSON.parse(currentData);
 
-                var isCorrect = e.target.innerText == "710" ? true : false;
+                var isCorrect = e.target.innerText == "25" ? true : false;
 
                 var answer6 = {
+                    type: 3,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 3,
+                    image: null,
                     testName: "Prueba de discalculia operacional 2 - 6 años"
                 };
 

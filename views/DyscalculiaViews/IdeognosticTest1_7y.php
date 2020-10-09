@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement">
-            <h1>Realiza la siguiente <br> operación y responde</h1>
+            <h1>Realiza la siguiente <br> operación y responde:</h1>
 
         </div>
 
@@ -54,9 +54,10 @@
                 var isCorrect = e.target.innerText == 65 ? true : false;
 
                 var answer1 = {
+                    type: 1,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 1,
+                    image: null,
                     testName: "Prueba de discalculia ideognostica 1 - 7 años"
                 };
 
@@ -69,4 +70,5 @@
         })
     })
 </script>
+
 </html>

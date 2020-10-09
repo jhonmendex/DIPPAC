@@ -21,13 +21,13 @@
 
 
         <div id="statement" style="margin-bottom: 2%;">
-            <h1>¿Cuántos elementos ves de cada tipo?</h1>
+            <h1>¿Cuántos lápices ves?</h1>
         </div>
 
         <div id="operation">
 
             <div id="elements">
-                <div><img id="element1" src="images/discalculia/elements/pencil.svg" /></div>
+                <div><img id="element1" src="images/discalculia/elements/eraser.svg" /></div>
                 <div></div>
                 <div><img id="element1" src="images/discalculia/elements/pencil.svg" /></div>
                 <div></div>
@@ -45,7 +45,7 @@
                 <div></div>
                 <div><img id="element1" src="images/discalculia/elements/pencil.svg" /></div>
                 <div></div>
-                <div><img id="element1" src="images/discalculia/elements/pencil.svg" /></div>
+                <div><img id="element1" src="images/discalculia/elements/eraser.svg" /></div>
                 <div></div>
                 <div><img id="element1" src="images/discalculia/elements/pencil.svg" /></div>
                 <div></div>
@@ -67,7 +67,6 @@
                 <div><img id="element1" src="images/discalculia/elements/pencil.svg" /></div>
                 <div><img id="element1" src="images/discalculia/elements/pencil.svg" /></div>
                 <div></div>
-
             </div>
         </div>
 
@@ -75,19 +74,22 @@
             <div id="options">
                 <button id="answer1" class="btn btn-warning answer">
                     <div id="information">
+                        <div></div>
+                        <div></div>
                         <div>
-                            <h6>10</h6>
+                            <h6>5</h6>
                         </div>
                         <div>
                             <img id="quantity1" src="images/discalculia/elements/pencil.svg" />
                         </div>
                         <div></div>
+                        <div></div>
                         <div>
-                            <h6>9</h6>
                         </div>
                         <div>
-                            <img id="quantity2" src="images/discalculia/elements/eraser.svg" />
                         </div>
+                        <div></div>
+                        <div></div>
                     </div>
 
                 </button>
@@ -95,56 +97,47 @@
 
                 <button id="answer2" class="btn btn-success answer">
                     <div id="information">
+                        <div></div>
+                        <div></div>
                         <div>
-                            <h6>12</h6>
+                            <h6>8</h6>
                         </div>
                         <div>
                             <img id="quantity1" src="images/discalculia/elements/pencil.svg" />
                         </div>
                         <div></div>
-                        <div>
-                            <h6>10</h6>
-                        </div>
-                        <div>
-                            <img id="quantity2" src="images/discalculia/elements/eraser.svg" />
-                        </div>
+                        <div></div>
                     </div>
 
                 </button>
 
                 <button id="answer3" class="btn btn-danger answer">
                     <div id="information">
+                        <div> </div>
+                        <div> </div>
                         <div>
-                            <h6>11</h6>
+                            <h6>6</h6>
                         </div>
                         <div>
                             <img id="quantity1" src="images/discalculia/elements/pencil.svg" />
                         </div>
-                        <div></div>
-                        <div>
-                            <h6>9</h6>
-                        </div>
-                        <div>
-                            <img id="quantity2" src="images/discalculia/elements/eraser.svg" />
-                        </div>
+                        <div> </div>
+                        <div> </div>
                     </div>
                 </button>
 
                 <button id="answer4" class="btn btn-secondary answer">
                     <div id="information">
+                        <div> </div>
+                        <div></div>
                         <div>
-                            <h6>16</h6>
+                            <h6>7</h6>
                         </div>
                         <div>
                             <img id="quantity1" src="images/discalculia/elements/pencil.svg" />
                         </div>
-                        <div></div>
-                        <div>
-                            <h6>8</h6>
-                        </div>
-                        <div>
-                            <img id="quantity2" src="images/discalculia/elements/eraser.svg" />
-                        </div>
+                        <div> </div>
+                        <div> </div>
                     </div>
                 </button>
             </div>
@@ -166,12 +159,13 @@
 
                 currentData = JSON.parse(currentData);
 
-                var isCorrect = e.target.innerText.includes("10") && e.target.innerText.includes("9") ? true : false;
+                var isCorrect = e.target.innerText.includes("8") ? true : false;
 
                 var answer7 = {
+                    type: 4,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 4,
+                    image: null,
                     testName: "Prueba de discalculia practognostica 1 - 7 años"
                 };
 

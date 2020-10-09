@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement">
-            <h1>Escoge el signo matemático de<br>la siguiente operación</h1>
+            <h1>Escoge el signo matemático de<br>la siguiente operación:</h1>
 
         </div>
 
@@ -59,9 +59,10 @@
                 var isCorrect = e.target.innerText == "Multiplicación" ? true : false;
 
                 var answer3 = {
+                    type: 2,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 2,
+                    image: null,
                     testName: "Discalculia Léxica - Prueba 1 - 7 años"
                 };
 

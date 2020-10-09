@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Prueba de discalculia operacional 1 - 6 años</title>
+    <title>Prueba de discalculia operacional 1 - 8 años</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         </div>
 
         <div id="statement" style="margin-bottom: 3%;">
-            <h1>Realiza la siguiente <br> operación y responde</h1>
+            <h1>Realiza la siguiente <br> operación y responde:</h1>
         </div>
 
         <div id="operation">
@@ -32,22 +32,16 @@
 
             <h1>4 5 0</h1>
             <h1 class="relative"><span class="operator">+</span> 2 6 0</h1>
+            <h1 class="relative"><span class="operator">+</span> 1 2 0</h1>
             <hr>
             <div id="result">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-            </div>
-
-            <div id="buttons">
-                <button id="answer1" class="btn btn-warning answer">710</button>
-                <button id="answer2" class="btn btn-success answer">720</button>
-                <button id="answer3" class="btn btn-danger answer">730</button>
-                <button id="answer4" class="btn btn-secondary answer">740</button>
+                <input id="inputUno" type="text">
+                <input id="inputDos" type="text">
+                <input id="inputTres" type="text">
             </div>
 
             <div id="finish">
-                <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Operational26">Continuar</a>
+                <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Operational28">Continuar</a>
             </div>
 
 
@@ -56,28 +50,31 @@
 </body>
 <script>
     $(document).ready(function() {
-        document.querySelectorAll('button.answer').forEach(function(btn) {
-            btn.addEventListener('click', function(e) {
+        $(document).on('change', 'input', function(e) {
 
-                // Get the existing data
-                var currentData = localStorage.getItem('dippacAnswers');
+            // Get the existing data
+            var currentData = localStorage.getItem('dippacAnswers');
 
-                currentData = JSON.parse(currentData);
+            currentData = JSON.parse(currentData);
 
-                var isCorrect = e.target.innerText == "710" ? true : false;
+            var inputUno = document.getElementById('inputUno').value;
+            var inputDos = document.getElementById('inputDos').value;
+            var inputTres = document.getElementById('inputTres').value;
 
-                var answer5 = {
-                    isCorrect: isCorrect,
-                    answer: e.target.innerText,
-                    type: 3,
-                    testName: "Prueba de discalculia operacional 1 - 6 años"
-                };
+            var isCorrect = inputUno == "8" && inputDos == "3" && inputTres == "0" ? true : false;
 
-                // Add new data to localStorage Array
-                currentData[4] = answer5;
+            var answer5 = {
+                type: 3,
+                isCorrect: isCorrect,
+                answer: inputUno + inputDos + inputTres,
+                image: null,
+                testName: "Prueba de discalculia operacional 1 - 8 años"
+            };
 
-                localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
-            })
+            // Add new data to localStorage Array
+            currentData[4] = answer5;
+
+            localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
         })
     })
 </script>

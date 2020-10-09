@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement" style="margin-bottom: 4%;">
-            <h1>Escucha el siguiente audio</h1>
+            <h1>Escucha el siguiente audio:</h1>
         </div>
 
         <div id="operation">
@@ -28,20 +28,13 @@
                 <audio id="audio" src="audios/audio.mpeg" preload="none" controls></audio>
             </div>
             <div style="margin-top: 2%;">
-                <h4>¿Qué número escuchaste?</h4>
+                <h4>Escribe el número que escuchaste</h4>
             </div>
             <br>
+            <div class="input-group-prepend" id="entry">
+                <input type="text" class="form-control" id="inputNum">
+            </div>
             <div id="buttons">
-                <div id="row1">
-                    <button id="answer1" class="btn btn-warning answer">2</button>
-                    <button id="answer2" class="btn btn-success answer">7</button>
-                </div>
-
-                <div id="row2">
-                    <button id="answer3" class="btn btn-danger answer">17</button>
-                    <button id="answer4" class="btn btn-secondary answer">37</button>
-                </div>
-
                 <div id="finish">
                     <a id="continue" class="btn btn-primary disable-links" href="index.php?controlador=DyscalculiaIndex&accion=Verbal28">Continuar</a>
                 </div>
@@ -52,29 +45,27 @@
 </body>
 <script>
     $(document).ready(function() {
-        document.querySelectorAll('button.answer').forEach(function(btn) {
-            btn.addEventListener('click', function(e) {
-                // Get the existing data
-                var currentData = localStorage.getItem('dippacAnswers');
+        $(document).on('change', 'input', function(e) {
+            // Get the existing data
+            var currentData = localStorage.getItem('dippacAnswers');
 
-                currentData = JSON.parse(currentData);
+            currentData = JSON.parse(currentData);
 
-                var isCorrect = e.target.innerText == "17" ? true : false;
+            var isCorrect = e.target.value == "279" ? true : false;
 
-                var answer8 = {
-                    isCorrect: isCorrect,
-                    answer: e.target.innerText,
-                    type: 5,
-                    testName: "Prueba de discalculia verbal 1 - 8 años"
-                };
+            var answer9 = {
+                type: 5,
+                isCorrect: isCorrect,
+                answer: e.target.value,
+                image: null,
+                testName: "Prueba de discalculia verbal 1 - 8 años"
+            };
 
-                // Add new data to localStorage Array
-                currentData[7] = answer8;
+            // Add new data to localStorage Array
+            currentData[8] = answer9;
 
-                localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
-            })
+            localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
         })
-        $('#continue').on('click', sendAnswer)
     })
 </script>
 

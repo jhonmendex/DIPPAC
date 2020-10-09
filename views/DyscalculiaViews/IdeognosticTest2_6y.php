@@ -21,7 +21,7 @@
         </div>
 
         <div id="statement">
-            <h1>Busca el signo correspondiente<br> para realizar la operación</h1>
+            <h1>Busca el signo correspondiente<br> para realizar la operación:</h1>
 
         </div>
 
@@ -61,9 +61,10 @@
                 var isCorrect = e.target.innerText == "Resta" ? true : false;
 
                 var answer2 = {
+                    type: 1,
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
-                    type: 1,
+                    image: null,
                     testName: "Prueba de discalculia ideognostica 2 - 6 años"
                 };
 
