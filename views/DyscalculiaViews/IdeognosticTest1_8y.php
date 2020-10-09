@@ -35,7 +35,7 @@
 
             <div id="buttons">
                 <div id="finish">
-                    <a id="continue" class="btn btn-primary" href="index.php?controlador=DyscalculiaIndex&accion=Ideognostic19">Continuar</a>
+                    <a id="continue" class="btn btn-primary btn-next" href="index.php?controlador=DyscalculiaIndex&accion=Ideognostic19">Continuar</a>
                 </div>
 
             </div>
