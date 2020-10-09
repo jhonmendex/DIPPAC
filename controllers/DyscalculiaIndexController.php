@@ -60,9 +60,64 @@ class DyscalculiaIndexController extends ControllerBase
 
     public function testResult()
     {
-        $this->view->setTemplate('DyscalculiaViews' . DS . 'result');
+        $this->view->setTemplate('DyscalculiaViews' . DS . 'students');
+        $this->document->addCss("assets/bootstrap/bootstrap.min");
+        $this->document->addScript("bootstrap/jquery");
+        $this->document->addScript("bootstrap/popper.min");
+        $this->document->addScript("bootstrap/bootstrap.min");
         $this->document->setHeader();
         $this->getModel("TestDiscalculia");
+        $usuarios = $this->model->getUsersByTutor();
+        $this->view->setVars('usuarios', $usuarios);
+        $this->view->show();
+    }
+
+    public function detailTest()
+    {
+        $this->view->setTemplate('DyscalculiaViews' . DS . 'result');
+        $this->document->addScript("Chart.min");
+        // $this->document->addScript("dyscalculiaScripts/radar");
+        $this->document->addCss("Chart.min");
+        $this->document->addCss("assets/bootstrap/bootstrap.min");
+        $this->document->addScript("bootstrap/jquery");
+        $this->document->addScript("bootstrap/popper.min");
+        $this->document->addScript("bootstrap/bootstrap.min");
+        $this->document->setHeader();
+
+        if (isset($_GET['testid'])) {
+            $id = $_GET['testid'];
+            $this->getModel("TestDiscalculia");
+            $cuestionarios = $this->model->getDetailTest($id);
+            $this->view->setVars('cuestionarios', $cuestionarios);
+            // agrupas respuestas
+            $res = array_reduce($cuestionarios, function (array $accumulator, array $element) {
+                $accumulator[$element['tipo']][] = $element;
+                return $accumulator;
+            }, []);
+            // print_r($res);
+            $c = 0;
+            foreach ($res as $tipo) {
+                $prom = 0;
+                foreach ($tipo as $r) {
+                    if ($r['correcta'] === 't') {
+                        $prom++;
+                    }
+                }
+                //echo count($tipo);
+                $calificaciones[$c][0] = $tipo[0]['nombreprueba'];
+                $calificaciones[$c][1] = $prom / count($tipo);
+                $c++;
+                //echo ($prom / count($tipo));
+                //echo '<br>';
+            }
+            $this->view->setVars('calificaciones', $calificaciones);
+        }
+        if (isset($_GET['userId'])) {
+            $this->getModel("User");
+            $idUser = intval($_GET['userId']);
+            $user = $this->model->getUserById($idUser);
+            $this->view->setVars('user', $user);
+        }
         $this->view->show();
     }
 
