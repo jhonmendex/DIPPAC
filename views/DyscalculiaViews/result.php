@@ -90,7 +90,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
     <?php
             $m++;
         } else {
-            print_r($cuestionario['respuesta']);
+            //print_r($cuestionario['respuesta']);
         }
         echo '</br>';
     }
@@ -102,7 +102,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
     $(document).ready(function() {
         <?php $i = 1;
         foreach ($cuestionarios as $cuestionario) {
-            if ($cuestionario['respuesta'] === null) {
+            if ($cuestionario['respuesta'] === 'null') {
                 echo 'respuestasNull.push({ modal: ' . $cuestionario["idrespuesta"] . ', show: false});';
         ?>
                 $('#respuesta<?php echo $cuestionario["idrespuesta"] ?>').on('hidden.bs.modal', function(e) {
