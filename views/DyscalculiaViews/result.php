@@ -65,7 +65,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 <div>
     <?php $m = 0;
     foreach ($cuestionarios as $cuestionario) {
-        if ($cuestionario['respuesta'] === null) {
+        if ($cuestionario['correcta'] == "null" || $cuestionario['correcta'] == null) {
             echo 'null';
     ?>
             <!-- Modal -->
@@ -79,10 +79,17 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
                             </button>
                         </div>
                         <div class="modal-body">
-                            ...
+                            <h1><?php if (isset($cuestionario['respuesta'])) {
+                                    echo $cuestionario['respuesta'];
+                                } ?></h1>
+                            <br>
+                            <?php if (isset($cuestionario['imagen'])) { ?>
+                                <img src="<?php echo $cuestionario['imagen'] ?>" />
+                            <?php } ?>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-success check-answer" answer="<?php echo $cuestionario['idrespuesta'] ?>" value="true">Aprobar</button>
+                            <button type="button" class="btn btn-danger check-answer" answer="<?php echo $cuestionario['idrespuesta'] ?>" value="false">Rechazar</button>
                         </div>
                     </div>
                 </div>
@@ -102,7 +109,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
     $(document).ready(function() {
         <?php $i = 1;
         foreach ($cuestionarios as $cuestionario) {
-            if ($cuestionario['respuesta'] === 'null') {
+            if ($cuestionario['correcta'] == "null" || $cuestionario['correcta'] == null) {
                 echo 'respuestasNull.push({ modal: ' . $cuestionario["idrespuesta"] . ', show: false});';
         ?>
                 $('#respuesta<?php echo $cuestionario["idrespuesta"] ?>').on('hidden.bs.modal', function(e) {
@@ -113,7 +120,6 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
             }
         }
         ?>
-        console.log(respuestasNull)
         if (respuestasNull.length > 0) {
             $('#respuesta' + respuestasNull[0].modal).modal('show')
         }
@@ -147,6 +153,34 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
                 }
             },
         });
+
+        $('.check-answer').on('click', function(e) {
+            let approve = null
+            let idAnswer = $(this).attr('answer')
+            if ($(this).val() === 'true') {
+                approve = true
+            } else {
+                approve = false
+            }
+            let data = {
+                'approve': approve,
+                'idAnswer': idAnswer
+            }
+            e.preventDefault()
+            $.ajax({
+                url: "index.php?controlador=DyscalculiaIndex&accion=approveAnswer", //Leerá la url en la etiqueta action del formulario (archivo.php)
+                type: "POST", //Leerá el método en etiqueta method del formulario
+                data: data,
+                dataType: "json"
+            }).done(function(respuesta) {
+                console.log(respuesta);
+                if (respuesta == 1) {
+                    $('#respuesta' + idAnswer).modal('hide')
+                }
+            }).fail(function(error) {
+                console.log(error);
+            });
+        })
     });
 
     function openNextModal() {
@@ -156,6 +190,8 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
         console.log(next)
         if (next) {
             $('#respuesta' + next.modal).modal('show')
+        } else {
+            location.reload()
         }
     }
 </script>

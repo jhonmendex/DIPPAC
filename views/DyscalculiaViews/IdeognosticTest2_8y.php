@@ -40,31 +40,42 @@
     </div>
 </body>
 <script>
+    // Get the existing data
+    var currentData = localStorage.getItem('dippacAnswers');
+    currentData = JSON.parse(currentData);
     $(document).ready(function() {
 
         $(document).on('change', 'input', function(e) {
+            validateAnswer(e)
+        })
 
-            // Get the existing data
-            var currentData = localStorage.getItem('dippacAnswers');
-
-            currentData = JSON.parse(currentData);
-
-            var isCorrect = e.target.value == "x" || e.target.value == "X" || e.target.value == "*" ? true : false;
-
-            var answer2 = {
-                type: 1,
-                isCorrect: isCorrect,
-                answer: e.target.value,
-                image: null,
-                testName: "Prueba de discalculia ideognostica 2 - 8 años"
-            };
-
-            // Add new data to localStorage Array
-            currentData[1] = answer2;
-
-            localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+        $('#continue').on('click', function() {
+            validateAnswer()
         })
     })
+
+    function validateAnswer(e) {
+        var isCorrect = null
+        var answer = null
+        if (e) {
+            isCorrect = e.target.value == "x" || e.target.value == "X" || e.target.value == "*" ? true : false;
+            answer = e.target.value
+        } else {
+            isCorrect = $('#inputNum').val() == "x" || $('#inputNum').val() == "X" || $('#inputNum').val() == "*" ? true : false;
+            answer = $('#inputNum').val() === "" ? 'No responde' : false
+        }
+        var answer2 = {
+            type: 1,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Prueba de discalculia ideognostica 2 - 8 años"
+        };
+        // Add new data to localStorage Array
+        currentData[1] = answer2;
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+    }
 </script>
 
 </html>

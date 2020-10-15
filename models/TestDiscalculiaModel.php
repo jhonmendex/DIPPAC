@@ -52,10 +52,23 @@ class TestDiscalculiaModel extends ModelBase
           'conclusion' => $row['conclusion'],
           'correcta' => $row['esCorrecta'],
           'tipo' => $row['tipo'],
-          'nombreprueba' => $row['nombreprueba']
+          'nombreprueba' => $row['nombreprueba'],
+          'imagen' => $row['imagen'],
         );
       }
     }
     return $send;
+  }
+
+  public function updateAnswerGraphic($id, $ans)
+  {
+    $query = 'update respuestas set "esCorrecta" = ' . $ans . ' where "Id" =' . $id;
+    $consulta = $this->db->executeQue($query);
+    if (!$consulta) //If query couldnt be executed
+    {
+      return $this->db->error; //Display information about why wasnt executed (eg. Error: couldnt find table)
+    } else {
+      return true;
+    }
   }
 }

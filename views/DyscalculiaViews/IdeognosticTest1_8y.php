@@ -42,24 +42,37 @@
 <script>
     $(document).ready(function() {
         $(document).on('change', 'input', function(e) {
+            validateAnswer(e)
+        })
 
-            var isCorrect = e.target.value == 16 ? true : false;
-
-            var answer1 = {
-                type: 1,
-                isCorrect: isCorrect,
-                answer: e.target.value,
-                image: null,
-                testName: "Prueba de discalculia ideognostica 1 - 8 años"
-            };
-
-            var array = [];
-
-            array.push(answer1);
-
-            localStorage.setItem('dippacAnswers', JSON.stringify(array));
+        $('#continue').on('click', function() {
+            validateAnswer()
         })
     })
+
+    function validateAnswer(e) {
+        var isCorrect = null
+        var answer = null
+        if (e) {
+            isCorrect = e.target.value == 16 ? true : false;
+            answer = e.target.value
+        } else {
+            isCorrect = $('#inputNum').val() == 16 ? true : false;
+            answer = $('#inputNum').val() === "" ? 'No responde' : false
+        }
+        var answer1 = {
+            type: 1,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Prueba de discalculia ideognostica 1 - 8 años"
+        };
+        var array = [];
+
+        array.push(answer1);
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(array));
+    }
 </script>
 
 </html>
