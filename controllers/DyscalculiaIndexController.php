@@ -58,6 +58,17 @@ class DyscalculiaIndexController extends ControllerBase
         }
     }
 
+    public function approveAnswer()
+    {
+        if (isset($_POST['approve']) && isset($_POST['idAnswer'])) {
+            $this->getModel("TestDiscalculia");
+            $update = $this->model->updateAnswerGraphic($_POST['idAnswer'], $_POST['approve']);
+            echo $update;
+        } else {
+            echo 'error no se ha enviado id de pregunta o respuesta a validar';
+        }
+    }
+
     public function testResult()
     {
         $this->getModel("User");
