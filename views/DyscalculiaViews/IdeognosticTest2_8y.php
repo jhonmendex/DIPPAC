@@ -49,12 +49,14 @@
 
             currentData = JSON.parse(currentData);
 
-            var isCorrect = e.target.value == "x" || e.target.value == "X" || e.target.value == "*" ? true : false;
+            var answer = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+            var isCorrect = answer == "x" || answer == "*" ? true : false;
 
             var answer2 = {
                 type: 1,
                 isCorrect: isCorrect,
-                answer: e.target.value,
+                answer: answer,
                 image: null,
                 testName: "Prueba de discalculia ideognostica 2 - 8 años"
             };

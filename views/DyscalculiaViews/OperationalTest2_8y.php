@@ -25,7 +25,7 @@
 
         <div id="operation">
             <div id="source">
-                <audio id="audio" src="audios/audio.mpeg" preload="none" controls></audio>
+                <audio id="audio" src="audios/OperationalTest2_8y_audio.mp3" preload="none" controls></audio>
             </div>
             <br>
             <div style="margin-bottom: 1%;">
@@ -65,8 +65,8 @@
 
             currentData = JSON.parse(currentData);
 
-            var inputUno = document.getElementById('inputUno').value;
-            var inputDos = document.getElementById('inputDos').value;
+            var inputUno = document.getElementById('inputUno').value.replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            var inputDos = document.getElementById('inputDos').value.replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
             var isCorrect = inputUno == "9" && inputDos == "7" ? true : false;
 

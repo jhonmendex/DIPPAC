@@ -21,7 +21,7 @@
         </div>
 
         <div id="statement">
-            <h1>Dibuja el signo de suma:</h1>
+            <h1>Dibuja el signo de igualdad:</h1>
         </div>
 
         <div id="space" style="margin-top: -2%;">
@@ -66,7 +66,7 @@
                 var answer12 = {
                     type: 0,
                     isCorrect: null,
-                    answer: null,
+                    answer: "Dibuja el signo de menor que:",
                     image: imagen,
                     testName: "Prueba de discalculia gráfica 2 - 9 años"
                 };

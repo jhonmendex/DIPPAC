@@ -48,12 +48,14 @@
 
             currentData = JSON.parse(currentData);
 
-            var isCorrect = e.target.value == "División" || e.target.value == "división" || e.target.value == "division" ? true : false;
+            var answer = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+            var isCorrect = answer == "division" ? true : false;
 
             var answer3 = {
                 type: 2,
                 isCorrect: isCorrect,
-                answer: e.target.value,
+                answer: answer,
                 image: null,
                 testName: "Discalculia Léxica - Prueba 1 - 9 años"
             };

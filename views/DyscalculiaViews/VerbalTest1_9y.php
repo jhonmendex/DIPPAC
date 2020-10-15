@@ -25,7 +25,7 @@
 
         <div id="operation">
             <div id="source">
-                <audio id="audio" src="audios/audio.mpeg" preload="none" controls></audio>
+                <audio id="audio" src="audios/VerbalTest1_9y_audio.mp3" preload="none" controls></audio>
             </div>
             <div style="margin-top: 2%;">
                 <h4>Escribe la operación que escuchaste:</h4>
@@ -51,12 +51,14 @@
 
             currentData = JSON.parse(currentData);
 
-            var isCorrect = e.target.value == "37 + 65" || e.target.value == "37+65" ? true : false;
+            var answer = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+            var isCorrect = answer == "37+65" ? true : false;
 
             var answer9 = {
                 type: 5,
                 isCorrect: isCorrect,
-                answer: e.target.value,
+                answer: answer,
                 image: null,
                 testName: "Prueba de discalculia verbal 1 - 9 años"
             };

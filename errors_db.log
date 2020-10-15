@@ -148,3 +148,23 @@ LINE 2:             VALUES (n, 'n', 'n', '50', n, 'n');
 ERROR:  column "n" does not exist
 LINE 2:             VALUES (n, 'n', 'n', '51', n, 'n');
                             ^
+
+ Error en la consulta: update cuestionarios set conclusion =El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia media en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia media en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal;calificacion = El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia media en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia media en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal; where "Id" = 62 
+ERROR:  syntax error at or near "estudiante"
+LINE 1: update cuestionarios set conclusion =El estudiante presenta ...
+                                                ^
+
+ Error en la consulta: update cuestionarios set conclusion =El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia media en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia media en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal;calificacion = El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia media en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia media en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal; where "Id" = 62 
+ERROR:  syntax error at or near "estudiante"
+LINE 1: update cuestionarios set conclusion =El estudiante presenta ...
+                                                ^
+
+ Error en la consulta: update cuestionarios set conclusion = 'El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia media en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia media en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal;' ,calificacion = El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia media en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia media en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal; where "Id" = 62 
+ERROR:  syntax error at or near "estudiante"
+LINE 1: ...a baja en discalculia Verbal;' ,calificacion = El estudiante...
+                                                             ^
+
+ Error en la consulta: update cuestionarios set conclusion = 'El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia media en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia media en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal;' ,calificacion = El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia media en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia media en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal; where "Id" = 62 
+ERROR:  syntax error at or near "estudiante"
+LINE 1: ...a baja en discalculia Verbal;' ,calificacion = El estudiante...
+                                                             ^

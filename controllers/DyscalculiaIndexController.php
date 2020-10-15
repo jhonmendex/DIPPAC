@@ -15,8 +15,8 @@ class DyscalculiaIndexController extends ControllerBase
         $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
         $this->document->addCss('dyscaulculiaCss' . DS . 'operationalTestsStyle');
         $this->document->addCss('dyscaulculiaCss' . DS . 'PractognosticTestsStyle');
-        $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
-        $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
+        // $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
+        // $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
         $this->document->addScript("jquery.mousewheel-3.0.4.pack");
         $this->document->addScript("jquery.fancybox-1.3.4.pack");
         $this->document->addScript("jquery.dataTables");
@@ -60,6 +60,9 @@ class DyscalculiaIndexController extends ControllerBase
 
     public function testResult()
     {
+        $this->getModel("User");
+        $idUser = $this->model->getUserId();
+
         $this->view->setTemplate('DyscalculiaViews' . DS . 'students');
         $this->document->addCss("assets/bootstrap/bootstrap.min");
         $this->document->addScript("bootstrap/jquery");
@@ -67,7 +70,7 @@ class DyscalculiaIndexController extends ControllerBase
         $this->document->addScript("bootstrap/bootstrap.min");
         $this->document->setHeader();
         $this->getModel("TestDiscalculia");
-        $usuarios = $this->model->getUsersByTutor();
+        $usuarios = $this->model->getUsersByTutor($idUser);
         $this->view->setVars('usuarios', $usuarios);
         $this->view->show();
     }
@@ -119,6 +122,76 @@ class DyscalculiaIndexController extends ControllerBase
             $this->view->setVars('user', $user);
         }
         $this->view->show();
+    }
+
+    public function rateTest()
+    {
+        if (isset($_GET['testid'])) {
+            $id = $_GET['testid'];
+            $this->getModel("TestDiscalculia");
+            $cuestionarios = $this->model->getDetailTest($id);
+            $this->view->setVars('cuestionarios', $cuestionarios);
+            // agrupas respuestas
+            $res = array_reduce($cuestionarios, function (array $accumulator, array $element) {
+                $accumulator[$element['tipo']][] = $element;
+                return $accumulator;
+            }, []);
+
+            $totalCount = 0;
+            $totalCorrect = 0;
+            $conclussion = "";
+            $testName = "";
+            foreach ($res as $tipo) {
+                $prom = 0;
+                foreach ($tipo as $r) {
+                    $totalCount++;
+                    if ($r['correcta'] === 't') {
+                        $prom++;
+                        $totalCorrect++;
+                    }
+                }
+                $type = $tipo[0]['tipo'];
+
+                switch ($type) {
+                    case 0:
+                        $testName = "Gráfica";
+                        break;
+                    case 1:
+                        $testName = "Ideognóstica";
+                        break;
+                    case 2:
+                        $testName = "Léxica";
+                        break;
+                    case 3:
+                        $testName = "Operacional";
+                        break;
+                    case 4:
+                        $testName = "Practognóstica";
+                        break;
+                    case 5:
+                        $testName = "Verbal";
+                        break;
+                }
+
+                switch ($prom) {
+                    case 0:
+                        $conclussion .= "El estudiante presenta latencia baja en discalculia " . $testName;
+                        break;
+                    case 1:
+                        $conclussion .= "El estudiante presenta latencia media en discalculia " . $testName;
+                        break;
+                    case 2:
+                        $conclussion .= "El estudiante presenta latencia alta en discalculia " . $testName;
+                        break;
+                }
+
+                $conclussion .= ";";
+            }
+
+            $totalScore = $totalCorrect / $totalCount;
+
+            $res = $this->model->updateCuestionario($conclussion, $totalScore, $id);
+        }
     }
 
     public function ValidateInitialTest()

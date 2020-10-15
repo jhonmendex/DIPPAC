@@ -83,8 +83,8 @@
 
             currentData = JSON.parse(currentData);
 
-            var inputUno = document.getElementById('inputUno').value;
-            var inputDos = document.getElementById('inputDos').value;
+            var inputUno = document.getElementById('inputUno').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            var inputDos = document.getElementById('inputDos').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
             var isCorrect = inputUno == 4 && inputDos == 6 ? true : false;
 

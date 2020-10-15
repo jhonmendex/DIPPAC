@@ -57,9 +57,9 @@
 
             currentData = JSON.parse(currentData);
 
-            var inputUno = document.getElementById('inputUno').value;
-            var inputDos = document.getElementById('inputDos').value;
-            var inputTres = document.getElementById('inputTres').value;
+            var inputUno = document.getElementById('inputUno').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            var inputDos = document.getElementById('inputDos').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            var inputTres = document.getElementById('inputTres').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
             var isCorrect = inputUno == "8" && inputDos == "3" && inputTres == "0" ? true : false;
 

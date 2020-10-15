@@ -23385,3 +23385,2933 @@ INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorr
 INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
             VALUES (5, '3', 'null', '61', false, 'Prueba de discalculia verbal 2 - 8 años'); 
 SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, EXTRACT(YEAR FROM age(timestamp 'now()',date(usuarios.fechacumple)))
+    as edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 54 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, EXTRACT(YEAR FROM age(timestamp 'now()',date(usuarios.fechacumple)))
+    as edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 54 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Menu 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, perfiles p, estados e 
+        where e.idestado='2' and p.idperfil='31' 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, perfiles p, estados e 
+        where e.idestado='2' and p.idperfil='28' 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, perfiles p, estados e 
+        where e.idestado='2' and p.idperfil='31' 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, perfiles p, estados e 
+        where e.idestado='2' and p.idperfil='28' 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, estados e 
+        where e.idestado='2' and u.perfil=31 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, perfiles p, estados e 
+        where e.idestado='2' and p.idperfil='28' 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ProfilesController.php 
+Controlador: ProfilesController 
+Accion: main 
+SELECT p.idperfil, p.nombreperfil, p.grupo, 
+                (SELECT count(*) from usuarios u where u.perfil=p.idperfil) as cantidad
+                from perfiles p 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, estados e 
+        where e.idestado='2' and u.perfil=31 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, estados e 
+        where e.idestado='2' and u.perfil=28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: createUser 
+select * from perfiles 
+            where grupo not in ('Superadministrador', 'No usuario') 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where cedula=1072708388 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where email='LEONARDOMORENO57@GMAIL.COM' or email='leonardomoreno57@gmail.com' 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where alias='LEO' or alias='LEO' 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where cedula=1072708388 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where email='LEONARDO.MORENO@FOONKIEMONKEY.CO.UK' or email='leonardo.moreno@foonkiemonkey.co.uk' 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_unica 
+select * from usuarios  where alias='LEO' or alias='LEO' 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_presencia 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ValidationController.php 
+Controlador: ValidationController 
+Accion: validar_pattern 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: insertUser 
+select nextval('usuarios_idusuario_seq'::regclass) limit 1 
+insert into usuarios
+        values(56,2,171,31,'LEONARDO MORENO','LEO','99b7219a8f71c0dc8b1c84fdd95c9a1aff4637df',1072708388,'', NULL, NULL,NULL,'2020-10-13','leonardo.moreno@foonkiemonkey.co.uk','1995-12-27',NULL) 
+select * from perfiles where idperfil=31 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='EDUARD' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, estados e 
+        where e.idestado='2' and u.perfil=31 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, estados e 
+        where e.idestado='2' and u.perfil=28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='EDUARD' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='EDUARD' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic27 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical17 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical27 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational17 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational27 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Practognostic17 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Practognostic27 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Verbal17 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Verbal27 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Graphic17 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Graphic27 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select * from usuarios where idusuario=55 
+INSERT INTO public.cuestionarios("usuarioId", "edad") VALUES (55,7); 
+SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT 1 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (0, 'Dibuja el signo de división:', 'data:image/png;base64,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zpMECPQsYLB6Bvc6AgS6Cxis7naeJECgZwGD1TO41xEg0F3AYHW38yQBAj0LGKyewb2OAIHuAgaru50nCRDoWcBg9QzudQQIdBcwWN3tPEmAQM8CBqtncK8jQKC7gMHqbudJAgR6FjBYPYN7HQEC3QUMVnc7TxIg0LOAweoZ3OsIEOguYLC623mSAIGeBQxWz+BeR4BAdwGD1d3OkwQI9CxgsHoG9zoCBLoLGKzudp4kQKBnAYPVM7jXESDQXcBgdbfz5IgFtra22p07d9r09HRbXFwc8bf7ugQBg5XQYkCGR48etcuXL7ft7e3dNFeuXGn3798PSCbCKAUM1ig1fVdngYsXL7aNjY0fnjdanTljHzRYsdXWCjY7O9s2Nzd/OvTq6mqbn5+vFcZp903AYO0brS8eRmBtba3Nzc399Mjy8nJbWFgY5qt8NljAYAWXWy3a4Bfu165d+3bswU9djx8/bocOHaoWxXn3ScBg7ROsr+0msL6+3lZWVtrMzExbWlpqU1NT3b7IU5ECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApECBiuyVqEIZAoYrMxepSIQKWCwImsVikCmgMHK7FUqApEC/wFeBWzI/KtWnQAAAABJRU5ErkJggg==', '62', null, 'Prueba de discalculia gráfica 2 - 7 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (0, 'Dibuja el signo de multiplicación:', 'data:image/png;base64,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', '62', null, 'Prueba de discalculia gráfica 1 - 7 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (1, '68', 'null', '62', false, 'Prueba de discalculia ideognostica 1 - 7 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (1, 'Resta', 'null', '62', true, 'Prueba de discalculia ideognostica 2 - 7 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (2, 'Cuarenta y cinco X oxcho', 'null', '62', false, 'Prueba de discalculia léxica 2 - 7 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (2, 'Multiplicación', 'null', '62', true, 'Discalculia Léxica - Prueba 1 - 7 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (3, '520', 'null', '62', false, 'Prueba de discalculia operacional 2 - 7 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (3, '830', 'null', '62', true, 'Prueba de discalculia operacional 1 - 7 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (4, '6', 'null', '62', false, 'Prueba de discalculia practognostica 1 - 7 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (4, 'Opción 2', 'null', '62', false, 'Prueba de discalculia practognostica 2 - 7 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (5, '11 - 50', 'null', '62', false, 'Prueba de discalculia verbal 2 - 7 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (5, '50 - 11', 'null', '62', false, 'Prueba de discalculia verbal 1 - 7 años'); 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic27 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical17 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical27 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational17 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational27 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Practognostic17 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Practognostic27 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Verbal17 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Verbal27 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Graphic17 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+SELECT * FROM cuestionarios 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='EDUARD' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Practognostic18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='EDUARD' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Practognostic18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Practognostic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Verbal18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Verbal28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Graphic18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Graphic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select * from usuarios where idusuario=55 
+INSERT INTO public.cuestionarios("usuarioId", "edad") VALUES (55,8); 
+SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT 1 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (0, 'Dibuja el signo de división:', 'data:image/png;base64,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', '63', null, 'Prueba de discalculia gráfica 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (0, 'Dibuja el signo de menor que:', 'data:image/png;base64,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', '63', null, 'Prueba de discalculia gráfica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (1, '*', 'null', '63', true, 'Prueba de discalculia ideognostica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (1, '16', 'null', '63', true, 'Prueba de discalculia ideognostica 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (2, 'Ciencuenta + cuarenta', 'null', '63', false, 'Prueba de discalculia léxica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (2, 'Multiplicación', 'null', '63', true, 'Discalculia Léxica - Prueba 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (3, '12', 'null', '63', false, 'Prueba de discalculia operacional 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (3, '123', 'null', '63', false, 'Prueba de discalculia operacional 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (4, '1 y 2', 'null', '63', false, 'Prueba de discalculia practognostica 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (4, '>', 'null', '63', true, 'Prueba de discalculia practognostica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (5, '1', 'null', '63', false, 'Prueba de discalculia verbal 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (5, '12', 'null', '63', false, 'Prueba de discalculia verbal 2 - 8 años'); 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Logo 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=3 
+select * from menus where idmenu=3 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/ManageUsersController.php 
+Controlador: ManageUsersController 
+Accion: main 
+select u.idusuario, e.nombreestado, 
+            p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
+            from usuarios u, perfiles p, estados e 
+            where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador' 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, estados e 
+        where e.idestado='2' and u.perfil=31 
+select u.idusuario,
+        u.nombreusuario
+        from usuarios u, estados e 
+        where e.idestado='2' and u.perfil=28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select nombreperfil from perfiles where idperfil=31 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Accion: Menu 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, EXTRACT(YEAR FROM age(timestamp 'now()',date(usuarios.fechacumple)))
+    as edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 54 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=1 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Controlador: DaltonismController 
+Accion: main 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, EXTRACT(YEAR FROM age(timestamp 'now()',date(usuarios.fechacumple)))
+    as edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 54 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=1 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=1 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, EXTRACT(YEAR FROM age(timestamp 'now()',date(usuarios.fechacumple)))
+    as edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 54 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=31 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Controlador: DaltonismController 
+Accion: main 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, EXTRACT(YEAR FROM age(timestamp 'now()',date(usuarios.fechacumple)))
+    as edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 54 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, EXTRACT(YEAR FROM age(timestamp 'now()',date(usuarios.fechacumple)))
+    as edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 54 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, EXTRACT(YEAR FROM age(timestamp 'now()',date(usuarios.fechacumple)))
+    as edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 54 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: detailTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=31 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: detailTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: detailTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =63 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: detailTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: detailTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=31 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: detailTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: detailTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =63 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=31 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Controlador: DaltonismController 
+Accion: main 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=31 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=31 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: IndexController 
+Controlador: DaltonismController 
+Accion: main 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=31 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+select nombreperfil from perfiles where idperfil=31 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: detailTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =63 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Controlador: DaltonismController 
+Accion: main 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=31 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+Controlador: IndexController 
+Accion: Menu 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: Menu 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: DyscalculiaIndexController 
+Controlador: IndexController 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =63 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =62 
+update cuestionarios set conclusion = 'El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia media en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia media en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal;' , calificacion = 0.5 where "Id" = 62 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='EDUARD' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+SELECT * FROM cuestionarios 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Practognostic18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Practognostic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Verbal18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Verbal28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Graphic18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Graphic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select * from usuarios where idusuario=55 
+INSERT INTO public.cuestionarios("usuarioId", "edad") VALUES (55,8); 
+SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT 1 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (0, 'Dibuja el signo de división:', 'data:image/png;base64,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', '64', null, 'Prueba de discalculia gráfica 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (0, 'Dibuja el signo de menor que:', 'data:image/png;base64,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KwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgQEKwnaNgQIxAUEK25oBQIEkgT+BooLYte/CjAyAAAAAElFTkSuQmCC', '64', null, 'Prueba de discalculia gráfica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (1, '*', 'null', '64', true, 'Prueba de discalculia ideognostica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (1, '16', 'null', '64', true, 'Prueba de discalculia ideognostica 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (2, 'Suma', 'null', '64', false, 'Discalculia Léxica - Prueba 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (2, 'Sesenta + sesenta', 'null', '64', true, 'Prueba de discalculia léxica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (3, '12', 'null', '64', false, 'Prueba de discalculia operacional 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (3, '123', 'null', '64', false, 'Prueba de discalculia operacional 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (4, '1 y 2', 'null', '64', false, 'Prueba de discalculia practognostica 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (4, '=', 'null', '64', false, 'Prueba de discalculia practognostica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (5, '1', 'null', '64', false, 'Prueba de discalculia verbal 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (5, '2', 'null', '64', false, 'Prueba de discalculia verbal 2 - 8 años'); 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=31 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+SELECT * FROM cuestionarios 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =64 
+update cuestionarios set conclusion = 'El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia alta en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia baja en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal;' , calificacion = 0.5 where "Id" = 64 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='LEO' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Controlador: IndexController 
+Accion: Banner 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DaltonismController.php 
+Controlador: DaltonismController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=4 
+select * from menus where idmenu=4 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=31 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: IndexController 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =64 
+update cuestionarios set conclusion = 'El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia alta en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia baja en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal;' , calificacion = 0.25 where "Id" = 64 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Accion: main 
+Controlador: IndexController 
+Accion: Menu 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=31 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=31 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: testResult 
+select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = 56 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: rateTest 
+select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
+    from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
+    where cuestionarios."Id" =64 
+update cuestionarios set conclusion = 'El estudiante presenta latencia baja en discalculia Gráfica;El estudiante presenta latencia alta en discalculia Ideognóstica;El estudiante presenta latencia media en discalculia Léxica;El estudiante presenta latencia baja en discalculia Operacional;El estudiante presenta latencia baja en discalculia Practognóstica;El estudiante presenta latencia baja en discalculia Verbal;' , calificacion = 0.25 where "Id" = 64 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: salir 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/UserController.php 
+Controlador: UserController 
+Accion: Login 
+SELECT * FROM usuarios WHERE alias='EDUARD' and idestado=2 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Banner 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/IndexController.php 
+Controlador: IndexController 
+Accion: Menu 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select nombreperfil from perfiles where idperfil=28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+                    from perfiles_permisos, submenus, menus 
+                    where idperfil=28 and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
+                    order by menus.nombremenu asc 
+select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=2 
+select * from menus where idmenu=2 
+SELECT * FROM cuestionarios 
+SELECT * FROM cuestionarios 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: ValidateInitialTest 
+select * from usuarios where idusuario=55 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Ideognostic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Lexical28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Operational28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Practognostic18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Practognostic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Verbal18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Verbal28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Graphic18 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: Graphic28 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: saveAnswer 
+ 
+Ruta: /var/www/html/DIPPAC/controllers/DyscalculiaIndexController.php 
+Controlador: DyscalculiaIndexController 
+Accion: main 
+select * from usuarios where idusuario=55 
+INSERT INTO public.cuestionarios("usuarioId", "edad") VALUES (55,8); 
+SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT 1 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (0, 'Dibuja el signo de división:', 'data:image/png;base64,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', '65', null, 'Prueba de discalculia gráfica 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (0, 'Dibuja el signo de menor que:', 'data:image/png;base64,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Dz8sSGIxEBieAGENz/w/K1544YXt0KFDaybZuXPnykcXPBCoTICw5tz+tm3b2pEjR9ZMcf7557fff/99zkktj8D8CRDWHDvoPj91zTXXuLKaYweWziJAWHPsq/uE+ukevmYzx2IsvbAECGtO1awlqwsuuKD99ttvc0pmWQQWlwBhzaGbtT664Ler5lCIJWMIENbAVa0lK7eBA5dhuTgChDVQZU8++WR7++2311zN3wUcqAzLxBIgrAGq63758++//yarAVhbYtwECGvG/U7y++tfffVVu+WWW2acxOkRyCdAWDPssO97gd3S3Vdtuq/ceCCAQD8BwupntKEjnn/++fbKK6+c9rleYN8QVk8qToCwZrQB1vqc1ZYtW9qff/45o5WdFoHxEiCsGXS71utWF110Uet+mcEDAQTWT4Cw1s9szWe88MIL7eWXX57orCevwrorrl27drXdu3e3p59+eqLnOgiBigQIa8qtr3UruNGlunN2H4247bbb2ocffuiv42wUpOfFEyCsGVQ4ybuD01q2k9nmzZvbDTfc0N5888125513TuvUzoPAwhEgrBlVMqS0TjdCJ7Pu97Yefvjh9u67785oUqdFYDgChDVD1osgrdXGOymyBx98sL3//vszJODUCEyXAGFNl2fv2boX1/fu3dsW8XuDnci6dzi7W8xzzz23XXfdde3mm29undi6v9TjgcC8CRDWvBs4Zf277rqrffvtt+2PP/5ox44dW7B0q8fpBHf55Ze3N954oz3wwAMRmYXMJEBYYb099dRT7YMPPlj5oxXHjx9f2PQnbzvvueee9tFHH628y+mBwJkSIKwzJbhAz0+QWXfL2f2VoFtvvbU98cQT7fHHH18ggqIsOgHCWvSGppTvyiuvbAcOHOj9mZspLbeh03RXZd0bFat9lu2SSy5pr7/+env00Uc3dG5PGgcBwhpHjxueIkFkpw7X3V7eeOON7cUXX2wPPfTQhmf3xDwChJXX2eCJuzcAul+f+OKLL9ovv/yy8obA4cOHV97pXIR3O7vbzB07drTbb7+9Pfvss6173cxjnAQIa5y9zmWq5557rr3zzjsrUpv3GwLd9zO73xnbvn17u++++9pLL700FyYWnS4BwpouT2dbhUB35fPNN9+s/KTOvK7Ius+VdVeFHtkECCu7v/j0jzzySNuzZ0/78ccf29GjR1decD/1Rffuam0aV2zLy8ttaWkpnlnlAQircvths3/22WftmWeead9///3Ku53rvVojrLDCV4lLWPkdlp6g+/2xjz/+uP30008rt3ynuxLrPo2/f/9+v58fvlsIK7xA8f9L4LXXXmuffPLJym3m1q1bV154f/XVV9vdd98NVzgBwgovUHwEKhEgrEptmxWBcAKEFV6g+AhUIkBYldo2KwLhBAgrvEDxEahEgLAqtW1WBMIJEFZ4geIjUIkAYVVq26wIhBMgrPACxUegEgHCqtS2WREIJ0BY4QWKj0AlAoRVqW2zIhBOgLDCCxQfgUoECKtS22ZFIJwAYYUXKD4ClQgQVqW2zYpAOAHCCi9QfAQqESCsSm2bFYFwAoQVXqD4CFQiQFiV2jYrAuEECCu8QPERqESAsCq1bVYEwgkQVniB4iNQiQBhVWrbrAiEEyCs8ALFR6ASAcKq1LZZEQgnQFjhBYqPQCUChFWpbbMiEE6AsMILFB+BSgQIq1LbZkUgnABhhRcoPgKVCBBWpbbNikA4AcIKL1B8BCoRIKxKbZsVgXAChBVeoPgIVCJAWJXaNisC4QQIK7xA8RGoRICwKrVtVgTCCRBWeIHiI1CJAGFVatusCIQTIKzwAsVHoBIBwqrUtlkRCCdAWOEFio9AJQKEValtsyIQToCwwgsUH4FKBAirUttmRSCcAGGFFyg+ApUIEFalts2KQDgBwgovUHwEKhEgrEptmxWBcAKEFV6g+AhUIkBYldo2KwLhBAgrvEDxEahEgLAqtW1WBMIJEFZ4geIjUIkAYVVq26wIhBMgrPACxUegEgHCqtS2WREIJ0BY4QWKj0AlAoRVqW2zIhBOgLDCCxQfgUoECKtS22ZFIJwAYYUXKD4ClQgQVqW2zYpAOAHCCi9QfAQqESCsSm2bFYFwAoQVXqD4CFQiQFiV2jYrAuEECCu8QPERqESAsCq1bVYEwgkQVniB4iNQiQBhVWrbrAiEEyCs8ALFR6ASAcKq1LZZEQgnQFjhBYqPQCUChFWpbbMiEE6AsMILFB+BSgQIq1LbZkUgnABhhRcoPgKVCBBWpbbNikA4AcIKL1B8BCoRIKxKbZsVgXAChBVeoPgIVCJAWJXaNisC4QQIK7xA8RGoRICwKrVtVgTCCRBWeIHiI1CJAGFVatusCIQTIKzwAsVHoBIBwqrUtlkRCCdAWOEFio9AJQKEValtsyIQToCwwgsUH4FKBAirUttmRSCcAGGFFyg+ApUIEFalts2KQDgBwgovUHwEKhEgrEptmxWBcAKEFV6g+AhUIkBYldo2KwLhBAgrvEDxEahEgLAqtW1WBMIJEFZ4geIjUIkAYVVq26wIhBMgrPACxUegEgHCqtS2WREIJ0BY4QWKj0AlAoRVqW2zIhBOgLDCCxQfgUoECKtS22ZFIJwAYYUXKD4ClQgQVqW2zYpAOAHCCi9QfAQqESCsSm2bFYFwAoQVXqD4CFQiQFiV2jYrAuEECCu8QPERqESAsCq1bVYEwgkQVniB4iNQiQBhVWrbrAiEEyCs8ALFR6ASAcKq1LZZEQgnQFjhBYqPQCUChFWpbbMiEE6AsMILFB+BSgQIq1LbZkUgnABhhRcoPgKVCBBWpbbNikA4AcIKL1B8BCoRIKxKbZsVgXAChBVeoPgIVCJAWJXaNisC4QQIK7xA8RGoRICwKrVtVgTCCfwPxBjC19qUpQoAAAAASUVORK5CYII=', '65', null, 'Prueba de discalculia gráfica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (1, '*', 'null', '65', true, 'Prueba de discalculia ideognostica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (1, '16', 'null', '65', true, 'Prueba de discalculia ideognostica 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (2, 'Multiplicación', 'null', '65', true, 'Discalculia Léxica - Prueba 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (2, 'Sesenta + sesenta', 'null', '65', true, 'Prueba de discalculia léxica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (3, '97', 'null', '65', true, 'Prueba de discalculia operacional 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (3, '830', 'null', '65', true, 'Prueba de discalculia operacional 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (4, '4 y 6', 'null', '65', true, 'Prueba de discalculia practognostica 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (4, '>', 'null', '65', true, 'Prueba de discalculia practognostica 2 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (5, '279', 'null', '65', true, 'Prueba de discalculia verbal 1 - 8 años'); 
+INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (5, '518', 'null', '65', true, 'Prueba de discalculia verbal 2 - 8 años'); 
+SELECT * FROM cuestionarios 

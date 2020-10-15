@@ -56,7 +56,7 @@
 
                 currentData = JSON.parse(currentData);
 
-                var isCorrect = e.target.innerText == "Multiplicación" || e.target.innerText == "multiplicación" || e.target.innerText == "multiplicacion" ? true : false;
+                var isCorrect = e.target.innerText == "Multiplicación" ? true : false;
 
                 var answer3 = {
                     type: 2,

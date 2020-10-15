@@ -66,7 +66,7 @@
                 var answer11 = {
                     type: 0,
                     isCorrect: null,
-                    answer: null,
+                    answer: "Dibuja el signo de suma:",
                     image: imagen,
                     testName: "Prueba de discalculia gráfica 1 - 6 años"
                 };

@@ -5,12 +5,11 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 class TestDiscalculiaModel extends ModelBase
 {
 
-  public function getUsersByTutor()
+  public function getUsersByTutor($idUsuario)
   {
     $query = 'select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
-    as cuestionarioId, cuestionarios.fechapresentacion, EXTRACT(YEAR FROM age(timestamp ' . "'now()'" . ',date(usuarios.fechacumple)))
-    as edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
-    where public.usuarios."tutorId" = 54';
+    as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
+    where public.usuarios."tutorId" = ' . $idUsuario . '';
     $consulta = $this->db->executeQue($query);
     $total = $this->db->numRows($consulta);
     $send = null;
@@ -46,7 +45,7 @@ class TestDiscalculiaModel extends ModelBase
         $send[] = array(
           'id' => $row['idcuestionario'],
           'idrespuesta' => $row['idrespuesta'],
-          'idCuestionario' => $row['cuestionarioid'],
+          'idCuestionario' => $row['idcuestionario'],
           'fecha' => $row['fechapresentacion'],
           'respuesta' => $row['respuesta'],
           'conclusion' => $row['conclusion'],
@@ -57,5 +56,12 @@ class TestDiscalculiaModel extends ModelBase
       }
     }
     return $send;
+  }
+
+  public function updateCuestionario($conclussion, $score, $idCuestionario)
+  {
+    $query = "update cuestionarios set conclusion = '" . $conclussion . "' , calificacion = " . $score . " where \"Id\" = " . $idCuestionario;
+    $consulta = $this->db->executeQue($query);
+    return $consulta;
   }
 }

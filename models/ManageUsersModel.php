@@ -30,8 +30,8 @@ class ManageUsersModel extends ModelBase
     {
         $consult = $this->db->executeQue("select u.idusuario,
         u.nombreusuario
-        from usuarios u, perfiles p, estados e 
-        where e.idestado='2' and p.idperfil='31'");
+        from usuarios u, estados e 
+        where e.idestado='2' and u.perfil=31");
         while ($fila = $this->db->arrayResult($consult)) {
             $usuarios[] = array(
                 'id' => $fila['idusuario'],
@@ -45,8 +45,8 @@ class ManageUsersModel extends ModelBase
     {
         $consult = $this->db->executeQue("select u.idusuario,
         u.nombreusuario
-        from usuarios u, perfiles p, estados e 
-        where e.idestado='2' and p.idperfil='28'");
+        from usuarios u, estados e 
+        where e.idestado='2' and u.perfil=28");
         while ($fila = $this->db->arrayResult($consult)) {
             $usuarios[] = array(
                 'id' => $fila['idusuario'],

@@ -43,12 +43,14 @@
     $(document).ready(function() {
         $(document).on('change', 'input', function(e) {
 
-            var isCorrect = e.target.value == 16 ? true : false;
+            var answer = e.target.value.replace(/ /g, "");
+
+            var isCorrect = answer == 16 ? true : false;
 
             var answer1 = {
                 type: 1,
                 isCorrect: isCorrect,
-                answer: e.target.value,
+                answer: answer,
                 image: null,
                 testName: "Prueba de discalculia ideognostica 1 - 8 años"
             };
