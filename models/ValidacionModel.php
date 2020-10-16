@@ -2,26 +2,31 @@
 
 defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 
-class ValidacionModel extends ModelBase {
+class ValidacionModel extends ModelBase
+{
 
-    private $models = array('val1' => 'usuarios',
+    private $models = array(
+        'val1' => 'usuarios',
         'val2' => 'productos',
         'val3' => 'beneficiarios',
         'val4' => 'perfiles',
         'val5' => 'terceros',
         'val6' => 'categoriasp',
-        'val7' => 'bodegas');
-    
+        'val7' => 'bodegas'
+    );
 
-    function validar_direccion($direccion, $minimum=1) {
+
+    function validar_direccion($direccion, $minimum = 1)
+    {
         if (preg_match('/^[a-zA-ZñÑáéíóú.\*\/,#-\d_\s]{' . $minimum . ',50}$/i', $direccion)) {
             return true;
         } else {
             return true;
         }
     }
-    
-    function validar_alias($direccion, $minimum=1) {
+
+    function validar_alias($direccion, $minimum = 1)
+    {
         if (preg_match('/^[a-zA-Z\d_]{' . $minimum . ',50}$/i', $direccion)) {
             return true;
         } else {
@@ -30,7 +35,8 @@ class ValidacionModel extends ModelBase {
     }
 
 
-    function validar_nombre($nombre, $minimum=0) {
+    function validar_nombre($nombre, $minimum = 0)
+    {
         if (preg_match('/^[a-zA-ZñÑáéíóú,-.\d_\s]{' . $minimum . ',50}$/i', $nombre)) {
             return true;
         } else {
@@ -38,7 +44,8 @@ class ValidacionModel extends ModelBase {
         }
     }
 
-    function validar_nombre_no_digit($nombre, $minimum=0) {
+    function validar_nombre_no_digit($nombre, $minimum = 0)
+    {
         if (preg_match('/^[a-zA-ZñÑáéíóú\s]{' . $minimum . ',50}$/i', $nombre)) {
             return true;
         } else {
@@ -46,7 +53,8 @@ class ValidacionModel extends ModelBase {
         }
     }
 
-    function validar_nombre_short($nombre, $minimum=0) {
+    function validar_nombre_short($nombre, $minimum = 0)
+    {
         if (preg_match('/^[a-zA-ZñÑáéíóú\s]{' . $minimum . ',30}$/i', $nombre)) {
             return true;
         } else {
@@ -54,7 +62,8 @@ class ValidacionModel extends ModelBase {
         }
     }
 
-    function validar_email($email, $minimum=0) {
+    function validar_email($email, $minimum = 0)
+    {
         if (preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $email)) {
             return true;
         } else {
@@ -62,9 +71,10 @@ class ValidacionModel extends ModelBase {
         }
     }
 
-    function validar_numero($number, $minimum=0) {
+    function validar_numero($number, $minimum = 0)
+    {
         if ($number != '') {
-            $number= (Integer) $number;
+            $number = (int) $number;
             if (preg_match('/^[0-9]{' . $minimum . ',15}$/', $number)) {
                 if ($number > 0) {
                     return true;
@@ -79,8 +89,9 @@ class ValidacionModel extends ModelBase {
         }
     }
 
-    function validar_digito($number, $minimum=0) {
-        $number= (int) $number;
+    function validar_digito($number, $minimum = 0)
+    {
+        $number = (int) $number;
         if (preg_match('/^[0-9]{' . $minimum . ',15}$/', $number)) {
             return true;
         } else {
@@ -88,7 +99,8 @@ class ValidacionModel extends ModelBase {
         }
     }
 
-    function validar_decimal($number, $minimum=0) {
+    function validar_decimal($number, $minimum = 0)
+    {
         if ($number != '') {
             //  if (eregi('^[0-9]{' . $minimum . ',15}$|^[0-9]{' . $minimum . ',15}[,|\.]{0,1}[0-9]{1,15}$', $number)) {
             if (preg_match('/^[0-9]{' . $minimum . ',15}$|^[0-9]{' . $minimum . ',15}[,|\.]{0,1}[0-9]{1,15}$/', $number)) {
@@ -105,18 +117,19 @@ class ValidacionModel extends ModelBase {
         }
     }
 
-    function validar_unica($value, $field, $table, $exception) {
+    function validar_unica($value, $field, $table, $exception)
+    {
         $consulta = null;
-        $value=trim($value);
+        $value = trim($value);
         if (is_numeric($value)) {
             if ($field == 'referencia') {
-                if (!$exception||$exception=="null") {
-                    $query = "select * from " . $this->models[$table] . "  where " . $field . "='".trim($value)."';";                    
-                } else {                    
-                    $query = "select * from " . $this->models[$table] . "  where $field='".trim($value)."' and $field<>'".trim($exception)."'";
+                if (!$exception || $exception == "null") {
+                    $query = "select * from " . $this->models[$table] . "  where " . $field . "='" . trim($value) . "';";
+                } else {
+                    $query = "select * from " . $this->models[$table] . "  where $field='" . trim($value) . "' and $field<>'" . trim($exception) . "'";
                 }
             } else {
-                if (!$exception||$exception=="null") {
+                if (!$exception || $exception == "null") {
                     $query = "select * from " . $this->models[$table] . "  where " . $field . "=" . $value;
                 } else {
                     $query = "select * from " . $this->models[$table] . "  where $field='$value' and $field<>$exception";
@@ -124,10 +137,10 @@ class ValidacionModel extends ModelBase {
             }
             $consulta = $this->db->executeQue($query);
         } else {
-            if (!$exception||$exception=="null") {
-                $query = "select * from " . $this->models[$table] . "  where " . $field . "='".strtoupper(trim($value))."' or ". $field . "='".trim($value)."'";
+            if (!$exception || $exception == "null") {
+                $query = "select * from " . $this->models[$table] . "  where " . $field . "='" . strtoupper(trim($value)) . "' or " . $field . "='" . trim($value) . "'";
             } else {
-                $query = "select * from " . $this->models[$table] . "  where ($field='".strtoupper(trim($value))."' and $field<>'".strtoupper(trim($exception))."') or ($field='".trim($value)."' and $field<>'".trim($exception)."')";
+                $query = "select * from " . $this->models[$table] . "  where ($field='" . strtoupper(trim($value)) . "' and $field<>'" . strtoupper(trim($exception)) . "') or ($field='" . trim($value) . "' and $field<>'" . trim($exception) . "')";
             }
             $consulta = $this->db->executeQue($query);
         }
@@ -139,15 +152,13 @@ class ValidacionModel extends ModelBase {
         }
     }
 
-    function validar_presencia($value) {
-        $values = (string) $values;
-        if ($value != '') {
+    function validar_presencia($value)
+    {
+        $values = (string) $value;
+        if ($values != '') {
             return true;
         } else {
             return false;
         }
     }
-
 }
-
-?>

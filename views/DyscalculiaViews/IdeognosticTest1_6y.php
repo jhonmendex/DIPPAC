@@ -47,6 +47,7 @@
 </body>
 <script>
     $(document).ready(function() {
+        Timer(50);
         document.querySelectorAll('button.answer').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
 

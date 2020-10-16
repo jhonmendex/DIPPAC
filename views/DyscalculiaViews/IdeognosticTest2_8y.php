@@ -44,7 +44,7 @@
     var currentData = localStorage.getItem('dippacAnswers');
     currentData = JSON.parse(currentData);
     $(document).ready(function() {
-
+        Timer(45);
         $(document).on('change', 'input', function(e) {
             validateAnswer(e)
         })

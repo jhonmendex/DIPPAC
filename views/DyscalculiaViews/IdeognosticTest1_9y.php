@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <script src="scripts/dyscalculiaScripts/Time.js"></script> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Prueba de discalculia ideognostica 1 - 9 años</title>
 </head>
@@ -41,8 +42,8 @@
 </body>
 <script>
     $(document).ready(function() {
+        Timer(70);
         $(document).on('change', 'input', function(e) {
-
             var answer = e.target.value.replace(/ /g, "");
 
             var isCorrect = answer == "40" ? true : false;

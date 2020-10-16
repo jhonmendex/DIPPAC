@@ -50,6 +50,7 @@
 </body>
 <script>
     $(document).ready(function() {
+        Timer(80);
         $(document).on('change', 'input', function(e) {
 
             // Get the existing data

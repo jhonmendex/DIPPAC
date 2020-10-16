@@ -45,6 +45,7 @@
 </body>
 <script>
     $(document).ready(function() {
+        Timer(30);
         $(document).on('change', 'input', function(e) {
             // Get the existing data
             var currentData = localStorage.getItem('dippacAnswers');

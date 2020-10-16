@@ -41,6 +41,7 @@
 </body>
 <script>
     $(document).ready(function() {
+        Timer(45);
         $(document).on('change', 'input', function(e) {
             validateAnswer(e)
         })

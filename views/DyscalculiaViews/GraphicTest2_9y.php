@@ -55,6 +55,7 @@
 <script>
     var imagen = "test";
     $(document).ready(function() {
+        Timer(40);
         $('#canvas-display').paintBrush();
         document.querySelectorAll('button.answer').forEach(function(btn) {
             btn.addEventListener('click', function(e) {

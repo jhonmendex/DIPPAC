@@ -1,8 +1,7 @@
-$(document).ready(function() {
-
+function Timer(inputTime) {
   var time = 0; /* how long the timer runs for */
-  var initialOffset = "440";
-  var i = 15;
+  var initialOffset = "1000";
+  var i = inputTime;
   var interval = setInterval(function () {
     $(".circle_animation").css(
       "stroke-dashoffset",
@@ -15,6 +14,6 @@ $(document).ready(function() {
       $("#continue")[0].click();
     }
     i--;
-  }, 500);
+  }, 1000);
 
-})
+}

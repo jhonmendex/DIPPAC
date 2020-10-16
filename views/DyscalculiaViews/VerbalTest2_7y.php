@@ -52,6 +52,7 @@
 </body>
 <script>
     $(document).ready(function() {
+        Timer(30);
         document.querySelectorAll('button.answer').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
                 // Get the existing data
