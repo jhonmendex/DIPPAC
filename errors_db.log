@@ -19,3 +19,30 @@ LINE 1: ...d submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=
 ERROR:  error de sintaxis al final de la entrada
 LINE 1: select * from menus where idmenu=
                                          ^
+
+ Error en la consulta: SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ERROR:  no existe la relación «usuarios»
+LINE 1: SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2
+                      ^
+
+ Error en la consulta: SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ERROR:  no existe la relación «usuarios»
+LINE 1: SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2
+                      ^
+
+ Error en la consulta: INSERT INTO public.cuestionarios("usuarioId") VALUES (1,6,Protanopia); 
+ERROR:  no existe la columna «protanopia»
+LINE 1: ...NTO public.cuestionarios("usuarioId") VALUES (1,6,Protanopia...
+                                                             ^
+
+ Error en la consulta: select 
+        (select count(conclusion) from cuestionarios where conclusion="deutaronapia") deutaronapia,
+        (select count(conclusion) from cuestionarios where conclusion="deutoronomalia") deutoronomalia,
+        (select count(conclusion) from cuestionarios where conclusion="protanomalia") protanomalia,
+        (select count(conclusion) from cuestionarios where conclusion="Protanopia") protanopia,
+        (select count(conclusion) from cuestionarios where conclusion="tritanomalia") tritanomalia,
+        (select count(conclusion) from cuestionarios where conclusion="tritanopia") tritanopia,
+        (select count(conclusion) from cuestionarios where conclusion="Normal") normal 
+ERROR:  no existe la columna «deutaronapia»
+LINE 2: ...t(conclusion) from cuestionarios where conclusion="deutarona...
+                                                             ^

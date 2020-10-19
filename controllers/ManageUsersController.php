@@ -2,9 +2,11 @@
 
 defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 
-class ManageUsersController extends ControllerBase {
+class ManageUsersController extends ControllerBase
+{
 
-    public function main() {
+    public function main()
+    {
         $this->view->setTemplate('user' . DS . 'manager');
         $this->document->addScript("jquery.mousewheel-3.0.4.pack");
         $this->document->addScript("jquery.fancybox-1.3.4.pack");
@@ -23,7 +25,8 @@ class ManageUsersController extends ControllerBase {
         $this->view->show();
     }
 
-    public function createUser() {
+    public function createUser()
+    {
         $this->view->setTemplate('user' . DS . 'createuser');
         $this->document->addCss("style");
         $this->document->addCss("orden");
@@ -43,22 +46,26 @@ class ManageUsersController extends ControllerBase {
         $this->view->show();
     }
 
-    public function insertUser() {
+    public function insertUser()
+    {
         $this->getModel("ManageUsers");
         $this->model->insertUser();
     }
 
-    public function disableUser() {
+    public function disableUser()
+    {
         $this->getModel("ManageUsers");
         $this->model->disableUser();
     }
 
-    public function enableUser() {
+    public function enableUser()
+    {
         $this->getModel("ManageUsers");
         $this->model->enableUser();
     }
 
-    public function editUser() {
+    public function editUser()
+    {
         $this->view->setTemplate('user' . DS . 'edituser');
         $this->document->addCss("style");
         $this->document->addCss("orden");
@@ -66,13 +73,13 @@ class ManageUsersController extends ControllerBase {
         $this->getModel("ManageUsers");
         $usuario = $this->model->getUserById($_GET['iduser']);
         $departamentos = $this->model->getDepartamentos();
-        $ciudades = $this->model->getCiudades($usuario["iddepartamento"]?$usuario["iddepartamento"]:$departamentos[0]['id']);
+        $ciudades = $this->model->getCiudades($usuario["iddepartamento"] ? $usuario["iddepartamento"] : $departamentos[0]['id']);
         $localidadvin = $this->model->getLocalidades();
-        $barriovin = $this->model->getBarrios($usuario["idlocalidad"]?$usuario["idlocalidad"]:$localidadvin[0]['id']);
-        $fecha=explode("-", $usuario['fechanacimiento']);        
-        $ano2=$fecha[0]; 
-        $mes2=$fecha[1]-1; 
-        $dia2=$fecha[2];
+        $barriovin = $this->model->getBarrios($usuario["idlocalidad"] ? $usuario["idlocalidad"] : $localidadvin[0]['id']);
+        $fecha = explode("-", $usuario['fechanacimiento']);
+        $ano2 = $fecha[0];
+        $mes2 = $fecha[1] - 1;
+        $dia2 = $fecha[2];
         $fecha = date("Y-m-d", strtotime(date("Y-m-d") . " -18 year"));
         $fechamax = date("Y-m-d", strtotime($fecha . " -1 day"));
         $arrayfecha = explode("-", $fechamax);
@@ -93,22 +100,26 @@ class ManageUsersController extends ControllerBase {
         $this->view->show();
     }
 
-    public function editBasicUser() {
+    public function editBasicUser()
+    {
         $this->getModel("ManageUsers");
         $this->model->editBasicUser();
     }
 
-    public function editPassUser() {
+    public function editPassUser()
+    {
         $this->getModel("ManageUsers");
         $this->model->editPassUser();
     }
 
-    public function editAssociatedUser() {
+    public function editAssociatedUser()
+    {
         $this->getModel("ManageUsers");
         $this->model->editAssociatedUser();
     }
 
-    public function editProfile() {
+    public function editProfile()
+    {
         $this->view->setTemplate('user' . DS . 'editProfile');
         $this->document->addCss("style");
         $this->document->addCss("orden");
@@ -121,23 +132,23 @@ class ManageUsersController extends ControllerBase {
         $this->view->show();
     }
 
-    public function ajaxCiudades() {
+    public function ajaxCiudades()
+    {
         $this->getModel("ManageUsers");
         $ciudades = $this->model->getCiudades($_POST['iddepartamento']);
         echo json_encode($ciudades);
     }
 
-    public function ajaxBarrios() {
+    public function ajaxBarrios()
+    {
         $this->getModel("ManageUsers");
         $barrios = $this->model->getBarrios($_POST['idlocalidad']);
         echo json_encode($barrios);
     }
-    
-    public function updateProfile(){
+
+    public function updateProfile()
+    {
         $this->getModel("ManageUsers");
-        $this->model->updateProfile();        
+        $this->model->updateProfile();
     }
-
 }
-
-?>

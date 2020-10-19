@@ -74,4 +74,94 @@ class DaltonismModel extends ModelBase
         }
         return $usuarios;
     }
+    public function getTypeReport()
+    {
+        $consult = $this->db->executeQue("select 
+        (select count(conclusion) from cuestionarios where conclusion='deutaronapia') deutaronapia,
+        (select count(conclusion) from cuestionarios where conclusion='deutoronomalia') deutoronomalia,
+        (select count(conclusion) from cuestionarios where conclusion='protanomalia') protanomalia,
+        (select count(conclusion) from cuestionarios where conclusion='Protanopia') protanopia,
+        (select count(conclusion) from cuestionarios where conclusion='tritanomalia') tritanomalia,
+        (select count(conclusion) from cuestionarios where conclusion='tritanopia') tritanopia,
+        (select count(conclusion) from cuestionarios where conclusion='Normal') normal");
+        while ($fila = $this->db->arrayResult($consult)) {
+            $typeReport[] = array(
+                'deutaronapia' => $fila['deutaronapia'],
+                'deutoronomalia' => $fila['deutoronomalia'],
+                'protanomalia' => $fila['protanomalia'],
+                'protanopia' => $fila['protanopia'],
+                'tritanomalia' => $fila['tritanomalia'],
+                'tritanopia' => $fila['tritanopia'],
+                'normal' => $fila['normal'],
+
+            );
+        }
+        return $typeReport;
+    }
+    public function getAgeReport()
+    {
+        $consult = $this->db->executeQue("select 
+        (select count(conclusion) from cuestionarios where conclusion='deutaronapia' and edad=6) deutaronapia6,
+        (select count(conclusion) from cuestionarios where conclusion='deutoronomalia' and edad=6) deutoronomalia6,
+        (select count(conclusion) from cuestionarios where conclusion='protanomalia' and edad=6) protanomalia6,
+        (select count(conclusion) from cuestionarios where conclusion='Protanopia' and edad=6) protanopia6,
+        (select count(conclusion) from cuestionarios where conclusion='tritanomalia' and edad=6) tritanomalia6,
+        (select count(conclusion) from cuestionarios where conclusion='tritanopia' and edad=6) tritanopia6,
+        (select count(conclusion) from cuestionarios where conclusion='Normal' and edad=6) normal6,
+        (select count(conclusion) from cuestionarios where conclusion='deutaronapia' and edad=7) deutaronapia7,
+        (select count(conclusion) from cuestionarios where conclusion='deutoronomalia' and edad=7) deutoronomalia7,
+        (select count(conclusion) from cuestionarios where conclusion='protanomalia' and edad=7) protanomalia7,
+        (select count(conclusion) from cuestionarios where conclusion='Protanopia' and edad=7) protanopia7,
+        (select count(conclusion) from cuestionarios where conclusion='tritanomalia' and edad=7) tritanomalia7,
+        (select count(conclusion) from cuestionarios where conclusion='tritanopia' and edad=7) tritanopia7,
+        (select count(conclusion) from cuestionarios where conclusion='Normal' and edad=7) normal7,
+        (select count(conclusion) from cuestionarios where conclusion='deutaronapia' and edad=8) deutaronapia8,
+        (select count(conclusion) from cuestionarios where conclusion='deutoronomalia' and edad=8) deutoronomalia8,
+        (select count(conclusion) from cuestionarios where conclusion='protanomalia' and edad=8) protanomalia8,
+        (select count(conclusion) from cuestionarios where conclusion='Protanopia' and edad=8) protanopia8,
+        (select count(conclusion) from cuestionarios where conclusion='tritanomalia' and edad=8) tritanomalia8,
+        (select count(conclusion) from cuestionarios where conclusion='tritanopia' and edad=8) tritanopia8,
+        (select count(conclusion) from cuestionarios where conclusion='Normal' and edad=8) normal8,
+        (select count(conclusion) from cuestionarios where conclusion='deutaronapia' and edad=9) deutaronapia9,
+        (select count(conclusion) from cuestionarios where conclusion='deutoronomalia' and edad=9) deutoronomalia9,
+        (select count(conclusion) from cuestionarios where conclusion='protanomalia' and edad=9) protanomalia9,
+        (select count(conclusion) from cuestionarios where conclusion='Protanopia' and edad=9) protanopia9,
+        (select count(conclusion) from cuestionarios where conclusion='tritanomalia' and edad=9) tritanomalia9,
+        (select count(conclusion) from cuestionarios where conclusion='tritanopia' and edad=9) tritanopia9,
+        (select count(conclusion) from cuestionarios where conclusion='Normal' and edad=9) normal9");
+        while ($fila = $this->db->arrayResult($consult)) {
+            $ageReport[] = array(
+                'deutaronapia6' => $fila['deutaronapia6'],
+                'deutoronomalia6' => $fila['deutoronomalia6'],
+                'protanomalia6' => $fila['protanomalia6'],
+                'protanopia6' => $fila['protanopia6'],
+                'tritanomalia6' => $fila['tritanomalia6'],
+                'tritanopia6' => $fila['tritanopia6'],
+                'normal6' => $fila['normal6'],
+                'deutaronapia7' => $fila['deutaronapia7'],
+                'deutoronomalia7' => $fila['deutoronomalia7'],
+                'protanomalia7' => $fila['protanomalia7'],
+                'protanopia7' => $fila['protanopia7'],
+                'tritanomalia7' => $fila['tritanomalia7'],
+                'tritanopia7' => $fila['tritanopia7'],
+                'normal7' => $fila['normal7'],
+                'deutaronapia8' => $fila['deutaronapia8'],
+                'deutoronomalia8' => $fila['deutoronomalia8'],
+                'protanomalia8' => $fila['protanomalia8'],
+                'protanopia8' => $fila['protanopia8'],
+                'tritanomalia8' => $fila['tritanomalia8'],
+                'tritanopia8' => $fila['tritanopia8'],
+                'normal8' => $fila['normal8'],
+                'deutaronapia9' => $fila['deutaronapia9'],
+                'deutoronomalia9' => $fila['deutoronomalia9'],
+                'protanomalia9' => $fila['protanomalia9'],
+                'protanopia9' => $fila['protanopia9'],
+                'tritanomalia9' => $fila['tritanomalia9'],
+                'tritanopia9' => $fila['tritanopia9'],
+                'normal9' => $fila['normal9'],
+
+            );
+        }
+        return $ageReport;
+    }
 }
