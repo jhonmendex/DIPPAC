@@ -40,32 +40,40 @@
     </div>
 </body>
 <script>
+    // Get the existing data
+    var currentData = localStorage.getItem('dippacAnswers');
+    currentData = JSON.parse(currentData);
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         $(document).on('change', 'input', function(e) {
-
-            // Get the existing data
-            var currentData = localStorage.getItem('dippacAnswers');
-
-            currentData = JSON.parse(currentData);
-
-            var answer = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-
-            var isCorrect = answer == "division" ? true : false;
-
-            var answer3 = {
-                type: 2,
-                isCorrect: isCorrect,
-                answer: answer,
-                image: null,
-                testName: "Discalculia Léxica - Prueba 1 - 9 años"
-            };
-
-            // Add new data to localStorage Array
-            currentData[2] = answer3;
-
-            localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+            validateAnswer(e)
+        })
+        $('#continue').on('click', function() {
+            validateAnswer()
         })
     })
+
+    function validateAnswer(e) {
+        if (e) {
+            answer = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            isCorrect = answer == "division" ? true : false;
+        } else {
+            isCorrect = isCorrect === null ? false : isCorrect
+            answer = answer === null ? 'No responde' : answer
+        }
+        var answer3 = {
+            type: 2,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Discalculia Léxica - Prueba 1 - 9 años"
+        };
+        // Add new data to localStorage Array
+        currentData[2] = answer3;
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+    }
 </script>
 
 </html>

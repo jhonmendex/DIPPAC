@@ -40,6 +40,8 @@
     </div>
 </body>
 <script>
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         $(document).on('change', 'input', function(e) {
             validateAnswer(e)
@@ -51,8 +53,6 @@
     })
 
     function validateAnswer(e) {
-        var isCorrect = null
-        var answer = null
         if (e) {
             isCorrect = e.target.value.replace(/ /g, "") == 16 ? true : false;
             answer = e.target.value.replace(/ /g, "")

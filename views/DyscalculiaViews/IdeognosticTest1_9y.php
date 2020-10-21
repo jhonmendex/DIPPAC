@@ -40,28 +40,38 @@
     </div>
 </body>
 <script>
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         $(document).on('change', 'input', function(e) {
-
-            var answer = e.target.value.replace(/ /g, "");
-
-            var isCorrect = answer == "40" ? true : false;
-
-            var answer1 = {
-                type: 1,
-                isCorrect: isCorrect,
-                answer: answer,
-                image: null,
-                testName: "Prueba de discalculia ideognostica 1 - 9 años"
-            };
-
-            var array = [];
-
-            array.push(answer1);
-
-            localStorage.setItem('dippacAnswers', JSON.stringify(array));
+            validateAnswer(e)
+        })
+        $('#continue').on('click', function() {
+            validateAnswer()
         })
     })
+
+    function validateAnswer(e) {
+        if (e) {
+            answer = e.target.value.replace(/ /g, "");
+            isCorrect = answer == "40" ? true : false;
+        } else {
+            isCorrect = $('#inputNum').val() == 40 ? true : false;
+            answer = $('#inputNum').val() === "" ? 'No responde' : false
+        }
+        var answer1 = {
+            type: 1,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Prueba de discalculia ideognostica 1 - 9 años"
+        };
+        var array = [];
+
+        array.push(answer1);
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(array));
+    }
 </script>
 
 </html>

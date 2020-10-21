@@ -75,33 +75,43 @@
     </div>
 </body>
 <script>
+    // Get the existing data
+    var currentData = localStorage.getItem('dippacAnswers');
+    currentData = JSON.parse(currentData);
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         $(document).on('change', 'input', function(e) {
-
-            // Get the existing data
-            var currentData = localStorage.getItem('dippacAnswers');
-
-            currentData = JSON.parse(currentData);
-
-            var inputUno = document.getElementById('inputUno').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-            var inputDos = document.getElementById('inputDos').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-
-            var isCorrect = inputUno == 4 && inputDos == 6 ? true : false;
-
-            var answer7 = {
-                type: 4,
-                isCorrect: isCorrect,
-                answer: inputUno + " y " + inputDos,
-                image: null,
-                testName: "Prueba de discalculia practognostica 1 - 9 años"
-            };
-
-            // Add new data to localStorage Array
-            currentData[6] = answer7;
-
-            localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+            validateAnswer(e)
+        })
+        $('#continue').on('click', function() {
+            validateAnswer()
         })
     })
+
+    function validateAnswer(e) {
+        var inputUno = document.getElementById('inputUno').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        var inputDos = document.getElementById('inputDos').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        if (e) {
+            answer = inputUno + " y " + inputDos
+            isCorrect = inputUno == 4 && inputDos == 6 ? true : false;
+        } else {
+            isCorrect = isCorrect === null ? false : isCorrect
+            answer = answer === null ? 'No responde' : answer
+        }
+        var answer7 = {
+            type: 4,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Prueba de discalculia practognostica 1 - 9 años"
+        };
+
+        // Add new data to localStorage Array
+        currentData[6] = answer7;
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+    }
 </script>
 
 </html>

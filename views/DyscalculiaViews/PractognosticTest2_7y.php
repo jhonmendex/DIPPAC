@@ -74,31 +74,43 @@
     </div>
 </body>
 <script>
+    // Get the existing data
+    var currentData = localStorage.getItem('dippacAnswers');
+    currentData = JSON.parse(currentData);
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         document.querySelectorAll('button.answer').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
-                // Get the existing data
-                var currentData = localStorage.getItem('dippacAnswers');
-
-                currentData = JSON.parse(currentData);
-
-                var isCorrect = e.target.id == "circle1" ? true : false;
-
-                var answer8 = {
-                    type: 4,
-                    isCorrect: isCorrect,
-                    answer: isCorrect ? "Opción 1" : "Opción 2",
-                    image: null,
-                    testName: "Prueba de discalculia practognostica 2 - 7 años"
-                };
-
-                // Add new data to localStorage Array
-                currentData[7] = answer8;
-
-                localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+                validateAnswer(e);
             })
         })
+        $('#continue').on('click', function() {
+            validateAnswer();
+        })
     })
+
+    function validateAnswer(e) {
+        if (e) {
+            isCorrect = e.target.id == "circle1" ? true : false;
+            answer = isCorrect ? "Opción 1" : "Opción 2"
+        } else {
+            isCorrect = isCorrect === null ? false : isCorrect
+            answer = answer === null ? 'No responde' : answer
+        }
+        var answer8 = {
+            type: 4,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Prueba de discalculia practognostica 2 - 7 años"
+        };
+
+        // Add new data to localStorage Array
+        currentData[7] = answer8;
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+    }
 </script>
 
 </html>

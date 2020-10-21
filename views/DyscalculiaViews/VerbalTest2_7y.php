@@ -54,28 +54,35 @@
     $(document).ready(function() {
         document.querySelectorAll('button.answer').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
-                // Get the existing data
-                var currentData = localStorage.getItem('dippacAnswers');
-
-                currentData = JSON.parse(currentData);
-
-                var isCorrect = e.target.innerText == "50 + 11" ? true : false;
-
-                var answer10 = {
-                    type: 5,
-                    isCorrect: isCorrect,
-                    answer: e.target.innerText,
-                    image: null,
-                    testName: "Prueba de discalculia verbal 2 - 7 años"
-                };
-
-                // Add new data to localStorage Array
-                currentData[9] = answer10;
-
-                localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+                validateAnswer(e);
             })
         })
+        $('#continue').on('click', function() {
+            validateAnswer();
+        })
     })
+
+    function validateAnswer(e) {
+        if (e) {
+            isCorrect = e.target.innerText == "50 + 11" ? true : false;
+            answer = e.target.innerText;
+        } else {
+            isCorrect = isCorrect === null ? false : isCorrect
+            answer = answer === null ? 'No responde' : answer
+        }
+        var answer10 = {
+            type: 5,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Prueba de discalculia verbal 2 - 7 años"
+        };
+
+        // Add new data to localStorage Array
+        currentData[9] = answer10;
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+    }
 </script>
 
 </html>
