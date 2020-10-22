@@ -9,7 +9,7 @@ class TestDiscalculiaModel extends ModelBase
   {
     $query = 'select usuarios.idusuario, usuarios.nombreusuario, cuestionarios."Id"
     as cuestionarioId, cuestionarios.fechapresentacion, cuestionarios.edad from public.usuarios inner join public.cuestionarios on usuarios.idusuario = cuestionarios."usuarioId"
-    where public.usuarios."tutorId" = ' . $idUsuario . '';
+    where public.usuarios."tutorId" = ' . $idUsuario . ' order by cuestionarios.fechapresentacion';
     $consulta = $this->db->executeQue($query);
     $total = $this->db->numRows($consulta);
     $send = null;
@@ -33,7 +33,7 @@ class TestDiscalculiaModel extends ModelBase
 
   public function getDetailTest($id)
   {
-    $query = 'select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
+    $query = 'select cuestionarios."Id" as idCuestionario, cuestionarios.conclusion, cuestionarios.edad, cuestionarios.calificacion, cuestionarios.fechapresentacion, respuestas."Id" as
     idRespuesta, respuestas.imagen, respuestas."esCorrecta", respuestas.respuesta, respuestas.tipo, respuestas.nombreprueba
     from public.cuestionarios inner join public.respuestas on respuestas."cuestionarioId" = cuestionarios."Id"
     where cuestionarios."Id" =' . $id;
@@ -49,6 +49,8 @@ class TestDiscalculiaModel extends ModelBase
           'fecha' => $row['fechapresentacion'],
           'respuesta' => $row['respuesta'],
           'conclusion' => $row['conclusion'],
+          'calificacion' => $row['calificacion'],
+          'edad' => $row['edad'],
           'correcta' => $row['esCorrecta'],
           'tipo' => $row['tipo'],
           'nombreprueba' => $row['nombreprueba'],
@@ -63,7 +65,12 @@ class TestDiscalculiaModel extends ModelBase
   {
     $query = "update cuestionarios set conclusion = '" . $conclussion . "' , calificacion = " . $score . " where \"Id\" = " . $idCuestionario;
     $consulta = $this->db->executeQue($query);
-    return $consulta;
+    if (!$consulta) //If query couldnt be executed
+    {
+      return $this->db->error; //Display information about why wasnt executed (eg. Error: couldnt find table)
+    } else {
+      return true;
+    }
   }
   public function updateAnswerGraphic($id, $ans)
   {

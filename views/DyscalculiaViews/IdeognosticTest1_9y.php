@@ -7,7 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- <script src="scripts/dyscalculiaScripts/Time.js"></script> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Prueba de discalculia ideognostica 1 - 9 años</title>
+    <title>Prueba de discalculia ideognóstica 1 - 9 años</title>
 </head>
 
 <body>
@@ -44,7 +44,7 @@
     $(document).ready(function() {
         Timer(70);
         $(document).on('change', 'input', function(e) {
-            var answer = e.target.value.replace(/ /g, "");
+            var answer = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
             var isCorrect = answer == "40" ? true : false;
 
@@ -53,7 +53,7 @@
                 isCorrect: isCorrect,
                 answer: answer,
                 image: null,
-                testName: "Prueba de discalculia ideognostica 1 - 9 años"
+                testName: "Discalculia ideognóstica"
             };
 
             var array = [];

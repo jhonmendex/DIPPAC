@@ -64,7 +64,7 @@
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
                     image: null,
-                    testName: "Prueba de discalculia léxica 1 - 6 años"
+                    testName: "Discalculia léxica"
                 };
 
                 // Add new data to localStorage Array

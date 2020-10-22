@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Prueba de discalculia ideognostica 1 - 8 años</title>
+    <title>Prueba de discalculia ideognóstica 1 - 8 años</title>
 </head>
 
 <body>
@@ -55,8 +55,8 @@
         var isCorrect = null
         var answer = null
         if (e) {
-            isCorrect = e.target.value.replace(/ /g, "") == 16 ? true : false;
-            answer = e.target.value.replace(/ /g, "")
+            isCorrect = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase() == 16 ? true : false;
+            answer = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
         } else {
             isCorrect = $('#inputNum').val() == 16 ? true : false;
             answer = $('#inputNum').val() === "" ? 'No responde' : false
@@ -66,7 +66,7 @@
             isCorrect: isCorrect,
             answer: answer,
             image: null,
-            testName: "Prueba de discalculia ideognostica 1 - 8 años"
+            testName: "Discalculia ideognóstica"
         };
         var array = [];
 

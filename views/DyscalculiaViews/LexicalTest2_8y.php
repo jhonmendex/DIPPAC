@@ -30,7 +30,7 @@
             <div id="buttons">
                 <div id="row1">
                     <button id="answer1" class="btn btn-warning answer">Sesenta + sesenta</button>
-                    <button id="answer2" class="btn btn-success answer">Ciencuenta + cuarenta</button>
+                    <button id="answer2" class="btn btn-success answer">Sesenta + cuarenta</button>
                 </div>
 
                 <div id="row2">
@@ -65,7 +65,7 @@
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
                     image: null,
-                    testName: "Prueba de discalculia léxica 2 - 8 años"
+                    testName: "Discalculia léxica"
                 };
 
                 // Add new data to localStorage Array

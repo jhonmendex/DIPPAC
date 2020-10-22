@@ -5,7 +5,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
     <div class="row">
         <div class="col">
             <h1>
-                Informes test
+                Informe
             </h1>
         </div>
     </div>
@@ -15,14 +15,14 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
             <table class="table table-bordered">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Estudiante</th>
-                        <th scope="col">Edad</th>
+                        <th scope="col" style="text-align: center;">Estudiante</th>
+                        <th scope="col" style="text-align: center;">Edad</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th><?php echo $user['nombre'] ?></th>
-                        <td><?php echo $user['edad'] ?></td>
+                        <td style="text-align: center;"><?php echo $cuestionarios[0]['edad'] ?></td>
                     </tr>
                 </tbody>
             </table>
@@ -30,32 +30,83 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
             <table class="table mt-5 table-bordered">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Discalculias evaluadas</th>
+                        <th scope="col" style="text-align: center;">Discalculias evaluadas</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    foreach ($cuestionarios as $cuestionario) { ?>
-                        <?php echo '<tr><th>' . $cuestionario['nombreprueba'] . '</th></tr>'; ?>
-                    <?php
-                    }
+                    $res = array_reduce($cuestionarios, function (array $accumulator, array $element) {
+                        $accumulator[$element['tipo']][] = $element;
+                        return $accumulator;
+                    }, []);
+
+                    foreach ($res as $cuestionario) {
                     ?>
+                        <?php echo '<tr><th>' . $cuestionario[0]['nombreprueba'] . '</th></tr>'; ?>
+                    <?php
+                    } ?>
                 </tbody>
             </table>
         </div>
         <div class="col-6">
+            <!-- Explicación -->
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" style="text-align: center;">Calificación</th>
+                        <th scope="col" style="text-align: center;">Explicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th style="text-align: center;">0.0</th>
+                        <td>Ninguna respuesta fue correcta</td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">0.5</th>
+                        <td>La mitad de respuestas fueron correctas</td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">1.0</th>
+                        <td>Todas las respuestas fueron correctas</td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">General</th>
+                        <td>Es el resultado de dividir la cantidad de respuestas correctas sobre la totalidad de respuestas registradas</td>
+                    </tr>
+                </tbody>
+            </table>
             <canvas id="spider" />
         </div>
         <div class="col-3">
+            <!-- Calificación estudiante -->
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" style="text-align: center;">Calificación general</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th style="text-align: center;"><?php echo number_format($cuestionarios[0]['calificacion'], 2, '.', '.'); ?></th>
+                    </tr>
+                </tbody>
+            </table>
             <!-- conclusiones -->
             <table class="table table-bordered">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Conclusiones</th>
+                        <th scope="col" style="text-align: center;">Conclusiones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php echo '<tr><th>' . $cuestionario['conclusion'] . '</th></tr>'; ?>
+                    <?php
+                    $conclusiones = explode(";", $cuestionarios[0]['conclusion']);
+                    foreach ($conclusiones as $conclusion) {
+                    ?>
+                        <?php echo '<tr><th>' . $conclusion . '</th></tr>'; ?>
+                    <?php
+                    } ?>
                 </tbody>
             </table>
         </div>
@@ -141,7 +192,21 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
             type: "radar",
             data: data,
             options: {
+                responsive: true,
+                scale: {
+                    ticks: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 1,
+                        stepSize: 0.1
+                    },
+                    pointLabels: {
+                        fontSize: 15
+                    }
+                },
                 tooltips: {
+                    enabled: true,
+                    mode: 'nearest',
                     callbacks: {
                         title: function(tooltipItem, data) {
                             return data.labels[tooltipItem[0].index];
@@ -191,7 +256,16 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
         if (next) {
             $('#respuesta' + next.modal).modal('show')
         } else {
-            location.reload()
+            $.ajax({
+                url: "index.php?controlador=DyscalculiaIndex&accion=rateTest&testid=" + <?php echo $cuestionarios[0]['idCuestionario'] ?>, //Leerá la url en la etiqueta action del formulario (archivo.php)
+                type: "GET", //Leerá el método en etiqueta method del formulario
+                data: null,
+                dataType: "json"
+            }).done(function(respuesta) {
+                location.reload();
+            }).fail(function(error) {
+                console.log(error);
+            });
         }
     }
 </script>

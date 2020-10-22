@@ -27,7 +27,7 @@
         <div id="operation">
 
             <div id="helper">
-                <input type="text">
+                <input type="text" onkeyup="$(this).next().focus();" maxlength="1">
             </div>
 
             <h1>4 5 0</h1>
@@ -36,9 +36,9 @@
             <h1 class="relative"><span class="operator">+</span> 1 0 0</h1>
             <hr>
             <div id="result">
-                <input id="inputUno" type="text">
-                <input id="inputDos" type="text">
-                <input id="inputTres" type="text">
+                <input id="inputUno" onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input id="inputDos" onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input id="inputTres" onkeyup="$(this).next().focus();" maxlength="1" type="text">
             </div>
 
             <div id="finish">
@@ -70,7 +70,7 @@
                 isCorrect: isCorrect,
                 answer: inputUno + inputDos + inputTres,
                 image: null,
-                testName: "Prueba de discalculia operacional 1 - 9 años"
+                testName: "Discalculia operacional"
             };
 
             // Add new data to localStorage Array

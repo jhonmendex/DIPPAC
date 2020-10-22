@@ -67,7 +67,7 @@
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
                     image: null,
-                    testName: "Prueba de discalculia verbal 1 - 7 años"
+                    testName: "Discalculia verbal"
                 };
 
                 // Add new data to localStorage Array

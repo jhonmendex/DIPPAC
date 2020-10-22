@@ -69,7 +69,7 @@
                     isCorrect: null,
                     answer: "Dibuja el signo de división:",
                     image: imagen,
-                    testName: "Prueba de discalculia gráfica 1 - 8 años"
+                    testName: "Discalculia gráfica"
                 };
 
                 // Add new data to localStorage Array

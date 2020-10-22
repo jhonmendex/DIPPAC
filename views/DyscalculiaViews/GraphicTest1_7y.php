@@ -69,7 +69,7 @@
                     isCorrect: null,
                     answer: "Dibuja el signo de multiplicación:",
                     image: imagen,
-                    testName: "Prueba de discalculia gráfica 1 - 7 años"
+                    testName: "Discalculia gráfica"
                 };
 
                 // Add new data to localStorage Array

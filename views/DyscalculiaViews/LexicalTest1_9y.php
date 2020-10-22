@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement">
-            <h1>Escoge el signo matemático de<br>la siguiente operación:</h1>
+            <h1>Escribe el nombre del signo matemático de<br>la siguiente operación:<br></h1>
 
         </div>
 
@@ -58,7 +58,7 @@
                 isCorrect: isCorrect,
                 answer: answer,
                 image: null,
-                testName: "Discalculia Léxica - Prueba 1 - 9 años"
+                testName: "Discalculia léxica"
             };
 
             // Add new data to localStorage Array

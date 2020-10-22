@@ -168,3 +168,9 @@ LINE 1: ...a baja en discalculia Verbal;' ,calificacion = El estudiante...
 ERROR:  syntax error at or near "estudiante"
 LINE 1: ...a baja en discalculia Verbal;' ,calificacion = El estudiante...
                                                              ^
+
+ Error en la consulta: INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (n, 'n', 'n', '79', n, 'n'); 
+ERROR:  column "n" does not exist
+LINE 2:             VALUES (n, 'n', 'n', '79', n, 'n');
+                            ^

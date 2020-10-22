@@ -69,7 +69,7 @@
                     isCorrect: null,
                     answer: "Dibuja el signo de suma:",
                     image: imagen,
-                    testName: "Prueba de discalculia gráfica 1 - 6 años"
+                    testName: "Discalculia gráfica"
                 };
 
                 // Add new data to localStorage Array

@@ -33,17 +33,19 @@
             </div>
             <br>
             <div id="result">
-                <input type="text">
-                <input type="text">
+                <input onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input onkeyup="$(this).nextAll('input').first().focus();" maxlength="1" type="text">
                 <br>
-                <input type="text">
-                <input type="text">
+                <h1 class="relative "><span class="operator span-no-click">+</span></h1>
+                <input id="test" onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input onkeyup="$(this).nextAll('input').first().focus();" maxlength="1" type="text">
                 <br>
-                <input type="text">
-                <input type="text">
+                <h1 class="relative"><span class="operator span-no-click">+</span></h1>
+                <input onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input onkeyup="$(this).nextAll('input').first().focus();" maxlength="1" type="text">
                 <hr>
-                <input id="inputUno" type="text">
-                <input id="inputDos" type="text">
+                <input id="inputUno" onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input id="inputDos" onkeyup="$(this).next().focus();" maxlength="1" type="text">
 
             </div>
 
@@ -76,7 +78,7 @@
                 isCorrect: isCorrect,
                 answer: inputUno + inputDos,
                 image: null,
-                testName: "Prueba de discalculia operacional 2 - 8 años"
+                testName: "Discalculia operacional"
             };
 
             // Add new data to localStorage Array

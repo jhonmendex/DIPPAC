@@ -69,7 +69,7 @@
                     isCorrect: null,
                     answer: "Dibuja el signo de menor que:",
                     image: imagen,
-                    testName: "Prueba de discalculia gráfica 2 - 8 años"
+                    testName: "Discalculia gráfica"
                 };
 
                 // Add new data to localStorage Array

@@ -7,25 +7,32 @@ class DyscalculiaIndexController extends ControllerBase
 
     public function main()
     {
-        $this->view->setTemplate('DyscalculiaViews' . DS . 'dyscalculiaIndex');
-        $this->document->addScript("test");
-        $this->document->addScript("font-awesome");
-        $this->document->addCss('indexStyle');
-        $this->document->addCss('orden');
-        $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
-        $this->document->addCss('dyscaulculiaCss' . DS . 'operationalTestsStyle');
-        $this->document->addCss('dyscaulculiaCss' . DS . 'PractognosticTestsStyle');
-        // $this->document->addScript('dyscalculiaScripts' . DS . 'Time');
-        // $this->document->addScript('dyscalculiaScripts' . DS . 'Validations');
-        $this->document->addScript("jquery.mousewheel-3.0.4.pack");
-        $this->document->addScript("jquery.fancybox-1.3.4.pack");
-        $this->document->addScript("jquery.dataTables");
-        $this->document->addCss("jquery.fancybox-1.3.4");
-        $this->document->setHeader();
-        $this->getModel("Cuestionario");
-        $cuestionarios = $this->model->getCuestionarios();
-        $this->view->setVars('cuestionarios', $cuestionarios);
-        $this->view->show();
+        $this->getModel("User");
+        $idUser = $this->model->getUserId();
+        $user = $this->model->getUserById($idUser);
+        if ($user != false) {
+
+            $perfil = $user['perfil'];
+
+            $this->view->setTemplate('DyscalculiaViews' . DS . 'dyscalculiaIndex');
+            $this->document->addScript("test");
+            $this->document->addScript("font-awesome");
+            $this->document->addCss('indexStyle');
+            $this->document->addCss('orden');
+            $this->document->addCss('dyscaulculiaCss' . DS . 'discalculia');
+            $this->document->addCss('dyscaulculiaCss' . DS . 'operationalTestsStyle');
+            $this->document->addCss('dyscaulculiaCss' . DS . 'PractognosticTestsStyle');
+            $this->document->addScript("jquery.mousewheel-3.0.4.pack");
+            $this->document->addScript("jquery.fancybox-1.3.4.pack");
+            $this->document->addScript("jquery.dataTables");
+            $this->document->addCss("jquery.fancybox-1.3.4");
+            $this->document->setHeader();
+            $this->getModel("Cuestionario");
+            $cuestionarios = $this->model->getCuestionarios();
+            $this->view->setVars('cuestionarios', $cuestionarios);
+            $this->view->setVars('perfil', $perfil);
+            $this->view->show();
+        }
     }
 
     public function saveAnswer()
@@ -152,6 +159,7 @@ class DyscalculiaIndexController extends ControllerBase
             $totalCorrect = 0;
             $conclussion = "";
             $testName = "";
+            $index = 0;
             foreach ($res as $tipo) {
                 $prom = 0;
                 foreach ($tipo as $r) {
@@ -165,43 +173,48 @@ class DyscalculiaIndexController extends ControllerBase
 
                 switch ($type) {
                     case 0:
-                        $testName = "Gráfica";
+                        $testName = "gráfica";
                         break;
                     case 1:
-                        $testName = "Ideognóstica";
+                        $testName = "ideognóstica";
                         break;
                     case 2:
-                        $testName = "Léxica";
+                        $testName = "léxica";
                         break;
                     case 3:
-                        $testName = "Operacional";
+                        $testName = "operacional";
                         break;
                     case 4:
-                        $testName = "Practognóstica";
+                        $testName = "practognóstica";
                         break;
                     case 5:
-                        $testName = "Verbal";
+                        $testName = "verbal";
                         break;
                 }
 
                 switch ($prom) {
                     case 0:
-                        $conclussion .= "El estudiante presenta latencia baja en discalculia " . $testName;
+                        $conclussion .= "El estudiante presenta latencia alta en discalculia " . $testName;
                         break;
                     case 1:
                         $conclussion .= "El estudiante presenta latencia media en discalculia " . $testName;
                         break;
                     case 2:
-                        $conclussion .= "El estudiante presenta latencia alta en discalculia " . $testName;
+                        $conclussion .= "El estudiante presenta latencia baja en discalculia " . $testName;
                         break;
                 }
 
-                $conclussion .= ";";
+                if ($index != count($res) - 1) {
+                    $conclussion .= ";";
+                }
+
+                $index++;
             }
 
             $totalScore = $totalCorrect / $totalCount;
 
-            $res = $this->model->updateCuestionario($conclussion, $totalScore, $id);
+            $response = $this->model->updateCuestionario($conclussion, $totalScore, $id);
+            echo $response;
         }
     }
 

@@ -56,10 +56,15 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
             <div class="panel">
                 <p>Se quiere estimar la habilidad de los niños para solucionar operaciones aritméticas básicas de forma escrita y verbal, para ello se presentarán diferentes operaciones, en algunos casos dictadas por audio, y se espera que el niño las solucione teniendo como ayuda campos de texto que le sirvieran para escribir.</p>
             </div>
-
-            <div style="margin-top: 20px;">
-                <a style="margin-left: 50%;" id="startTest" class="btn btn-primary btn-start-test" href="index.php?controlador=DyscalculiaIndex&accion=ValidateInitialTest">Empezar prueba</a>
-            </div>
+            <?php if (isset($perfil)) {
+                if ($perfil == 28) {
+            ?>
+                    <div style="margin-top: 30px; text-align:center">
+                        <a style="padding: 10px; text-decoration: none;" id="startTest" class="btn btn-primary btn-start-test" href="index.php?controlador=DyscalculiaIndex&accion=ValidateInitialTest">Empezar prueba</a>
+                    </div>
+            <?php
+                }
+            } ?>
 
             <script>
                 var acc = document.getElementsByClassName("accordion");

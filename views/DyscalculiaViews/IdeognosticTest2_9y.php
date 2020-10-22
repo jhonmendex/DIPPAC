@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Prueba de discalculia ideognostica 2 - 9 años</title>
+    <title>Prueba de discalculia ideognóstica 2 - 9 años</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement">
-            <h1>Escribe el signo correspondiente <br>para realizar la operación:</h1>
+            <h1>Escribe el signo correspondiente <br>para realizar la operación:<br>(Los signos válidos son: + , - , / , X)</h1>
 
         </div>
 
@@ -28,7 +28,7 @@
             <h1>20<label id="sign">_</label> 5 = 4</h1>
             <br>
             <div class="input-group-prepend" id="entry">
-                <input type="text" class="form-control" id="inputNum">
+                <input type="text" class="form-control" maxlength="1" id="inputNum">
             </div>
             <div id="buttons">
                 <div id="finish">
@@ -58,7 +58,7 @@
                 isCorrect: isCorrect,
                 answer: answer,
                 image: null,
-                testName: "Prueba de discalculia ideognostica 2 - 9 años"
+                testName: "Discalculia ideognóstica"
             };
 
             // Add new data to localStorage Array

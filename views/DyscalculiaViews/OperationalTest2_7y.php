@@ -33,17 +33,18 @@
             </div>
             <br>
             <div id="result">
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <input onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input onkeyup="$(this).nextAll('input').first().focus();" maxlength="1" type="text">
                 <br>
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <h1 class="relative"><span class="operator span-no-click">+</span></h1>
+                <input onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input onkeyup="$(this).nextAll('input').first().focus();" maxlength="1" type="text">
                 <hr>
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <input onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input onkeyup="$(this).next().focus();" maxlength="1" type="text">
+                <input onkeyup="$(this).next().focus();" maxlength="1" type="text">
 
             </div>
 
@@ -78,7 +79,7 @@
                     isCorrect: isCorrect,
                     answer: e.target.innerText,
                     image: null,
-                    testName: "Prueba de discalculia operacional 2 - 7 años"
+                    testName: "Discalculia operacional"
                 };
 
                 // Add new data to localStorage Array

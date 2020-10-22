@@ -61,7 +61,7 @@
                 isCorrect: isCorrect,
                 answer: answer,
                 image: null,
-                testName: "Prueba de discalculia verbal 2 - 9 años"
+                testName: "Discalculia verbal"
             };
 
             // Add new data to localStorage Array

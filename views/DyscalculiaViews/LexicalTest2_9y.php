@@ -20,7 +20,7 @@
         </div>
 
         <div id="statement">
-            <h1>Escoge los números<br>presentes en la operación:</h1>
+            <h1>Escribe (en letras) los números<br>presentes en la operación:</h1>
 
         </div>
 
@@ -61,14 +61,14 @@
             var inputUno = document.getElementById('inputUno').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
             var inputDos = document.getElementById('inputDos').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-            var isCorrect = inputUno == "45" && inputDos == "20" ? true : false;
+            var isCorrect = inputUno == "cuarentaycinco" && inputDos == "veinte" ? true : false;
 
             var answer4 = {
                 type: 2,
                 isCorrect: isCorrect,
                 answer: inputUno + inputDos,
                 image: null,
-                testName: "Prueba de discalculia léxica 2 - 9 años"
+                testName: "Discalculia léxica"
             };
 
             // Add new data to localStorage Array
