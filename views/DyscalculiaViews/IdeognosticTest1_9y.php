@@ -41,28 +41,39 @@
     </div>
 </body>
 <script>
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         Timer(70);
         $(document).on('change', 'input', function(e) {
-            var answer = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-
-            var isCorrect = answer == "40" ? true : false;
-
-            var answer1 = {
-                type: 1,
-                isCorrect: isCorrect,
-                answer: answer,
-                image: null,
-                testName: "Discalculia ideognóstica"
-            };
-
-            var array = [];
-
-            array.push(answer1);
-
-            localStorage.setItem('dippacAnswers', JSON.stringify(array));
+            validateAnswer(e)
+        })
+        $('#continue').on('click', function() {
+            validateAnswer()
         })
     })
+
+    function validateAnswer(e) {
+        if (e) {
+            answer = e.target.value.replace(/ /g, "");
+            isCorrect = answer == "40" ? true : false;
+        } else {
+            isCorrect = $('#inputNum').val() == 40 ? true : false;
+            answer = $('#inputNum').val() === "" ? 'No responde' : false
+        }
+        var answer1 = {
+            type: 1,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Discalculia ideognóstica"
+        };
+        var array = [];
+
+        array.push(answer1);
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(array));
+    }
 </script>
 
 </html>

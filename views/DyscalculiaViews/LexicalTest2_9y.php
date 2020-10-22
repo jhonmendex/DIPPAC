@@ -49,34 +49,41 @@
 </body>
 
 <script>
+    // Get the existing data
+    var currentData = localStorage.getItem('dippacAnswers');
+    currentData = JSON.parse(currentData);
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         Timer(80);
         $(document).on('change', 'input', function(e) {
-
-            // Get the existing data
-            var currentData = localStorage.getItem('dippacAnswers');
-
-            currentData = JSON.parse(currentData);
-
-            var inputUno = document.getElementById('inputUno').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-            var inputDos = document.getElementById('inputDos').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-
-            var isCorrect = inputUno == "cuarentaycinco" && inputDos == "veinte" ? true : false;
-
-            var answer4 = {
-                type: 2,
-                isCorrect: isCorrect,
-                answer: inputUno + inputDos,
-                image: null,
-                testName: "Discalculia léxica"
-            };
-
-            // Add new data to localStorage Array
-            currentData[3] = answer4;
-
-            localStorage.setItem('dippacAnswers', JSON.stringify(currentData))
+            btn.addEventListener('click', function(e) {
+                validateAnswer(e)
+            })
+        })
+        $('#continue').on('click', function() {
+            validateAnswer()
         })
     })
+
+
+    function validateAnswer(e) {
+        var inputUno = document.getElementById('inputUno').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        var inputDos = document.getElementById('inputDos').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        isCorrect = isCorrect = inputUno == "45" && inputDos == "20" ? true : false;
+        answer = inputUno + inputDos
+        var answer4 = {
+            type: 2,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Discalculia léxica"
+        };
+        // Add new data to localStorage Array
+        currentData[3] = answer4;
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+    }
 </script>
 
 </html>

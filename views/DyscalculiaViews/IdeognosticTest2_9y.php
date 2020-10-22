@@ -1,3 +1,4 @@
+.
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,33 +41,43 @@
     </div>
 </body>
 <script>
+    // Get the existing data
+    var currentData = localStorage.getItem('dippacAnswers');
+    currentData = JSON.parse(currentData);
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         Timer(70);
         $(document).on('change', 'input', function(e) {
+            validateAnswer(e)
+        })
 
-            // Get the existing data
-            var currentData = localStorage.getItem('dippacAnswers');
-
-            currentData = JSON.parse(currentData);
-
-            var answer = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-
-            var isCorrect = answer == "/" || answer == "÷" ? true : false;
-
-            var answer2 = {
-                type: 1,
-                isCorrect: isCorrect,
-                answer: answer,
-                image: null,
-                testName: "Discalculia ideognóstica"
-            };
-
-            // Add new data to localStorage Array
-            currentData[1] = answer2;
-
-            localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+        $('#continue').on('click', function() {
+            validateAnswer()
         })
     })
+
+    function validateAnswer(e) {
+        if (e) {
+            let val = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            isCorrect = answer == "/" || answer == "÷" ? true : false;
+            answer = val
+        } else {
+            isCorrect = $('#inputNum').val() == "/" || $('#inputNum').val() == "÷" || $('#inputNum').val() == "*" ? true : false;
+            answer = $('#inputNum').val() === "" ? 'No responde' : false
+        }
+        var answer2 = {
+            type: 1,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Discalculia ideognóstica"
+        };
+        // Add new data to localStorage Array
+        currentData[1] = answer2;
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+    }
 </script>
 
 </html>

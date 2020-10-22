@@ -75,34 +75,41 @@
     </div>
 </body>
 <script>
+    // Get the existing data
+    var currentData = localStorage.getItem('dippacAnswers');
+    currentData = JSON.parse(currentData);
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         Timer(40);
         $(document).on('change', 'input', function(e) {
-
-            // Get the existing data
-            var currentData = localStorage.getItem('dippacAnswers');
-
-            currentData = JSON.parse(currentData);
-
-            var inputUno = document.getElementById('inputUno').value.replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-            var inputDos = document.getElementById('inputDos').value.replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-
-            var isCorrect = inputUno == 4 && inputDos == 6 ? true : false;
-
-            var answer7 = {
-                type: 4,
-                isCorrect: isCorrect,
-                answer: inputUno + " y " + inputDos,
-                image: null,
-                testName: "Discalculia practognóstica"
-            };
-
-            // Add new data to localStorage Array
-            currentData[6] = answer7;
-
-            localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+            validateAnswer(e)
+        })
+        $('#continue').on('click', function() {
+            validateAnswer()
         })
     })
+
+    function validateAnswer(e) {
+        var inputUno = document.getElementById('inputUno').value.replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        var inputDos = document.getElementById('inputDos').value.replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+        isCorrect = inputUno == 4 && inputDos == 6 ? true : false;
+        answer = inputUno + " y " + inputDos,
+
+            answer = answer.length === 0 ? 'no responde' : answer
+        var answer7 = {
+            type: 3,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Discalculia practognóstica"
+        };
+        // Add new data to localStorage Array
+        currentData[6] = answer7;
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+    }
 </script>
 
 </html>

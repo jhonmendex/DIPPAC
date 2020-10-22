@@ -51,32 +51,44 @@
     </div>
 </body>
 <script>
+    // Get the existing data
+    var currentData = localStorage.getItem('dippacAnswers');
+    currentData = JSON.parse(currentData);
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         Timer(20);
         document.querySelectorAll('button.answer').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
-                // Get the existing data
-                var currentData = localStorage.getItem('dippacAnswers');
-
-                currentData = JSON.parse(currentData);
-
-                var isCorrect = e.target.innerText == "7" ? true : false;
-
-                var answer9 = {
-                    type: 5,
-                    isCorrect: isCorrect,
-                    answer: e.target.innerText,
-                    image: null,
-                    testName: "Discalculia verbal"
-                };
-
-                // Add new data to localStorage Array
-                currentData[8] = answer9;
-
-                localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+                validateAnswer(e);
             })
         })
+        $('#continue').on('click', function() {
+            validateAnswer();
+        })
     })
+
+    function validateAnswer(e) {
+        if (e) {
+            isCorrect = e.target.innerText == "7" ? true : false;
+            answer = e.target.innerText;
+        } else {
+            isCorrect = isCorrect === null ? false : isCorrect
+            answer = answer === null ? 'No responde' : answer
+        }
+        var answer9 = {
+            type: 5,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Discalculia verbal"
+        };
+
+        // Add new data to localStorage Array
+        currentData[8] = answer9;
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+    }
 </script>
 
 </html>

@@ -43,6 +43,8 @@
     // Get the existing data
     var currentData = localStorage.getItem('dippacAnswers');
     currentData = JSON.parse(currentData);
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         Timer(45);
         $(document).on('change', 'input', function(e) {
@@ -55,8 +57,6 @@
     })
 
     function validateAnswer(e) {
-        var isCorrect = null
-        var answer = null
         if (e) {
             let val = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
             isCorrect = val == "x" || val == "X" || val == "*" ? true : false;

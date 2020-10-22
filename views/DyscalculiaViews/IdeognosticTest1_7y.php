@@ -47,29 +47,41 @@
     </div>
 </body>
 <script>
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         Timer(65);
         document.querySelectorAll('button.answer').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
-
-                var isCorrect = e.target.innerText == 65 ? true : false;
-
-                var answer1 = {
-                    type: 1,
-                    isCorrect: isCorrect,
-                    answer: e.target.innerText,
-                    image: null,
-                    testName: "Discalculia ideognóstica"
-                };
-
-                var array = [];
-
-                array.push(answer1);
-
-                localStorage.setItem('dippacAnswers', JSON.stringify(array));
+                validateAnswer(e)
             })
         })
+        $('#continue').on('click', function() {
+            validateAnswer()
+        })
     })
+
+    function validateAnswer(e) {
+        if (e) {
+            answer = e.target.innerText;
+            isCorrect = e.target.innerText == 65 ? true : false;
+        } else {
+            isCorrect = $('#inputNum').val() == 40 ? true : false;
+            answer = $('#inputNum').val() === "" ? 'No responde' : false
+        }
+        var answer1 = {
+            type: 1,
+            isCorrect: isCorrect,
+            answer: answer,
+            image: null,
+            testName: "Discalculia ideognóstica"
+        };
+        var array = [];
+
+        array.push(answer1);
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(array));
+    }
 </script>
 
 </html>

@@ -40,6 +40,8 @@
     </div>
 </body>
 <script>
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         Timer(45);
         $(document).on('change', 'input', function(e) {
@@ -52,8 +54,6 @@
     })
 
     function validateAnswer(e) {
-        var isCorrect = null
-        var answer = null
         if (e) {
             isCorrect = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase() == 16 ? true : false;
             answer = e.target.value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();

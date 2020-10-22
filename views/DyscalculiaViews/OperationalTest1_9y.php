@@ -50,35 +50,46 @@
     </div>
 </body>
 <script>
+    // Get the existing data
+    var currentData = localStorage.getItem('dippacAnswers');
+    currentData = JSON.parse(currentData);
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         Timer(90);
         $(document).on('change', 'input', function(e) {
+            validateAnswer(e)
+        })
 
-            // Get the existing data
-            var currentData = localStorage.getItem('dippacAnswers');
-
-            currentData = JSON.parse(currentData);
-
-            var inputUno = document.getElementById('inputUno').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-            var inputDos = document.getElementById('inputDos').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-            var inputTres = document.getElementById('inputTres').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-
-            var isCorrect = inputUno == "9" && inputDos == "3" && inputTres == "0" ? true : false;
-
-            var answer5 = {
-                type: 3,
-                isCorrect: isCorrect,
-                answer: inputUno + inputDos + inputTres,
-                image: null,
-                testName: "Discalculia operacional"
-            };
-
-            // Add new data to localStorage Array
-            currentData[4] = answer5;
-
-            localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+        $('#continue').on('click', function() {
+            validateAnswer()
         })
     })
+
+    function validateAnswer(e) {
+        var inputUno = document.getElementById('inputUno').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        var inputDos = document.getElementById('inputDos').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        var inputTres = document.getElementById('inputTres').value.normalize("NFD").replace(/ /g, "").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        if (e) {
+            answer = inputUno + inputDos + inputTres
+            isCorrect = inputUno == "9" && inputDos == "3" && inputTres == "0" ? true : false;
+        } else {
+            isCorrect = isCorrect === null ? false : isCorrect
+            answer = answer === null ? 'No responde' : answer
+        }
+        var answer5 = {
+            type: 3,
+            isCorrect: isCorrect,
+            answer: inputUno + inputDos + inputTres,
+            image: null,
+            testName: "Discalculia operacional"
+        };
+
+        // Add new data to localStorage Array
+        currentData[4] = answer5;
+
+        localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
+    }
 </script>
 
 </html>
