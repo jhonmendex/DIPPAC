@@ -41,19 +41,54 @@ class ManageUsersModel extends ModelBase
         return $usuarios;
     }
 
-    public function getAlumnos()
+    public function getAlumnos(int $tutorId)
     {
-        $consult = $this->db->executeQue("select u.idusuario,
-        u.nombreusuario
-        from usuarios u, estados e 
-        where e.idestado='2' and u.perfil=28");
+        $consult = $this->db->executeQue("SELECT u.idusuario, u.nombreusuario, u.\"tutorId\" 
+        FROM usuarios u, estados e WHERE e.idestado=2 and u.perfil=28 and u.\"tutorId\"  = " . $tutorId);
         while ($fila = $this->db->arrayResult($consult)) {
             $usuarios[] = array(
                 'id' => $fila['idusuario'],
-                'nombre' => $fila['nombreusuario']
+                'nombre' => $fila['nombreusuario'],
+                'tutorId' => $fila['tutorId']
             );
         }
         return $usuarios;
+    }
+
+    public function getAlumnosNoAsignados()
+    {
+        $consult = $this->db->executeQue("SELECT u.idusuario, u.nombreusuario, u.\"tutorId\" 
+        FROM usuarios u, estados e WHERE e.idestado=2 and u.perfil=28 and u.\"tutorId\" IS NULL");
+        while ($fila = $this->db->arrayResult($consult)) {
+            $usuarios[] = array(
+                'id' => $fila['idusuario'],
+                'nombre' => $fila['nombreusuario'],
+                'tutorId' => $fila['tutorId']
+            );
+        }
+        return $usuarios;
+    }
+
+    public function updateAlumnos(array $alumnos, int $tutor, bool $function)
+    {
+        $respuesta = [];
+        $i = 0;
+        foreach ($alumnos as $alumno) {
+            if ($function) {
+                $consulta = 'UPDATE usuarios  SET "tutorId" = ' . $tutor . ' where idusuario = ' . intval($alumno);
+            } else {
+                $consulta = 'UPDATE usuarios  SET "tutorId" = NULL where idusuario = ' . intval($alumno);
+            }
+            if ($this->db->executeQue($consulta)) {
+                $respuesta[$i]['respuesta'] = 'si';
+                $respuesta[$i]['id'] = $alumno;
+            } else {
+                $respuesta[$i]['respuesta'] = 'no';
+                $respuesta[$i]['id'] = $alumno;
+            }
+            $i++;
+        }
+        echo json_encode($respuesta);
     }
 
     public function getPerfiles()
@@ -298,7 +333,7 @@ left join perfiles p on u.perfil=p.idperfil where u.idusuario=$idusuario");
             }
         }
         $result = $this->db->executeQue($query);
-        $perfiles;
+        $perfiles = [];
         while ($fila = $this->db->arrayResult($result)) {
             $perfiles[] = array(
                 'id' => $fila['idperfil'],

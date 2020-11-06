@@ -12,6 +12,7 @@ class ManageUsersController extends ControllerBase
         $this->document->addScript("jquery.fancybox-1.3.4.pack");
         $this->document->addScript("jquery.dataTables");
         $this->document->addScript("columnfilter");
+        $this->document->addScript("manager");
         $this->document->addCss("jquery.fancybox-1.3.4");
         $this->document->addCss("style");
         $this->document->addCss("orden");
@@ -22,9 +23,20 @@ class ManageUsersController extends ControllerBase
         $this->getModel("ManageUsers");
         $usuarios = $this->model->getUsers();
         $tutores = $this->model->getTutores();
-        $alumnos = $this->model->getAlumnos();
+        // $alumnos = $this->model->getAlumnos();
+        $asignados = [];
+        $sinAsignar = [];
+        // foreach ($alumnos as $alumno) {
+        //     if (isset($alumno['tutorId'])) {
+        //         $asignados[] = $alumno;
+        //     } else {
+        //         $sinAsignar[] = $alumno;
+        //     }
+        // }
         $this->view->setVars('usuarios', $usuarios);
         $this->view->setVars('tutores', $tutores);
+        // $this->view->setVars('asignados', $asignados);
+        // $this->view->setVars('sinAsignar', $sinAsignar);
         $this->view->setVars('alumnos', $alumnos);
         $this->view->show();
     }
@@ -148,6 +160,29 @@ class ManageUsersController extends ControllerBase
         $this->getModel("ManageUsers");
         $barrios = $this->model->getBarrios($_POST['idlocalidad']);
         echo json_encode($barrios);
+    }
+
+    public function ajaxAlumnos()
+    {
+        $this->getModel("ManageUsers");
+        $alumnos = $this->model->getAlumnos($_POST['idTutor']);
+        $noasignados = $this->model->getAlumnosNoAsignados();
+        $envio = array('alumnos' => $alumnos, 'noasignados' => $noasignados);
+        echo json_encode($envio);
+    }
+
+    public function asignarAlumnos()
+    {
+        $this->getModel("ManageUsers");
+        $alumnos = $this->model->updateAlumnos($_POST['estudiantes'], intval($_POST['tutorid']), true);
+        echo $alumnos;
+    }
+
+    public function removerAlumnos()
+    {
+        $this->getModel("ManageUsers");
+        $alumnos = $this->model->updateAlumnos($_POST['estudiantes'], intval($_POST['tutorid']), false);
+        echo $alumnos;
     }
 
     public function updateProfile()
