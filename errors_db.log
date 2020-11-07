@@ -1,1 +1,13 @@
 ﻿
+
+ Error en la consulta: INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (n, 'n', 'n', '88', n, 'n'); 
+ERROR:  column "n" does not exist
+LINE 2:             VALUES (n, 'n', 'n', '88', n, 'n');
+                            ^
+
+ Error en la consulta: INSERT INTO public.respuestas(tipo, respuesta, imagen, "cuestionarioId", "esCorrecta", nombreprueba)
+            VALUES (n, 'n', 'n', '89', n, 'n'); 
+ERROR:  column "n" does not exist
+LINE 2:             VALUES (n, 'n', 'n', '89', n, 'n');
+                            ^

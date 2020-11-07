@@ -51,6 +51,10 @@
     </div>
 </body>
 <script>
+    var currentData = localStorage.getItem('dippacAnswers');
+    currentData = JSON.parse(currentData);
+    var isCorrect = null
+    var answer = null
     $(document).ready(function() {
         Timer(30);
         document.querySelectorAll('button.answer').forEach(function(btn) {

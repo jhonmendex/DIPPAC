@@ -67,7 +67,7 @@
             isCorrect = isCorrect === null ? false : isCorrect
             answer = answer === null ? 'No responde' : answer
         }
-        var answer8 = {
+        var answer9 = {
             type: 5,
             isCorrect: isCorrect,
             answer: answer,
@@ -75,7 +75,7 @@
             testName: "Discalculia verbal"
         };
         // Add new data to localStorage Array
-        currentData[7] = answer8;
+        currentData[8] = answer9;
 
         localStorage.setItem('dippacAnswers', JSON.stringify(currentData));
     }

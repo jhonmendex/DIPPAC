@@ -129,7 +129,7 @@ defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body text-center">
                             <h1><?php if (isset($cuestionario['respuesta'])) {
                                     echo $cuestionario['respuesta'];
                                 } ?></h1>
