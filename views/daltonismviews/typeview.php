@@ -22,6 +22,9 @@ if (sizeof($reporte) != 0) {
 }
 ?>
 
-
-<canvas id="myChart" width="100" height="100"></canvas>
-<canvas id="doughnut-chart" width="100" height="100"></canvas>
+<div class="chart-container" style="height:1000px;width:1000px;responsive:true">
+<canvas id="myChart" responsive:true></canvas>
+</div>
+<div class="chart-container" style="height:1000px;width:1000px;responsive:true">
+<canvas id="doughnut-chart" responsive:true></canvas>
+</div>

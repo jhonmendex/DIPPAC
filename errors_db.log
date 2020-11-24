@@ -46,3 +46,28 @@ LINE 1: ...NTO public.cuestionarios("usuarioId") VALUES (1,6,Protanopia...
 ERROR:  no existe la columna «deutaronapia»
 LINE 2: ...t(conclusion) from cuestionarios where conclusion="deutarona...
                                                              ^
+
+ Error en la consulta: SELECT * FROM cuestionarios 
+ERROR:  no existe la relación «cuestionarios»
+LINE 1: SELECT * FROM cuestionarios
+                      ^
+
+ Error en la consulta: SELECT * FROM cuestionarios 
+ERROR:  no existe la relación «cuestionarios»
+LINE 1: SELECT * FROM cuestionarios
+                      ^
+
+ Error en la consulta: SELECT * FROM cuestionarios 
+ERROR:  no existe la relación «cuestionarios»
+LINE 1: SELECT * FROM cuestionarios
+                      ^
+
+ Error en la consulta: INSERT INTO public.cuestionarios("usuarioId",edad,conclusion)VALUES (60, 8, 'Normal'); 
+ERROR:  no existe la relación «public.cuestionarios»
+LINE 1: INSERT INTO public.cuestionarios("usuarioId",edad,conclusion...
+                    ^
+
+ Error en la consulta: SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT 1 
+ERROR:  no existe la relación «public.cuestionarios»
+LINE 1: SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT ...
+                      ^
