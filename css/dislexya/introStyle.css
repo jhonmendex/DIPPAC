@@ -1,0 +1,20 @@
+h1,
+h2 {
+  color: rgb(112, 48, 160);
+}
+
+h3 {
+  margin-top: 20px;
+  color: rgba(80, 236, 171, 1);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a:link, a:hover, a:active, a:visited {
+  color: rgb(255, 160, 5);
+  width: 180px;
+  text-size-adjust: 18;
+}
