@@ -2,38 +2,111 @@
 
 defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 
-class ManageUsersModel extends ModelBase {
+class ManageUsersModel extends ModelBase
+{
 
-    public function getUsers() {
+    public function getUsers()
+    {
         $consult = $this->db->executeQue("select u.idusuario, e.nombreestado, 
             p.nombreperfil, u.nombreusuario, u.alias, u.cedula, u.fechaingreso, p.grupo
             from usuarios u, perfiles p, estados e 
             where e.idestado=u.idestado and p.idperfil=u.perfil and p.grupo<>'Superadministrador'");
         while ($fila = $this->db->arrayResult($consult)) {
-            $usuarios[] = array('id' => $fila['idusuario'],
+            $usuarios[] = array(
+                'id' => $fila['idusuario'],
                 'nombre' => $fila['nombreusuario'],
                 'cedula' => $fila['cedula'],
                 'alias' => $fila['alias'],
                 'perfil' => $fila['nombreperfil'],
                 'estado' => $fila['nombreestado'],
                 'fecha' => $fila['fechaingreso'],
-                'grupo' => $fila['grupo']);
+                'grupo' => $fila['grupo']
+            );
         }
         return $usuarios;
     }
 
-    public function getPerfiles() {
+    public function getTutores()
+    {
+        $consult = $this->db->executeQue("select u.idusuario,
+        u.nombreusuario
+        from usuarios u, estados e 
+        where e.idestado='2' and u.perfil=31");
+        while ($fila = $this->db->arrayResult($consult)) {
+            $usuarios[] = array(
+                'id' => $fila['idusuario'],
+                'nombre' => $fila['nombreusuario']
+            );
+        }
+        return $usuarios;
+    }
+
+    public function getAlumnos(int $tutorId)
+    {
+        $consult = $this->db->executeQue("SELECT u.idusuario, u.nombreusuario, u.\"tutorId\" 
+        FROM usuarios u, estados e WHERE e.idestado=2 and u.perfil=28 and u.\"tutorId\"  = " . $tutorId);
+        while ($fila = $this->db->arrayResult($consult)) {
+            $usuarios[] = array(
+                'id' => $fila['idusuario'],
+                'nombre' => $fila['nombreusuario'],
+                'tutorId' => $fila['tutorId']
+            );
+        }
+        return $usuarios;
+    }
+
+    public function getAlumnosNoAsignados()
+    {
+        $consult = $this->db->executeQue("SELECT u.idusuario, u.nombreusuario, u.\"tutorId\" 
+        FROM usuarios u, estados e WHERE e.idestado=2 and u.perfil=28 and u.\"tutorId\" IS NULL");
+        while ($fila = $this->db->arrayResult($consult)) {
+            $usuarios[] = array(
+                'id' => $fila['idusuario'],
+                'nombre' => $fila['nombreusuario'],
+                'tutorId' => $fila['tutorId']
+            );
+        }
+        return $usuarios;
+    }
+
+    public function updateAlumnos(array $alumnos, int $tutor, bool $function)
+    {
+        $respuesta = [];
+        $i = 0;
+        foreach ($alumnos as $alumno) {
+            if ($function) {
+                $consulta = 'UPDATE usuarios  SET "tutorId" = ' . $tutor . ' where idusuario = ' . intval($alumno);
+            } else {
+                $consulta = 'UPDATE usuarios  SET "tutorId" = NULL where idusuario = ' . intval($alumno);
+            }
+            if ($this->db->executeQue($consulta)) {
+                $respuesta[$i]['respuesta'] = 'si';
+                $respuesta[$i]['id'] = $alumno;
+            } else {
+                $respuesta[$i]['respuesta'] = 'no';
+                $respuesta[$i]['id'] = $alumno;
+            }
+            $i++;
+        }
+        echo json_encode($respuesta);
+    }
+
+    public function getPerfiles()
+    {
         $resultset = $this->db->executeQue("select * from perfiles 
             where grupo not in ('Superadministrador', 'No usuario')");
         while ($fila = $this->db->arrayResult($resultset)) {
-            $perfiles[] = array('id' => $fila['idperfil'],
+            $perfiles[] = array(
+                'id' => $fila['idperfil'],
                 'nombre' => $fila['nombreperfil'],
-                'grupo' => $fila['grupo']);
+                'grupo' => $fila['grupo']
+            );
         }
         return $perfiles;
     }
 
-    public function insertUser() {
+    public function insertUser()
+    {
         $nombrecompleto = strtoupper(trim($_POST['full_name']));
         $cedula = trim($_POST['cedula']);
         $email = trim($_POST['email']);
@@ -51,7 +124,8 @@ class ManageUsersModel extends ModelBase {
             $idverify = strrev(urlencode(base64_encode($idusuario)));
             $idid = sha1($idusuario);
             $nuevoperfil = $this->getPerfil($perfil);
-            $respuesta = array('respuesta' => 'si',
+            $respuesta = array(
+                'respuesta' => 'si',
                 'id' => $idusuario,
                 'nombre' => $nombrecompleto,
                 'alias' => $alias,
@@ -61,7 +135,8 @@ class ManageUsersModel extends ModelBase {
                 'grupo' => $nuevoperfil['grupo'],
                 'fecha' => $fechaingreso,
                 'idcode' => $idid,
-                'idverify' => $idverify);
+                'idverify' => $idverify
+            );
             echo json_encode($respuesta);
         } else {
             $respuesta = array('respuesta' => 'no');
@@ -69,16 +144,20 @@ class ManageUsersModel extends ModelBase {
         }
     }
 
-    private function getPerfil($id) {
+    private function getPerfil($id)
+    {
         $consult = $this->db->executeQue("select * from perfiles where idperfil=$id");
         $row = $this->db->arrayResult($consult);
-        $perfil = array('id' => $row['idperfil'],
+        $perfil = array(
+            'id' => $row['idperfil'],
             'nombre' => $row['nombreperfil'],
-            'grupo' => $row['grupo']);
+            'grupo' => $row['grupo']
+        );
         return $perfil;
     }
 
-    public function disableUser() {
+    public function disableUser()
+    {
         if (isset($_POST["verify"])) {
             $idusuario = base64_decode(urldecode(strrev($_POST["verify"])));
             if ($this->db->executeQue("update usuarios set idestado=1 where idusuario=$idusuario")) {
@@ -87,7 +166,7 @@ class ManageUsersModel extends ModelBase {
                 $respuesta['res'] = 'si';
                 $respuesta['idrow'] = $idusuario;
                 $respuesta['nombre'] = $fila["nombre"];
-                $respuesta['ididid'] = sha1(time() . "" . $idusuario + time());                
+                $respuesta['ididid'] = sha1(time() . "" . $idusuario + time());
                 $respuesta['verify'] = strrev(urlencode(base64_encode($idusuario)));
                 echo json_encode($respuesta);
             } else {
@@ -97,7 +176,8 @@ class ManageUsersModel extends ModelBase {
         }
     }
 
-    public function enableUser() {
+    public function enableUser()
+    {
         if (isset($_POST["verify"])) {
             $idusuario = base64_decode(urldecode(strrev($_POST["verify"])));
             if ($this->db->executeQue("update usuarios set idestado=2 where idusuario=$idusuario")) {
@@ -106,7 +186,7 @@ class ManageUsersModel extends ModelBase {
                 $respuesta['res'] = 'si';
                 $respuesta['idrow'] = $idusuario;
                 $respuesta['nombre'] = $fila["nombre"];
-                $respuesta['ididid'] = sha1(time() . "" . $idusuario + time());                
+                $respuesta['ididid'] = sha1(time() . "" . $idusuario + time());
                 $respuesta['verify'] = strrev(urlencode(base64_encode($idusuario)));
                 echo json_encode($respuesta);
             } else {
@@ -116,7 +196,8 @@ class ManageUsersModel extends ModelBase {
         }
     }
 
-    public function getLocalidades() {
+    public function getLocalidades()
+    {
         $consulta = $this->db->executeQue("select * from localidades order by nombre");
         while ($row = $this->db->arrayResult($consulta)) {
             $localidades[] = array("id" => $row['idlocalidad'], "nombre" => $row['nombre']);
@@ -124,7 +205,8 @@ class ManageUsersModel extends ModelBase {
         return $localidades;
     }
 
-    public function getBarrios($idlocalidad) {
+    public function getBarrios($idlocalidad)
+    {
         $consulta = $this->db->executeQue("select * from barrios where idlocalidad=$idlocalidad order by nombre");
         while ($row = $this->db->arrayResult($consulta)) {
             $barrios[] = array("id" => $row['idbarrio'], "nombre" => $row['nombre']);
@@ -132,7 +214,8 @@ class ManageUsersModel extends ModelBase {
         return $barrios;
     }
 
-    public function getDepartamentos() {
+    public function getDepartamentos()
+    {
         $consulta = $this->db->executeQue("select * from departamentos order by nombredepartamento");
         while ($row = $this->db->arrayResult($consulta)) {
             $departamentos[] = array("id" => $row['iddepartamento'], "nombre" => $row['nombredepartamento']);
@@ -140,7 +223,8 @@ class ManageUsersModel extends ModelBase {
         return $departamentos;
     }
 
-    public function getCiudades($iddepartamento) {
+    public function getCiudades($iddepartamento)
+    {
         $consulta = $this->db->executeQue("select * from ciudades where iddepartamento=$iddepartamento  order by nombreciudad");
         while ($row = $this->db->arrayResult($consulta)) {
             $ciudades[] = array("id" => $row['idciudad'], "nombre" => $row['nombreciudad']);
@@ -148,12 +232,14 @@ class ManageUsersModel extends ModelBase {
         return $ciudades;
     }
 
-    public function getUserById($idusuario) {
+    public function getUserById($idusuario)
+    {
         $consulta = $this->db->executeQue("select * 
 from usuarios u left outer join barrios b on u.idbarrio=b.idbarrio left join ciudades c on u.ciudad=c.idciudad
 left join perfiles p on u.perfil=p.idperfil where u.idusuario=$idusuario");
         $row = $this->db->arrayResult($consulta);
-        $usuario = array("id" => $row['idusuario'],
+        $usuario = array(
+            "id" => $row['idusuario'],
             "idciudad" => $row['ciudad'],
             "nombre" => $row['nombreusuario'],
             "alias" => $row['alias'],
@@ -171,11 +257,13 @@ left join perfiles p on u.perfil=p.idperfil where u.idusuario=$idusuario");
             "iddepartamento" => $row['iddepartamento'],
             "grupo" => $row['grupo'],
             "fechaingreso" => $row['fechaingreso'],
-            "idperfil" => $row['idperfil']);
+            "idperfil" => $row['idperfil']
+        );
         return $usuario;
     }
 
-    public function editBasicUser() {
+    public function editBasicUser()
+    {
         $fechanacimiento = trim($_POST['born_date']) ? "'" . trim($_POST['born_date']) . "'" : "NULL";
         $cedula = trim($_POST['cedula']);
         $email = trim($_POST['email']);
@@ -194,7 +282,8 @@ left join perfiles p on u.perfil=p.idperfil where u.idusuario=$idusuario");
         }
     }
 
-    public function editPassUser() {
+    public function editPassUser()
+    {
         $newpass = sha1(trim($_POST['con']));
         $idusuario = $_POST['idusuariopass'];
         $consulta = "update usuarios set password='$newpass' where idusuario=$idusuario";
@@ -207,7 +296,8 @@ left join perfiles p on u.perfil=p.idperfil where u.idusuario=$idusuario");
         }
     }
 
-    public function editAssociatedUser() {
+    public function editAssociatedUser()
+    {
         $telefono = trim($_POST['phone']) ? trim($_POST['phone']) : "NULL";
         $telefono2 = trim($_POST['movil']) ? trim($_POST['movil']) : "NULL";
         $ciudad = trim($_POST['ciudades']);
@@ -227,31 +317,35 @@ left join perfiles p on u.perfil=p.idperfil where u.idusuario=$idusuario");
         }
     }
 
-    public function getPerfiles2($arrayPerfiles) {
+    public function getPerfiles2($arrayPerfiles)
+    {
         $query = "select * from perfiles 
             where ";
         foreach ($arrayPerfiles as $key => $value) {
             if (sizeof($arrayPerfiles) == 1) {
-                $query.="grupo='$value'";
+                $query .= "grupo='$value'";
             } else {
                 if ($key == sizeof($arrayPerfiles) - 1) {
-                    $query.="grupo='$value'";
+                    $query .= "grupo='$value'";
                 } else {
-                    $query.="grupo='$value' or ";
+                    $query .= "grupo='$value' or ";
                 }
             }
         }
         $result = $this->db->executeQue($query);
-        $perfiles;
+        $perfiles = [];
         while ($fila = $this->db->arrayResult($result)) {
-            $perfiles[] = array('id' => $fila['idperfil'],
+            $perfiles[] = array(
+                'id' => $fila['idperfil'],
                 'nombre' => $fila['nombreperfil'],
-                'grupo' => $fila['grupo']);
+                'grupo' => $fila['grupo']
+            );
         }
         return $perfiles;
     }
 
-    public function updateProfile() {
+    public function updateProfile()
+    {
         $idusuario = $_POST['idusuario'];
         $perfil = $_POST['perfil'];
         $consulta = "update usuarios set perfil=$perfil where idusuario=$idusuario";
@@ -266,7 +360,4 @@ left join perfiles p on u.perfil=p.idperfil where u.idusuario=$idusuario");
             echo json_encode($respuesta);
         }
     }
-
 }
-
-?>
