@@ -17,7 +17,7 @@
 
 <body>
 
-    <div id="tabs">
+    <div id="tabs" style="width:1250px">
         <ul>
             <li><a href="index.php?controlador=Daltonism&accion=tableReport">Reporte General</a></li>
             <li><a href="index.php?controlador=Daltonism&accion=typeReport">Reporte por tipo</a></li>

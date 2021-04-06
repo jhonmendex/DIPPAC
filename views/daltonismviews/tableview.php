@@ -1,12 +1,8 @@
 <div id="main">
-    <div class="maxcontent" id="content">
-        <div id="fancybox-title" class="fancybox-title-float" style="display: block; z-index: 50">
-
-            <div class="container" style="    margin-left: -15px; margin-bottom: 20px; margin-top: 15px">
-
+    <div style="margin-left:-25px;margin-top:50px">
                 <div style="clear: left"></div>
                 <div>
-                    <table class="table" border="0" cellspacing="0" cellpadding="3" id="mytable">
+                    <table class="table " border="0" cellspacing="0" cellpadding="3" id="mytable">
                         <thead>
                             <tr class="headall">
                                 <th class="headinit" style="cursor: pointer">Nombre</th>
@@ -29,19 +25,19 @@
                                 foreach ($reporte as $value) {
                             ?>
                                     <tr class="class<?php echo $estilo; ?>">
-                                        <td class="init2" id="nombre<?php echo $value['id']; ?>">
+                                        <td class="init2" id="nombre">
                                             <?php echo $value['nombre']; ?>
                                         </td>
-                                        <td class="item2" style="width: 20px; text-align: center">
+                                        <td " style="width: 20px; text-align: center">
                                             <?php echo $value['edad']; ?>
                                         </td>
                                         <td class="item2" style="width: 20px; text-align: center">
                                             <?php echo $value['fechapresentacion']; ?>
                                         </td>
-                                        <td class="item2" style="width: 20px; text-align: center" <?php echo $value['id']; ?>">
+                                        <td class="item2" style="width: 20px; text-align: center">
                                             <?php echo $value['normales']; ?>
                                         </td>
-                                        <td class="item2" style="width: 20px; text-align: center" <?php echo $value['id']; ?>">
+                                        <td class="item2" style="width: 20px; text-align: center">
                                             <?php echo $value['deutaronapia']; ?>
                                         </td>
                                         <td class="item2" style="width: 20px; text-align: center">
@@ -54,6 +50,12 @@
                                         </td>
                                         <td class="item2" style="width: 20px; text-align: center">
                                             <?php echo $value['tritanomalia']; ?>
+                                        </td>
+                                        <td class="item2" style="width: 20px; text-align: center">
+                                            <?php echo $value['tritanopia']; ?>
+                                        </td>
+                                        <td class="item2" style="width: 20px; text-align: center">
+                                            <?php echo $value['conclusion']; ?>
                                         </td>
 
                                     </tr>
@@ -81,10 +83,18 @@
                                 <th>Tritanopia</th>
                                 <th>Resultado</th>
                             </tr>
+                     
+	                         <td><input type="button" id="cargar_primera_pagina" value="<< Primero"/></td>
+                            <td><input type="button" id="cargar_anterior_pagina" value="< Anterior"/></td>
+                            <td id="indicador_paginas"></td>
+                            <td><input type="button" id="cargar_siguiente_pagina" value="Siguiente >"/></td>
+                            <td><input type="button" id="cargar_ultima_pagina" value="Ultimo >>"/></td>
+
+                            
                         </tfoot>
                     </table>
                 </div>
                 </fieldset>
-            </div>
-        </div>
+    
+
     </div>

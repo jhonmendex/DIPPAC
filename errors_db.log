@@ -71,3 +71,8 @@ LINE 1: INSERT INTO public.cuestionarios("usuarioId",edad,conclusion...
 ERROR:  no existe la relación «public.cuestionarios»
 LINE 1: SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT ...
                       ^
+
+ Error en la consulta: insert into usuarios
+        values(56,2,171,28,'ANA GONZALEZ','AGONZALEZ','40bd001563085fc35165329ea1ff5c5ecbdbbeef',96114946169,'', NULL, NULL,NULL,'2021-03-05','ana@hotmail.com','2013-05-09',NULL) 
+ERROR:  llave duplicada viola restricción de unicidad «usuarios_pkey»
+DETAIL:  Ya existe la llave (idusuario)=(56).
