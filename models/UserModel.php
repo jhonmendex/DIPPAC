@@ -2,71 +2,81 @@
 
 defined('EXECG__') or die('<h1>404 - <strong>Not Found</strong></h1>');
 
-require ('classes/Usuario.php');
+require('classes/Usuario.php');
 
-class UserModel extends ModelBase {
+class UserModel extends ModelBase
+{
 
-    public function LoginUser() {        
+    public function LoginUser()
+    {
         $pass = $_POST['pwd'];
         $user = $_POST['user'];
         $validacion = Validacion::singleton();
-        if ($validacion->Login($user, $pass)) {   
+        if ($validacion->Login($user, $pass)) {
             header('Location: index.php');
         } else {
             header('location: index.php?controlador=User&accion=Login&message=error');
         }
     }
 
-    public function LogoutUser() {
+    public function LogoutUser()
+    {
         $validacion = Validacion::singleton();
         $validacion->Logout();
     }
 
-    public function getUserId() {
+    public function getUserId()
+    {
         $usuario = unserialize($_SESSION['user']);
         return $usuario->getIdUser();
     }
 
-    public function getUserName() {
+    public function getUserName()
+    {
         $usuario = unserialize($_SESSION['user']);
         return $usuario->getNameUser();
     }
 
-    public function getUserProfile() {
+    public function getUserProfile()
+    {
         $usuario = unserialize($_SESSION['user']);
         return $usuario->getPerfilUser();
     }
-    
-    public function getUserProfileName() {
+
+    public function getUserProfileName()
+    {
         $usuario = unserialize($_SESSION['user']);
-        $idperfil= $usuario->getPerfilUser();
-        $result=$this->db->executeQue("select nombreperfil from perfiles where idperfil=$idperfil");
-        $row=$this->db->arrayResult($result);        
+        $idperfil = $usuario->getPerfilUser();
+        $result = $this->db->executeQue("select nombreperfil from perfiles where idperfil=$idperfil");
+        $row = $this->db->arrayResult($result);
         return $row["nombreperfil"];
     }
 
-    public function getUserBodega() {
+    public function getUserBodega()
+    {
         $usuario = unserialize($_SESSION['user']);
         return $usuario->getBodega();
     }
 
-    public function getMenus() {
+    public function getMenus()
+    {
         $perfil = $this->getUserProfile();
-        $menus_user = null;        
-            $consulta = $this->db->executeQue("select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
+        $menus_user = null;
+        $consulta = $this->db->executeQue("select distinct(submenus.idmenu), menus.nombremenu, menus.url_main 
                     from perfiles_permisos, submenus, menus 
                     where idperfil=$perfil and perfiles_permisos.idsubmenu=submenus.idsubmenu and menus.idmenu=submenus.idmenu
                     order by menus.nombremenu asc");
-            $total = $this->db->numRows($consulta);
-            if ($total > 0) {
-                while ($row = $this->db->arrayResult($consulta)) {
-                    $menus_user[] = array('idmen' => $row['idmenu'], 'namemen' => $row['nombremenu'], 'urlprin' => $row['url_main']);
-                }
-            }       
+        $total = $this->db->numRows($consulta);
+        if ($total > 0) {
+            while ($row = $this->db->arrayResult($consulta)) {
+                $menus_user[] = array('idmen' => $row['idmenu'], 'namemen' => $row['nombremenu'], 'urlprin' => $row['url_main']);
+            }
+        }
         return $menus_user;
     }
 
-    public function getSubmenus($mainmenu) {
+    public function getSubmenus($mainmenu)
+    {
         $perfil = $this->getUserProfile();
         $menus_user = null;
         if (isset($_GET['idmenu'])) {
@@ -84,14 +94,15 @@ class UserModel extends ModelBase {
         $total = $this->db->numRows($consulta);
         if ($total > 0) {
             while ($row = $this->db->arrayResult($consulta)) {
-                $menus_user[] = array('urlmenu' => $row['url_submenu'], 'icono' => $row['icon_submenu'],'nombresubmenu' => $row['nombresubmenu']);
+                $menus_user[] = array('urlmenu' => $row['url_submenu'], 'icono' => $row['icon_submenu'], 'nombresubmenu' => $row['nombresubmenu']);
             }
         }
 
         return $menus_user;
     }
 
-    public function getMenuName($mainmenu) {
+    public function getMenuName($mainmenu)
+    {
         $perfil = $this->getUserProfile();
         if (isset($_GET['idmenu'])) {
             $menu = $_GET['idmenu'];
@@ -114,7 +125,8 @@ class UserModel extends ModelBase {
         return $nombremenu;
     }
 
-    public function getUserById($id_user) {
+    public function getUserById($id_user)
+    {
         $consulta = $this->db->executeQue("select * from usuarios where idusuario=$id_user");
         $total = $this->db->numRows($consulta);
         if ($total > 0) {
@@ -125,7 +137,7 @@ class UserModel extends ModelBase {
                 $name_user['cedula'] = $row['cedula'];
                 $name_user['email'] = $row['email'];
                 $name_user['direcion'] = $row['direccion'];
-                $name_user['fechacumple'] = $row['nombreusuario'];
+                $name_user['fechacumple'] = $row['fechacumple'];
                 $name_user['fax'] = $row['fax'];
                 $name_user['telefono'] = $row['telefonocasa'];
                 $name_user['celular'] = $row['telefonooficina'];
@@ -146,7 +158,8 @@ class UserModel extends ModelBase {
      * 
      */
 
-    public function getUserNameAjax() {
+    public function getUserNameAjax()
+    {
         session_start();
         $id_user = $_GET['sponsor'];
         $usuario = unserialize($_SESSION['user']);
@@ -167,18 +180,14 @@ class UserModel extends ModelBase {
         }
     }
 
-     public function verifyNet($user){
+    public function verifyNet($user)
+    {
         $consulta = $this->db->executeQue("select * from usuarios");
         $total = $this->db->numRows($consulta);
-        if ($total >= 2)  
-            {  
+        if ($total >= 2) {
             return true;
-            }
-            else { 
+        } else {
             return false;
-            }
-            
-     }
+        }
+    }
 }
-
-?>

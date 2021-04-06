@@ -1,0 +1,32 @@
+#background {
+  background-image: url('images/startbackground.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  background-size: 100% 100%;
+}
+#startbutton {
+  text-decoration: none;
+  height: 15%;
+  width: 30%;
+  margin-top: 25%;
+  margin-left: 33%;
+  opacity: 90%;
+  color: #333333;
+  outline: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4%;
+  padding-right: 4%;
+  background-color: #6C3F20;
+  border-color: #6C3F20;
+  border-width: 3%;
+  border-style: solid;
+  border-radius: 35px;
+  background-image: url('images/Iniciar.gif');
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+

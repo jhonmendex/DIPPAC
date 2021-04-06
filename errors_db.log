@@ -1,1 +1,78 @@
 ﻿
+
+ Error en la consulta: select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: ...d submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=
+                                                                       ^
+
+ Error en la consulta: select * from menus where idmenu= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: select * from menus where idmenu=
+                                         ^
+
+ Error en la consulta: select submenus.url_submenu,submenus.nombresubmenu, submenus.icon_submenu from perfiles_permisos, submenus where idperfil=28 and submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: ...d submenus.idsubmenu=perfiles_permisos.idsubmenu and idmenu=
+                                                                       ^
+
+ Error en la consulta: select * from menus where idmenu= 
+ERROR:  error de sintaxis al final de la entrada
+LINE 1: select * from menus where idmenu=
+                                         ^
+
+ Error en la consulta: SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ERROR:  no existe la relación «usuarios»
+LINE 1: SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2
+                      ^
+
+ Error en la consulta: SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2 
+ERROR:  no existe la relación «usuarios»
+LINE 1: SELECT * FROM usuarios WHERE alias='jmendez' and idestado=2
+                      ^
+
+ Error en la consulta: INSERT INTO public.cuestionarios("usuarioId") VALUES (1,6,Protanopia); 
+ERROR:  no existe la columna «protanopia»
+LINE 1: ...NTO public.cuestionarios("usuarioId") VALUES (1,6,Protanopia...
+                                                             ^
+
+ Error en la consulta: select 
+        (select count(conclusion) from cuestionarios where conclusion="deutaronapia") deutaronapia,
+        (select count(conclusion) from cuestionarios where conclusion="deutoronomalia") deutoronomalia,
+        (select count(conclusion) from cuestionarios where conclusion="protanomalia") protanomalia,
+        (select count(conclusion) from cuestionarios where conclusion="Protanopia") protanopia,
+        (select count(conclusion) from cuestionarios where conclusion="tritanomalia") tritanomalia,
+        (select count(conclusion) from cuestionarios where conclusion="tritanopia") tritanopia,
+        (select count(conclusion) from cuestionarios where conclusion="Normal") normal 
+ERROR:  no existe la columna «deutaronapia»
+LINE 2: ...t(conclusion) from cuestionarios where conclusion="deutarona...
+                                                             ^
+
+ Error en la consulta: SELECT * FROM cuestionarios 
+ERROR:  no existe la relación «cuestionarios»
+LINE 1: SELECT * FROM cuestionarios
+                      ^
+
+ Error en la consulta: SELECT * FROM cuestionarios 
+ERROR:  no existe la relación «cuestionarios»
+LINE 1: SELECT * FROM cuestionarios
+                      ^
+
+ Error en la consulta: SELECT * FROM cuestionarios 
+ERROR:  no existe la relación «cuestionarios»
+LINE 1: SELECT * FROM cuestionarios
+                      ^
+
+ Error en la consulta: INSERT INTO public.cuestionarios("usuarioId",edad,conclusion)VALUES (60, 8, 'Normal'); 
+ERROR:  no existe la relación «public.cuestionarios»
+LINE 1: INSERT INTO public.cuestionarios("usuarioId",edad,conclusion...
+                    ^
+
+ Error en la consulta: SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT 1 
+ERROR:  no existe la relación «public.cuestionarios»
+LINE 1: SELECT * FROM public.cuestionarios ORDER BY "Id" DESC LIMIT ...
+                      ^
+
+ Error en la consulta: insert into usuarios
+        values(56,2,171,28,'ANA GONZALEZ','AGONZALEZ','40bd001563085fc35165329ea1ff5c5ecbdbbeef',96114946169,'', NULL, NULL,NULL,'2021-03-05','ana@hotmail.com','2013-05-09',NULL) 
+ERROR:  llave duplicada viola restricción de unicidad «usuarios_pkey»
+DETAIL:  Ya existe la llave (idusuario)=(56).
